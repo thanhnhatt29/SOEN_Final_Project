@@ -1,0 +1,13 @@
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\bin\Debug\UI.exe.config
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\bin\Debug\UI.exe
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\bin\Debug\UI.pdb
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.csproj.AssemblyReference.cache
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.csproj.SuggestedBindingRedirects.cache
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.OrderManage.resources
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.DashBoard.resources
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.Login.resources
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.Properties.Resources.resources
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.csproj.GenerateResource.cache
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.exe
+D:\UTE College\program\HK5\SOEN\Final\UI\UI\obj\Debug\UI.pdb
