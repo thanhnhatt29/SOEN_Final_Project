@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI.Admin
+namespace UI
 {
     public partial class EmployeeManage : Form
     {

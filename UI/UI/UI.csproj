@@ -102,6 +102,9 @@
     <Compile Include="Admin\VourcherManage.Designer.cs">
       <DependentUpon>VourcherManage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\EmployeeManage.resx">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
