@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AccountManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AccountManage.Designer.cs">
+      <DependentUpon>AccountManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Admin\VourcherManage.Designer.cs">
       <DependentUpon>VourcherManage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\ProductManage.resx">
+      <DependentUpon>ProductManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee\OrderManage.resx">
       <DependentUpon>OrderManage.cs</DependentUpon>
     </EmbeddedResource>
