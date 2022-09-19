@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\UI",
+    "\\UI\\UI",
+    "\\UI\\UI\\Employee"
   ],
+  "SelectedNode": "\\UI\\UI\\Employee\\OrderManage.cs",
   "PreviewInSolutionExplorer": false
 }
