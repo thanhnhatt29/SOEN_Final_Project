@@ -26,3 +26,4 @@ C:\Users\huynh\OneDrive\Máy tính\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Deb
 C:\Users\huynh\OneDrive\Máy tính\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.exe
 C:\Users\huynh\OneDrive\Máy tính\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.pdb
 C:\Users\huynh\OneDrive\Máy tính\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.EmployeeManage.resources
+C:\Users\huynh\OneDrive\Máy tính\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.SellingHistory.resources
