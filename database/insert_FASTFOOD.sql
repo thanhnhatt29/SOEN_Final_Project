@@ -1,8 +1,8 @@
 ﻿use FASTFOOD
 go
 
-exec add_Employee 'abc',N'Phước', 0357648144,false,'administrator'
-exec add_Employee 'aaa',N'Nhật', 0123456789,false,'manager'
+exec add_Employee 'abc',N'Phước', 0357648144,'2002-7-5',false,'administrator'
+exec add_Employee 'aaa',N'Nhật', 0123456789,'2022-1-1',false,'manager'
 
 
 exec add_Account 'abc',0357648144,true

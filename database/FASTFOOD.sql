@@ -8,6 +8,7 @@ create table EMPLOYEE(
 	employee_id char(10) primary key,
 	employee_name nvarchar(100),
 	phone_number char(10) null,
+	birth date,
 	gender bit not null,
 	position nvarchar(20)	
 )
@@ -65,11 +66,12 @@ create proc add_Employee
 	@id char(10),
 	@name nvarchar(100),
 	@phone char(10),
+	@birth date,
 	@sex bit,
 	@position nvarchar(20)
 as
-	insert into EMPLOYEE(employee_id,employee_name,phone_number,gender,position)
-	values (@id,@name,@phone,@sex,@position)
+	insert into EMPLOYEE(employee_id,employee_name,phone_number,birth,gender,position)
+	values (@id,@name,@phone,@birth,@sex,@position)
 go
 
 create proc add_Product
