@@ -16,7 +16,7 @@ namespace UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductManage());
+            Application.Run(new EmployeeManage());
         }
     }
 }
