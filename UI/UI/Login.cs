@@ -19,7 +19,15 @@ namespace UI
 
         private void label3_Click(object sender, EventArgs e)
         {
-           
+            
+        }
+        // Login button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DashBoard dashBoard = new DashBoard();
+            dashBoard.ShowDialog();
+            this.Show();
         }
     }
 }
