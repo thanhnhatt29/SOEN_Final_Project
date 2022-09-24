@@ -96,17 +96,20 @@
     <Compile Include="SellingHistory.Designer.cs">
       <DependentUpon>SellingHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\VourcherManage.cs">
+    <Compile Include="Admin\VoucherManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\VourcherManage.Designer.cs">
-      <DependentUpon>VourcherManage.cs</DependentUpon>
+    <Compile Include="Admin\VoucherManage.Designer.cs">
+      <DependentUpon>VoucherManage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\EmployeeManage.resx">
       <DependentUpon>EmployeeManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\VoucherManage.resx">
+      <DependentUpon>VoucherManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\OrderManage.resx">
       <DependentUpon>OrderManage.cs</DependentUpon>

@@ -77,7 +77,7 @@
             this.selling_button.Text = "Selling History";
             this.selling_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.selling_button.UseVisualStyleBackColor = true;
-            this.selling_button.Click += new System.EventHandler(this.button7_Click);
+            this.selling_button.Click += new System.EventHandler(this.selling_button_Click);
             // 
             // revenue_button
             // 
@@ -96,7 +96,7 @@
             this.revenue_button.Text = "Revenue";
             this.revenue_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.revenue_button.UseVisualStyleBackColor = true;
-            this.revenue_button.Click += new System.EventHandler(this.button6_Click);
+            this.revenue_button.Click += new System.EventHandler(this.revenue_button_Click);
             // 
             // account_button
             // 
@@ -115,7 +115,7 @@
             this.account_button.Text = "Account";
             this.account_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.account_button.UseVisualStyleBackColor = true;
-            this.account_button.Click += new System.EventHandler(this.button5_Click);
+            this.account_button.Click += new System.EventHandler(this.account_button_Click);
             // 
             // employee_button
             // 
@@ -134,7 +134,7 @@
             this.employee_button.Text = "Employee";
             this.employee_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.employee_button.UseVisualStyleBackColor = true;
-            this.employee_button.Click += new System.EventHandler(this.button4_Click);
+            this.employee_button.Click += new System.EventHandler(this.employee_button_Click);
             // 
             // product_button
             // 
@@ -153,7 +153,7 @@
             this.product_button.Text = "Product";
             this.product_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.product_button.UseVisualStyleBackColor = true;
-            this.product_button.Click += new System.EventHandler(this.button3_Click);
+            this.product_button.Click += new System.EventHandler(this.product_button_Click);
             // 
             // voucher_button
             // 
@@ -172,7 +172,7 @@
             this.voucher_button.Text = "Voucher";
             this.voucher_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.voucher_button.UseVisualStyleBackColor = true;
-            this.voucher_button.Click += new System.EventHandler(this.button2_Click);
+            this.voucher_button.Click += new System.EventHandler(this.voucher_button_Click);
             // 
             // order_button
             // 

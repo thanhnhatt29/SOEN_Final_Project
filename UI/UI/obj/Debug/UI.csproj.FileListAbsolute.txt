@@ -43,3 +43,4 @@ C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.csproj.Gene
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.exe
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.pdb
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.VoucherManage.resources

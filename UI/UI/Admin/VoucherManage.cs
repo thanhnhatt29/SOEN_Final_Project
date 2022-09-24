@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class VourcherManage : Form
+    public partial class VoucherManage : Form
     {
-        public VourcherManage()
+        public VoucherManage()
         {
             InitializeComponent();
         }
