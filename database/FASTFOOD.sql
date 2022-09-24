@@ -27,7 +27,7 @@ go
 create table PRODUCT(
 	product_id int identity(1,1) primary key,
 	product_name nvarchar(50) not null,
-	price float constraint check_price check(price>=0) not null,
+	price int constraint check_price check(price>=0) not null,
 	update_date datetime not null,
 	detail nvarchar(50) null
 )
@@ -35,7 +35,7 @@ go
 
 create table VOUCHER(
 	voucher_id char(10) primary key,
-	apply_price float constraint min_money check (apply_price>=0) not null,
+	apply_price int constraint min_money check (apply_price>=0) not null,
 	off_percent int constraint percent_off check (off_percent>=0 and off_percent<=50),
 	--off_money float constraint max_sales check(off_money<=100000),
 	used bit,
@@ -47,8 +47,8 @@ create table BILL(
 	date_created datetime not null,
 	employee_id char(10) references EMPLOYEE(employee_id)not null,
 	voucher_id char(10) references VOUCHER(voucher_id) null,
-	bill_price float constraint check_bill_price check(bill_price>=0),
-	off_money float constraint check_final_money check (off_money>=0),
+	bill_price int constraint check_bill_price check(bill_price>=0),
+	off_money int constraint check_final_money check (off_money>=0),
 )
 go
 
