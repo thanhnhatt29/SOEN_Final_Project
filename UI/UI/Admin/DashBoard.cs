@@ -16,8 +16,8 @@ namespace UI
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        // Order button
+        private void order_button_Click(object sender, EventArgs e)
         {
             OrderManage orderManage = new OrderManage() { Dock = DockStyle.Fill, TopLevel = false };
             orderManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -54,5 +54,6 @@ namespace UI
         {
 
         }
+
     }
 }
