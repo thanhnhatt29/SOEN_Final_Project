@@ -7,6 +7,7 @@ go
 create table EMPLOYEE(
 	employee_id char(10) primary key,
 	employee_name nvarchar(100),
+	employee_img image null,
 	phone_number char(10) null,
 	birth date,
 	gender bit not null,
@@ -27,6 +28,7 @@ go
 create table PRODUCT(
 	product_id int identity(1,1) primary key,
 	product_name nvarchar(50) not null,
+	product_img image null,
 	price int constraint check_price check(price>=0) not null,
 	update_date datetime not null,
 	detail nvarchar(50) null
@@ -36,7 +38,7 @@ go
 create table VOUCHER(
 	voucher_id char(10) primary key,
 	apply_price int constraint min_money check (apply_price>=0) not null,
-	off_percent int constraint percent_off check (off_percent>=0 and off_percent<=50),
+	off_percent inAt constraint percent_off check (off_percent>=0 and off_percent<=50),
 	--off_money float constraint max_sales check(off_money<=100000),
 	used bit,
 )
@@ -65,28 +67,31 @@ go
 create proc add_Employee
 	@id char(10),
 	@name nvarchar(100),
+	@image image,
 	@phone char(10),
 	@birth date,
 	@sex bit,
 	@position nvarchar(20)
 as
-	insert into EMPLOYEE(employee_id,employee_name,phone_number,birth,gender,position)
-	values (@id,@name,@phone,@birth,@sex,@position)
+	insert into EMPLOYEE(employee_id,employee_name,employee_img,phone_number,birth,gender,position)
+	values (@id,@name,@image,@phone,@birth,@sex,@position)
 go
 
 create proc add_Product
 	@name nvarchar(50),
-	@price float,
+	@image image,
+	@price int,
 	@update_date datetime,
 	@detail nvarchar(50)
+	
 as 
-	insert into PRODUCT(product_name,price,update_date,detail)
-	values (@name,@price,@update_date,@detail)
+	insert into PRODUCT(product_name,product_img,price,update_date,detail) 
+	values (@name,@image,@price,@update_date,@detail)
 go
 
 create proc add_Voucher
 	@id char(10),
-	@apply_price float,
+	@apply_price int,
 	@percent float
 as
 	insert into VOUCHER(voucher_id,apply_price,off_percent,used)
@@ -147,12 +152,13 @@ go
 create proc update_Product
 	@id int,
 	@name nvarchar(50),
+	@image image,
 	@price float,
 	@date datetime,
 	@detail nvarchar(50)
 as
 	update PRODUCT
-	set product_name=@name, price=@price,update_date=@date,detail=@detail
+	set product_name=@name, price=@price,update_date=@date,detail=@detail,product_img=@image
 	where product_id=@id
 go
 
@@ -168,11 +174,12 @@ go
 create proc update_Employee
 	@id char(10),
 	@name nvarchar(100),
+	@image image,
 	@phone char(10),
 	@position nvarchar(20)
 as
 	update EMPLOYEE
-	set employee_name=@name, phone_number=@phone, position=@position
+	set employee_name=@name, phone_number=@phone, position=@position,employee_img=@image
 	where employee_id=@id
 go
 
