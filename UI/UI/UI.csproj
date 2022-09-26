@@ -120,6 +120,9 @@
     <EmbeddedResource Include="Admin\ProductManage.resx">
       <DependentUpon>ProductManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\RevenueManage.resx">
+      <DependentUpon>RevenueManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\VoucherManage.resx">
       <DependentUpon>VoucherManage.cs</DependentUpon>
     </EmbeddedResource>
