@@ -57,7 +57,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 518);
+            this.panel1.Size = new System.Drawing.Size(150, 688);
             this.panel1.TabIndex = 12;
             // 
             // selling_button
@@ -207,7 +207,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(150, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(930, 73);
+            this.panel3.Size = new System.Drawing.Size(1010, 73);
             this.panel3.TabIndex = 13;
             // 
             // dashboard_panel
@@ -215,14 +215,14 @@
             this.dashboard_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboard_panel.Location = new System.Drawing.Point(150, 73);
             this.dashboard_panel.Name = "dashboard_panel";
-            this.dashboard_panel.Size = new System.Drawing.Size(930, 445);
+            this.dashboard_panel.Size = new System.Drawing.Size(1010, 615);
             this.dashboard_panel.TabIndex = 14;
             // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 518);
+            this.ClientSize = new System.Drawing.Size(1160, 688);
             this.Controls.Add(this.dashboard_panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
