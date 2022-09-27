@@ -31,30 +31,30 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.productImg = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.remove_Button = new System.Windows.Forms.Button();
             this.add_Button = new System.Windows.Forms.Button();
             this.cancel_Button = new System.Windows.Forms.Button();
             this.update_Button = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.productID_Box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.productPrice_box = new System.Windows.Forms.TextBox();
+            this.productDetail = new System.Windows.Forms.RichTextBox();
+            this.productName_Box = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.productData = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.searchName_Box = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productImg)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,17 +79,17 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.productImg);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.remove_Button);
             this.panel3.Controls.Add(this.add_Button);
             this.panel3.Controls.Add(this.cancel_Button);
             this.panel3.Controls.Add(this.update_Button);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.productID_Box);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.richTextBox1);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.productPrice_box);
+            this.panel3.Controls.Add(this.productDetail);
+            this.panel3.Controls.Add(this.productName_Box);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
@@ -98,6 +98,29 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(489, 539);
             this.panel3.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(255, 177);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Picture";
+            // 
+            // productImg
+            // 
+            this.productImg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.productImg.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.productImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productImg.Location = new System.Drawing.Point(258, 196);
+            this.productImg.Name = "productImg";
+            this.productImg.Size = new System.Drawing.Size(208, 140);
+            this.productImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.productImg.TabIndex = 36;
+            this.productImg.TabStop = false;
+            this.productImg.Click += new System.EventHandler(this.productImg_Click);
             // 
             // label7
             // 
@@ -120,6 +143,7 @@
             this.remove_Button.TabIndex = 34;
             this.remove_Button.Text = "REMOVE";
             this.remove_Button.UseVisualStyleBackColor = false;
+            this.remove_Button.Click += new System.EventHandler(this.remove_Button_Click);
             // 
             // add_Button
             // 
@@ -131,6 +155,7 @@
             this.add_Button.TabIndex = 31;
             this.add_Button.Text = "ADD";
             this.add_Button.UseVisualStyleBackColor = false;
+            this.add_Button.Click += new System.EventHandler(this.add_Button_Click);
             // 
             // cancel_Button
             // 
@@ -142,6 +167,7 @@
             this.cancel_Button.TabIndex = 32;
             this.cancel_Button.Text = "CANCEL";
             this.cancel_Button.UseVisualStyleBackColor = false;
+            this.cancel_Button.Click += new System.EventHandler(this.cancel_Button_Click);
             // 
             // update_Button
             // 
@@ -153,17 +179,18 @@
             this.update_Button.TabIndex = 33;
             this.update_Button.Text = "UPDATE";
             this.update_Button.UseVisualStyleBackColor = false;
+            this.update_Button.Click += new System.EventHandler(this.update_Button_Click);
             // 
-            // textBox4
+            // productID_Box
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(18, 45);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(220, 34);
-            this.textBox4.TabIndex = 29;
+            this.productID_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.productID_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.productID_Box.Enabled = false;
+            this.productID_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productID_Box.Location = new System.Drawing.Point(18, 45);
+            this.productID_Box.Name = "productID_Box";
+            this.productID_Box.Size = new System.Drawing.Size(220, 34);
+            this.productID_Box.TabIndex = 29;
             // 
             // label1
             // 
@@ -175,36 +202,36 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Product ID";
             // 
-            // textBox3
+            // productPrice_box
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(258, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(157, 34);
-            this.textBox3.TabIndex = 24;
+            this.productPrice_box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.productPrice_box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.productPrice_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productPrice_box.Location = new System.Drawing.Point(258, 45);
+            this.productPrice_box.Name = "productPrice_box";
+            this.productPrice_box.Size = new System.Drawing.Size(157, 34);
+            this.productPrice_box.TabIndex = 24;
             // 
-            // richTextBox1
+            // productDetail
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(18, 196);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(220, 140);
-            this.richTextBox1.TabIndex = 27;
-            this.richTextBox1.Text = "";
+            this.productDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.productDetail.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.productDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productDetail.Location = new System.Drawing.Point(18, 196);
+            this.productDetail.Name = "productDetail";
+            this.productDetail.Size = new System.Drawing.Size(220, 140);
+            this.productDetail.TabIndex = 27;
+            this.productDetail.Text = "";
             // 
-            // textBox2
+            // productName_Box
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(18, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(448, 34);
-            this.textBox2.TabIndex = 20;
+            this.productName_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.productName_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.productName_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productName_Box.Location = new System.Drawing.Point(18, 119);
+            this.productName_Box.Name = "productName_Box";
+            this.productName_Box.Size = new System.Drawing.Size(448, 34);
+            this.productName_Box.TabIndex = 20;
             // 
             // label4
             // 
@@ -241,9 +268,9 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.productData);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.searchName_Box);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 81);
             this.panel4.Name = "panel4";
@@ -261,19 +288,20 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Product List";
             // 
-            // dataGridView1
+            // productData
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.productData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(340, 291);
-            this.dataGridView1.TabIndex = 16;
+            this.productData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.productData.ColumnHeadersHeight = 29;
+            this.productData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.productData.Location = new System.Drawing.Point(11, 44);
+            this.productData.Name = "productData";
+            this.productData.RowHeadersWidth = 51;
+            this.productData.RowTemplate.Height = 70;
+            this.productData.Size = new System.Drawing.Size(340, 291);
+            this.productData.TabIndex = 16;
             // 
             // label2
             // 
@@ -286,37 +314,16 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Search for name";
             // 
-            // textBox1
+            // searchName_Box
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.searchName_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(11, 407);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 34);
-            this.textBox1.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(258, 196);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 140);
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(255, 177);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Picture";
+            this.searchName_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchName_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchName_Box.Location = new System.Drawing.Point(11, 407);
+            this.searchName_Box.Name = "searchName_Box";
+            this.searchName_Box.Size = new System.Drawing.Size(340, 34);
+            this.searchName_Box.TabIndex = 15;
             // 
             // ProductManage
             // 
@@ -331,10 +338,10 @@
             this.Text = "ProductManage";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productImg)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,18 +351,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox productPrice_box;
+        private System.Windows.Forms.RichTextBox productDetail;
+        private System.Windows.Forms.TextBox productName_Box;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productData;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox searchName_Box;
+        private System.Windows.Forms.TextBox productID_Box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button remove_Button;
         private System.Windows.Forms.Button add_Button;
@@ -363,6 +370,6 @@
         private System.Windows.Forms.Button update_Button;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox productImg;
     }
 }

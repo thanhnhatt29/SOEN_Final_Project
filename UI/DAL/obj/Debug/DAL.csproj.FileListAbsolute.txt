@@ -1,0 +1,12 @@
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll.config
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.pdb
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.dll
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.xml
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
+C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb

@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,12 +53,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ACCOUNT.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BILL.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BILL_DETAIL.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDAL.cs" />
+    <Compile Include="EMPLOYEE.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FASTFOODModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FASTFOODModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FASTFOODModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FASTFOODModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FASTFOODModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCT.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VOUCHER.cs">
+      <DependentUpon>FASTFOODModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="FASTFOODModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FASTFOODModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FASTFOODModel.edmx.diagram">
+      <DependentUpon>FASTFOODModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FASTFOODModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FASTFOODModel.edmx</DependentUpon>
+      <LastGenOutput>FASTFOODModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FASTFOODModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FASTFOODModel.edmx</DependentUpon>
+      <LastGenOutput>FASTFOODModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
