@@ -10,3 +10,15 @@ C:\nam3ki1\cnpm\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CoreCompileInputs
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.dll
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.pdb
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\BLL.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\BLL.pdb
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\EntityFramework.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.pdb
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.dll.config
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\bin\Debug\EntityFramework.xml
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CopyComplete
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.pdb

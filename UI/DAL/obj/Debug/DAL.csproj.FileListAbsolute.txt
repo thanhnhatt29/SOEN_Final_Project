@@ -10,3 +10,15 @@ C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll.config
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.pdb
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.xml
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
+E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb

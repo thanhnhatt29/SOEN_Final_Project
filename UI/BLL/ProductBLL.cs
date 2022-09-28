@@ -13,14 +13,14 @@ namespace BLL
         ProductDAL pro_DAL = new ProductDAL();
         public List<PRODUCT> getDataBLL()
         {
-            /*DataTable dt = new DataTable();
+            DataTable dt = new DataTable();
             List<PRODUCT> data = pro_DAL.getDataDAL();
             foreach (PRODUCT item in data)
             {
                 dt.Rows.Add(item);
             }
 
-            return dt;*/
+            //return dt;
             return pro_DAL.getDataDAL();
         }
 
