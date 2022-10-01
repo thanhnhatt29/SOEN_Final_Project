@@ -14,12 +14,6 @@ namespace DAL
     
     public partial class EMPLOYEE
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public EMPLOYEE()
-        {
-            this.BILLs = new HashSet<BILL>();
-        }
-    
         public string employee_id { get; set; }
         public string employee_name { get; set; }
         public byte[] employee_img { get; set; }
@@ -27,9 +21,5 @@ namespace DAL
         public Nullable<System.DateTime> birth { get; set; }
         public bool gender { get; set; }
         public string position { get; set; }
-    
-        public virtual ACCOUNT ACCOUNT { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BILL> BILLs { get; set; }
     }
 }

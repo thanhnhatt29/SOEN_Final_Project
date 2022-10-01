@@ -309,8 +309,6 @@
           <Property Name="birth" Type="DateTime" Precision="0" />
           <Property Name="gender" Type="Boolean" Nullable="false" />
           <Property Name="position" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ACCOUNT" Relationship="Self.FK__ACCOUNT__employe__267ABA7A" FromRole="EMPLOYEE" ToRole="ACCOUNT" />
-          <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__employee_i__300424B4" FromRole="EMPLOYEE" ToRole="BILL" />
         </EntityType>
         <EntityType Name="PRODUCT">
           <Key>

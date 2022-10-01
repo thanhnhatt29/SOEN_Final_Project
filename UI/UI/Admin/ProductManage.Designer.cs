@@ -282,6 +282,7 @@
             this.productData.RowTemplate.Height = 70;
             this.productData.Size = new System.Drawing.Size(417, 372);
             this.productData.TabIndex = 16;
+            this.productData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productData_CellContentClick);
             // 
             // label2
             // 
@@ -304,6 +305,7 @@
             this.searchName_Box.Name = "searchName_Box";
             this.searchName_Box.Size = new System.Drawing.Size(417, 34);
             this.searchName_Box.TabIndex = 15;
+            this.searchName_Box.TextChanged += new System.EventHandler(this.searchName_Box_TextChanged);
             // 
             // ProductManage
             // 

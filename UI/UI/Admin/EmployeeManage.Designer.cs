@@ -30,12 +30,12 @@
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.empImg = new System.Windows.Forms.PictureBox();
+            this.empBirth = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.empID_Box = new System.Windows.Forms.TextBox();
+            this.empFemale = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.remove_Button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,37 +43,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cancel_Button = new System.Windows.Forms.Button();
             this.update_Button = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.empPos_Box = new System.Windows.Forms.TextBox();
+            this.empPhone_Box = new System.Windows.Forms.TextBox();
+            this.empName_Box = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmplyeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.DoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.empData = new System.Windows.Forms.DataGridView();
+            this.searchName_Box = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empImg)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Controls.Add(this.empImg);
+            this.panel3.Controls.Add(this.empBirth);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.checkBox1);
+            this.panel3.Controls.Add(this.empID_Box);
+            this.panel3.Controls.Add(this.empFemale);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.remove_Button);
             this.panel3.Controls.Add(this.label2);
@@ -81,9 +74,9 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.cancel_Button);
             this.panel3.Controls.Add(this.update_Button);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.empPos_Box);
+            this.panel3.Controls.Add(this.empPhone_Box);
+            this.panel3.Controls.Add(this.empName_Box);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(478, 0);
             this.panel3.Name = "panel3";
@@ -100,24 +93,24 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "Picture";
             // 
-            // pictureBox1
+            // empImg
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(319, 94);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 175);
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.empImg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.empImg.Location = new System.Drawing.Point(319, 94);
+            this.empImg.Name = "empImg";
+            this.empImg.Size = new System.Drawing.Size(160, 175);
+            this.empImg.TabIndex = 35;
+            this.empImg.TabStop = false;
             // 
-            // dateTimePicker1
+            // empBirth
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(291, 319);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(1);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(188, 22);
-            this.dateTimePicker1.TabIndex = 33;
+            this.empBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empBirth.Location = new System.Drawing.Point(291, 319);
+            this.empBirth.Margin = new System.Windows.Forms.Padding(1);
+            this.empBirth.Name = "empBirth";
+            this.empBirth.Size = new System.Drawing.Size(188, 22);
+            this.empBirth.TabIndex = 33;
             // 
             // label7
             // 
@@ -139,27 +132,27 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Employee ID";
             // 
-            // textBox5
+            // empID_Box
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(56, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(216, 32);
-            this.textBox5.TabIndex = 26;
+            this.empID_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empID_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.empID_Box.Enabled = false;
+            this.empID_Box.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empID_Box.Location = new System.Drawing.Point(56, 91);
+            this.empID_Box.Name = "empID_Box";
+            this.empID_Box.Size = new System.Drawing.Size(216, 32);
+            this.empID_Box.TabIndex = 26;
             // 
-            // checkBox1
+            // empFemale
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(56, 199);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(75, 20);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "Female";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.empFemale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empFemale.AutoSize = true;
+            this.empFemale.Location = new System.Drawing.Point(56, 199);
+            this.empFemale.Name = "empFemale";
+            this.empFemale.Size = new System.Drawing.Size(75, 20);
+            this.empFemale.TabIndex = 25;
+            this.empFemale.Text = "Female";
+            this.empFemale.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -235,43 +228,43 @@
             this.update_Button.Text = "UPDATE";
             this.update_Button.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // empPos_Box
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(56, 309);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(216, 32);
-            this.textBox3.TabIndex = 21;
+            this.empPos_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empPos_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.empPos_Box.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPos_Box.Location = new System.Drawing.Point(56, 309);
+            this.empPos_Box.Name = "empPos_Box";
+            this.empPos_Box.Size = new System.Drawing.Size(216, 32);
+            this.empPos_Box.TabIndex = 21;
             // 
-            // textBox2
+            // empPhone_Box
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(56, 252);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 32);
-            this.textBox2.TabIndex = 19;
+            this.empPhone_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empPhone_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.empPhone_Box.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPhone_Box.Location = new System.Drawing.Point(56, 252);
+            this.empPhone_Box.Name = "empPhone_Box";
+            this.empPhone_Box.Size = new System.Drawing.Size(216, 32);
+            this.empPhone_Box.TabIndex = 19;
             // 
-            // textBox1
+            // empName_Box
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(56, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 32);
-            this.textBox1.TabIndex = 17;
+            this.empName_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.empName_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.empName_Box.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empName_Box.Location = new System.Drawing.Point(56, 148);
+            this.empName_Box.Name = "empName_Box";
+            this.empName_Box.Size = new System.Drawing.Size(216, 32);
+            this.empName_Box.TabIndex = 17;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.empData);
+            this.panel4.Controls.Add(this.searchName_Box);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -290,95 +283,31 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Employee list";
             // 
-            // dataGridView1
+            // empData
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.empData.AllowUserToAddRows = false;
+            this.empData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.EmplyeeName,
-            this.Image,
-            this.DoB,
-            this.Phone,
-            this.Gender,
-            this.Pos});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(440, 432);
-            this.dataGridView1.TabIndex = 16;
+            this.empData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.empData.ColumnHeadersHeight = 29;
+            this.empData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.empData.Location = new System.Drawing.Point(11, 49);
+            this.empData.Name = "empData";
+            this.empData.RowHeadersWidth = 51;
+            this.empData.RowTemplate.Height = 70;
+            this.empData.Size = new System.Drawing.Size(440, 432);
+            this.empData.TabIndex = 16;
             // 
-            // ID
+            // searchName_Box
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Width = 125;
-            // 
-            // EmplyeeName
-            // 
-            this.EmplyeeName.HeaderText = "Name";
-            this.EmplyeeName.MinimumWidth = 6;
-            this.EmplyeeName.Name = "EmplyeeName";
-            this.EmplyeeName.Width = 125;
-            // 
-            // Image
-            // 
-            this.Image.HeaderText = "Image";
-            this.Image.MinimumWidth = 6;
-            this.Image.Name = "Image";
-            this.Image.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Image.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Image.Width = 125;
-            // 
-            // DoB
-            // 
-            this.DoB.HeaderText = "Date of Birth";
-            this.DoB.MinimumWidth = 6;
-            this.DoB.Name = "DoB";
-            this.DoB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DoB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DoB.Width = 125;
-            // 
-            // Phone
-            // 
-            this.Phone.HeaderText = "Phone Number";
-            this.Phone.MinimumWidth = 6;
-            this.Phone.Name = "Phone";
-            this.Phone.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Phone.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Phone.Width = 125;
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Female";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.Width = 125;
-            // 
-            // Pos
-            // 
-            this.Pos.HeaderText = "Position";
-            this.Pos.MinimumWidth = 6;
-            this.Pos.Name = "Pos";
-            this.Pos.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Pos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Pos.Width = 400;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.searchName_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox4.Location = new System.Drawing.Point(11, 536);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(440, 22);
-            this.textBox4.TabIndex = 18;
+            this.searchName_Box.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.searchName_Box.Location = new System.Drawing.Point(11, 536);
+            this.searchName_Box.Name = "searchName_Box";
+            this.searchName_Box.Size = new System.Drawing.Size(440, 22);
+            this.searchName_Box.TabIndex = 18;
             // 
             // label5
             // 
@@ -401,10 +330,10 @@
             this.Text = "EmployeeManage";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empImg)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,8 +341,8 @@
         #endregion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox empID_Box;
+        private System.Windows.Forms.CheckBox empFemale;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button remove_Button;
         private System.Windows.Forms.Label label2;
@@ -421,24 +350,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cancel_Button;
         private System.Windows.Forms.Button update_Button;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox empPos_Box;
+        private System.Windows.Forms.TextBox empPhone_Box;
+        private System.Windows.Forms.TextBox empName_Box;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridView empData;
+        private System.Windows.Forms.TextBox searchName_Box;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmplyeeName;
-        private System.Windows.Forms.DataGridViewImageColumn Image;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DoB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pos;
+        private System.Windows.Forms.DateTimePicker empBirth;
+        private System.Windows.Forms.PictureBox empImg;
         private System.Windows.Forms.Label label8;
     }
 }

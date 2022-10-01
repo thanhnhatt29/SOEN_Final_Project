@@ -8,7 +8,7 @@ namespace DAL
 {
     public class ProductDAL
     {
-        public List<PRODUCT> getDataDAL()
+        public List<PRODUCT> getDataProductDAL()
         {
             List<PRODUCT> data = new List<PRODUCT>();
             using (FASTFOODEntities db = new FASTFOODEntities())
@@ -22,6 +22,29 @@ namespace DAL
                 return data;
             }
 
+        }
+
+        public bool updateProductDAL(int id,string productName, byte[] productImg, int productPrice, string details)
+        {
+            using (FASTFOODEntities db = new FASTFOODEntities())
+            {
+                var table = from c in db.PRODUCTs
+                            select c;
+
+                foreach(var t in table)
+                {
+                    if(t.product_id == id)
+                    {
+                        t.product_name = productName;
+                        t.update_date = DateTime.Now;
+                        t.price = productPrice;
+                        t.product_img = productImg;
+                        t.detail = details;
+                    }    
+                }    
+                db.SaveChanges();
+                return true;
+            }    
         }
 
         public bool addProductDAL(string productName, byte[] productImg, int productPrice, string details)
