@@ -15,6 +15,7 @@ namespace UI
         public Login()
         {
             InitializeComponent();
+            textBox2.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -28,6 +29,18 @@ namespace UI
             DashBoard dashBoard = new DashBoard();
             dashBoard.ShowDialog();
             this.Show();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
+            }
         }
     }
 }
