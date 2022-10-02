@@ -100,8 +100,10 @@
             this.empImg.Location = new System.Drawing.Point(319, 94);
             this.empImg.Name = "empImg";
             this.empImg.Size = new System.Drawing.Size(160, 175);
+            this.empImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empImg.TabIndex = 35;
             this.empImg.TabStop = false;
+            this.empImg.Click += new System.EventHandler(this.empImg_Click);
             // 
             // empBirth
             // 
@@ -195,6 +197,7 @@
             this.add_Button.TabIndex = 27;
             this.add_Button.Text = "ADD";
             this.add_Button.UseVisualStyleBackColor = false;
+            this.add_Button.Click += new System.EventHandler(this.add_Button_Click);
             // 
             // label1
             // 
@@ -216,6 +219,7 @@
             this.cancel_Button.TabIndex = 28;
             this.cancel_Button.Text = "CANCEL";
             this.cancel_Button.UseVisualStyleBackColor = false;
+            this.cancel_Button.Click += new System.EventHandler(this.cancel_Button_Click);
             // 
             // update_Button
             // 
@@ -227,6 +231,7 @@
             this.update_Button.TabIndex = 29;
             this.update_Button.Text = "UPDATE";
             this.update_Button.UseVisualStyleBackColor = false;
+            this.update_Button.Click += new System.EventHandler(this.update_Button_Click);
             // 
             // empPos_Box
             // 

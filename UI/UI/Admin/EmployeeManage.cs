@@ -104,6 +104,33 @@ namespace UI
 
             return memoryStream.ToArray();
         }
+        void insertData()
+        {
+            getValues();
+            try
+            {
+                MessageBox.Show(emp_BLL.addEmpBLL(name,img,phone,doB,female,position));
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Fail");
+            }
+            
+        }
+
+        void updateData()
+        {
+            getValues();
+            try
+            {
+                MessageBox.Show(emp_BLL.updateEmpBLL(id,name,img, phone,doB,female,position));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Fail");
+            }
+        }
         #endregion
 
         private void searchName_Box_TextChanged(object sender, EventArgs e)
@@ -111,6 +138,40 @@ namespace UI
             empData.DataSource = emp_BLL.searchEmployeeBLL(searchName_Box.Text.TrimEnd());
             clearEmpBinding();
             addEmpBinding();
+        }
+
+        private void add_Button_Click(object sender, EventArgs e)
+        {
+            insertData();
+            LoadData();
+        }
+
+        private void update_Button_Click(object sender, EventArgs e)
+        {
+            updateData();
+            LoadData();
+        }
+
+        private void remove_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancel_Button_Click(object sender, EventArgs e)
+        {
+            searchName_Box.Clear();
+            LoadData();
+        }
+
+        private void empImg_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Chọn ảnh";
+            openFileDialog.Filter = "Image Files(*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif; *.jpg; *.jpeg; *.bmp; *.wmf; *.png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                empImg.ImageLocation = openFileDialog.FileName;
+            }
         }
     }
 }

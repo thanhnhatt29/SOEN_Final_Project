@@ -74,8 +74,8 @@ namespace UI
             getValues();
             try
             {
-                pro_BLL.addProductBLL(name, img, price, detail);
-                MessageBox.Show("Success");
+                MessageBox.Show(pro_BLL.addProductBLL(name, img, price, detail));
+                
             }
             catch (Exception ex)
             {
@@ -156,7 +156,8 @@ namespace UI
 
         private void cancel_Button_Click(object sender, EventArgs e)
         {
-            clearProductBinding();
+            //clearProductBinding();
+            searchName_Box.Clear();
             LoadData();
         }
 
