@@ -21,10 +21,12 @@ namespace UI
 
         }
 
-
+        #region
         void LoadData()
         {
+            clearEmpBinding();
             getData();
+            addEmpBinding();
             headerChange();
         }
 
@@ -45,6 +47,70 @@ namespace UI
             empData.Columns[4].HeaderText = "Date of birth";
             empData.Columns[5].HeaderText = "Female";
             empData.Columns[6].HeaderText = "Position";
+        }
+        string id;
+        string name;
+        byte[] img;
+        string phone;
+        DateTime doB;
+        bool female;
+        string position;
+
+        void getValues()
+        {
+            id = empID_Box.Text;
+            name = empName_Box.Text;
+            img = null;
+            if(empImg.Image != null)
+            {
+                img = imageToArray(empImg);
+            }
+
+            phone = empPhone_Box.Text;
+            doB = empBirth.Value;
+            female = empFemale.Checked;
+            position = empPos_Box.Text;
+        }
+
+        void addEmpBinding()
+        {
+            empID_Box.DataBindings.Add(new Binding("Text", empData.DataSource, "employee_id", true,DataSourceUpdateMode.Never));
+            empName_Box.DataBindings.Add(new Binding("Text", empData.DataSource, "employee_name", true, DataSourceUpdateMode.Never));
+            empImg.DataBindings.Add(new Binding("Image", empData.DataSource, "employee_img", true, DataSourceUpdateMode.Never));
+            empPhone_Box.DataBindings.Add(new Binding("Text", empData.DataSource, "phone_number", true, DataSourceUpdateMode.Never));
+            empBirth.DataBindings.Add(new Binding("Value", empData.DataSource, "birth", true, DataSourceUpdateMode.Never));
+            empFemale.DataBindings.Add(new Binding("Checked", empData.DataSource, "gender", true, DataSourceUpdateMode.Never));
+            empPos_Box.DataBindings.Add(new Binding("Text", empData.DataSource, "position", true, DataSourceUpdateMode.Never));
+        }
+
+        void clearEmpBinding()
+        {
+            empID_Box.DataBindings.Clear();
+            empName_Box.DataBindings.Clear();
+            empImg.DataBindings.Clear();
+            empPhone_Box.DataBindings.Clear();
+            empBirth.DataBindings.Clear();
+            empFemale.DataBindings.Clear();
+            empPos_Box.DataBindings.Clear();
+        }
+
+        private byte[] imageToArray(PictureBox img)
+        {
+            MemoryStream memoryStream = new MemoryStream();
+            if (img != null)
+            {
+                img.Image.Save(memoryStream, img.Image.RawFormat);
+            }
+
+            return memoryStream.ToArray();
+        }
+        #endregion
+
+        private void searchName_Box_TextChanged(object sender, EventArgs e)
+        {
+            empData.DataSource = emp_BLL.searchEmployeeBLL(searchName_Box.Text.TrimEnd());
+            clearEmpBinding();
+            addEmpBinding();
         }
     }
 }

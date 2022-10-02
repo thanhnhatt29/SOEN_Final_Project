@@ -308,6 +308,7 @@
             this.searchName_Box.Name = "searchName_Box";
             this.searchName_Box.Size = new System.Drawing.Size(440, 22);
             this.searchName_Box.TabIndex = 18;
+            this.searchName_Box.TextChanged += new System.EventHandler(this.searchName_Box_TextChanged);
             // 
             // label5
             // 
