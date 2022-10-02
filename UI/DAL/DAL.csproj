@@ -62,7 +62,6 @@
     <Compile Include="BILL_DETAIL.cs">
       <DependentUpon>FASTFOODModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="BillDetailDAL.cs" />
     <Compile Include="EmployeeDAL.cs" />
     <Compile Include="ProductDAL.cs" />
     <Compile Include="EMPLOYEE.cs">

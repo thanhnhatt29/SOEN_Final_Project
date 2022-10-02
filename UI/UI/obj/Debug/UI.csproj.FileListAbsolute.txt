@@ -103,16 +103,3 @@ E:\CNPhanMem\SOEN_Final_Project\UI\UI\bin\Debug\DAL.dll.config
 E:\CNPhanMem\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.xml
 E:\CNPhanMem\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.SqlServer.xml
 E:\CNPhanMem\SOEN_Final_Project\UI\UI\obj\Debug\UI.csproj.CopyComplete
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\BLL.dll
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\DAL.dll
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.dll
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\BLL.pdb
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\DAL.pdb
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\DAL.dll.config
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.xml
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.Admin.AccountManage.resources
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.Admin.AddAccount.resources
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.RevenueManage.resources
-C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.csproj.CopyComplete
