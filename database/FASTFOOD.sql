@@ -38,8 +38,8 @@ go
 create table VOUCHER(
 	voucher_id char(10) primary key,
 	apply_price int constraint min_money check (apply_price>=0) not null,
-	off_percent inAt constraint percent_off check (off_percent>=0 and off_percent<=50),
-	--off_money float constraint max_sales check(off_money<=100000),
+	off_percent int constraint percent_off check (off_percent>=0 and off_percent<=50),
+	max_money float constraint max_money check(max_money<=100000),
 	used bit,
 )
 go
