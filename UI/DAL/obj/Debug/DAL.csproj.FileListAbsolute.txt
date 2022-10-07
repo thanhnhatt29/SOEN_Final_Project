@@ -22,3 +22,15 @@ E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.ca
 E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
 E:\CNPhanMem\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll.config
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.pdb
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.dll
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.xml
+E:\ATTT\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
+E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb
