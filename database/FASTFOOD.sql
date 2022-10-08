@@ -51,6 +51,7 @@ create table BILL(
 	voucher_id char(10) references VOUCHER(voucher_id) null,
 	bill_price int constraint check_bill_price check(bill_price>=0),
 	off_money int constraint check_final_money check (off_money>=0),
+	total_money int constraint check_total_money check (total_money>=0),
 )
 go
 
