@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,69 +8,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
 
 namespace UI
 {
     public partial class OrderManage : Form
     {
+
+        SqlConnection connection = new SqlConnection();
+        SqlCommand command = new SqlCommand();
+        string str = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=FASTFOOD;Integrated Security=True";
+        SqlDataAdapter da = new SqlDataAdapter();
+        DataTable dt = new DataTable();
+
         public OrderManage()
         {
             InitializeComponent();
+            
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void Load_Image()
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select count(product_id) from PRODUCT";
+            int total_product = Convert.ToInt32(command.ExecuteScalar());
+            for (int i = 1; i <= total_product; i++)
+            {
+                Button new_button = new Button();
+                new_button.Height = 125;
+                new_button.Width = 125;
+                string path = System.IO.Directory.GetCurrentDirectory();
+                path = path.Replace("\\UI\\bin\\Debug", "\\images\\product_id_product.jpg");
+                path = path.Replace("id_product", i.ToString());
+                new_button.BackgroundImage = Image.FromFile(path);
+                new_button.BackgroundImageLayout = ImageLayout.Stretch;
+                flowLayoutPanel1.Controls.Add(new_button);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void OrderManage_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
+            connection = new SqlConnection(str);
+            connection.Open();
+            Load_Image();
         }
     }
 }
