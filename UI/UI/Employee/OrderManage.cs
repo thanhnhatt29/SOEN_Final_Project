@@ -19,7 +19,7 @@ namespace UI
 
         SqlConnection connection = new SqlConnection();
         SqlCommand command = new SqlCommand();
-        string str = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=FASTFOOD;Integrated Security=True";
+        string str = "Data Source=LAPTOP-0460STTB;Initial Catalog=FASTFOOD;Integrated Security=True";
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
 
