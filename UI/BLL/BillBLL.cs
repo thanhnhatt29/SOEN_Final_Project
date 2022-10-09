@@ -17,6 +17,10 @@ namespace BLL
 
         public string addBillBLL(string bill_id, DateTime date_created, string employee_id, string voucher_id, int bill_price, int off_money)
         {
+            if (!checkBillPrice(bill_price, off_money))
+            {
+                return "Giá bị sai";
+            }
             if (bill_DAL.addBillDAL(bill_id, date_created, employee_id, voucher_id, bill_price, off_money))
             {
                 return "Thành công";
@@ -33,6 +37,19 @@ namespace BLL
             }
             else
                 return "Thất bại";
+        }
+
+        bool checkBillPrice(int bill_price, int off_money)
+        {
+            if (bill_price < 0)
+            {
+                return false;
+            }
+            if (off_money < 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
