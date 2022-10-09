@@ -34,3 +34,15 @@ E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
 E:\ATTT\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll.config
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.dll
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\DAL.pdb
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.dll
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\DAL\obj\Debug\DAL.pdb
