@@ -7,7 +7,6 @@
     <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="passwd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="permission" Type="Boolean" />
-    <NavigationProperty Name="EMPLOYEE" Relationship="Self.FK__ACCOUNT__employe__267ABA7A" FromRole="ACCOUNT" ToRole="EMPLOYEE" />
   </EntityType>
   <EntityType Name="BILL">
     <Key>
@@ -19,9 +18,6 @@
     <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="bill_price" Type="Int32" />
     <Property Name="off_money" Type="Int32" />
-    <NavigationProperty Name="EMPLOYEE" Relationship="Self.FK__BILL__employee_i__300424B4" FromRole="BILL" ToRole="EMPLOYEE" />
-    <NavigationProperty Name="VOUCHER" Relationship="Self.FK__BILL__voucher_id__30F848ED" FromRole="BILL" ToRole="VOUCHER" />
-    <NavigationProperty Name="BILL_DETAIL" Relationship="Self.FK__BILL_DETA__bill___35BCFE0A" FromRole="BILL" ToRole="BILL_DETAIL" />
   </EntityType>
   <EntityType Name="BILL_DETAIL">
     <Key>
@@ -31,8 +27,6 @@
     <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="product_id" Type="Int32" Nullable="false" />
     <Property Name="amount" Type="Int32" />
-    <NavigationProperty Name="BILL" Relationship="Self.FK__BILL_DETA__bill___35BCFE0A" FromRole="BILL_DETAIL" ToRole="BILL" />
-    <NavigationProperty Name="PRODUCT" Relationship="Self.FK__BILL_DETA__produ__36B12243" FromRole="BILL_DETAIL" ToRole="PRODUCT" />
   </EntityType>
   <EntityType Name="EMPLOYEE">
     <Key>
@@ -75,7 +69,6 @@
     <Property Name="apply_price" Type="Int32" Nullable="false" />
     <Property Name="off_percent" Type="Double" />
     <Property Name="used" Type="Boolean" />
-    <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__voucher_id__30F848ED" FromRole="VOUCHER" ToRole="BILL" />
   </EntityType>
   <Association Name="FK__ACCOUNT__employe__267ABA7A">
     <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />

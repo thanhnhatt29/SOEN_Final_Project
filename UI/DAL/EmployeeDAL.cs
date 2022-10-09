@@ -65,8 +65,6 @@ namespace DAL
                 db.SaveChanges();
                 return true;
             }
-
-           
         }
     }
 }

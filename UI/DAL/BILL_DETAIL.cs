@@ -17,8 +17,5 @@ namespace DAL
         public string bill_id { get; set; }
         public int product_id { get; set; }
         public Nullable<int> amount { get; set; }
-    
-        public virtual BILL BILL { get; set; }
-        public virtual PRODUCT PRODUCT { get; set; }
     }
 }

@@ -17,7 +17,5 @@ namespace DAL
         public string employee_id { get; set; }
         public string passwd { get; set; }
         public Nullable<bool> permission { get; set; }
-    
-        public virtual EMPLOYEE EMPLOYEE { get; set; }
     }
 }

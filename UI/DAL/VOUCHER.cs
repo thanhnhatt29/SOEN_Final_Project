@@ -14,18 +14,9 @@ namespace DAL
     
     public partial class VOUCHER
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public VOUCHER()
-        {
-            this.BILLs = new HashSet<BILL>();
-        }
-    
         public string voucher_id { get; set; }
         public int apply_price { get; set; }
         public Nullable<double> off_percent { get; set; }
         public Nullable<bool> used { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BILL> BILLs { get; set; }
     }
 }

@@ -44,7 +44,7 @@ namespace BLL
             }
             else if (emp_DAL.updateEmpDAL(empID, empName, empImg, phone, doB, female, position))
             {
-                return "Thành công";
+                return "Cập nhật thành công";
             }
             else return "Thất bại";
         }

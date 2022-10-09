@@ -131,6 +131,19 @@ namespace UI
                 MessageBox.Show("Fail");
             }
         }
+
+        void deleteData()
+        {
+            getValues();
+            try
+            {
+                MessageBox.Show(emp_BLL.updateEmpBLL(id, name, img, phone, doB, female, "Đã nghỉ")+" nhân viên nghỉ");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Fail");
+            }
+        }
         #endregion
 
         private void searchName_Box_TextChanged(object sender, EventArgs e)
@@ -154,7 +167,8 @@ namespace UI
 
         private void remove_Button_Click(object sender, EventArgs e)
         {
-
+            deleteData();
+            LoadData();
         }
 
         private void cancel_Button_Click(object sender, EventArgs e)

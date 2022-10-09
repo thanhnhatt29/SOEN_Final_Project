@@ -98,6 +98,19 @@ namespace UI
             }
         }
 
+        private void deleteData()
+        {
+            getValues();
+            try
+            {
+                MessageBox.Show(pro_BLL.deleteProductBLL(id));
+            }
+            catch( Exception ex)
+            {
+                MessageBox.Show("Fail");
+            }
+        }
+
         private byte[] imageToArray(PictureBox img)
         {
             MemoryStream memoryStream = new MemoryStream();
@@ -151,7 +164,8 @@ namespace UI
 
         private void remove_Button_Click(object sender, EventArgs e)
         {
-
+            deleteData();
+            LoadData();
         }
 
         private void cancel_Button_Click(object sender, EventArgs e)

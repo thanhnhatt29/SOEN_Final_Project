@@ -47,6 +47,16 @@ namespace DAL
             }    
         }
 
+        public bool deleteProductDAL(int id)
+        {
+            using(FASTFOODEntities db = new FASTFOODEntities())
+            {
+                db.PRODUCTs.Remove(db.PRODUCTs.Where(p=>p.product_id==id).SingleOrDefault());
+                db.SaveChanges();
+            }   
+            return true;
+        }
+
         public bool addProductDAL(string productName, byte[] productImg, int productPrice, string details)
         {
             using (FASTFOODEntities db = new FASTFOODEntities())

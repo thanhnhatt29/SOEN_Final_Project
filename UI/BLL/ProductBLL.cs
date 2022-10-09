@@ -11,6 +11,8 @@ namespace BLL
     public class ProductBLL
     {
         ProductDAL pro_DAL = new ProductDAL();
+        BillDetailDAL billdetail_DAL = new BillDetailDAL();
+
         public List<PRODUCT> getDataProductBLL()
         {
             /*DataTable dt = new DataTable();
@@ -48,6 +50,26 @@ namespace BLL
                 return "Thành công";
             }    
             else return "Thất bại";
+        }
+
+        public string deleteProductBLL(int productID)
+        {
+            List<BILL_DETAIL> list = billdetail_DAL.getDataBillDetailDAL();
+
+            foreach(var bd in list)
+            {
+                if(bd.product_id==productID)
+                {
+                    pro_DAL.updateProductDAL(productID, "Không bán", null, 0, "Ngưng bán");
+                    return "Không thể xóa, đã cập nhật";
+                }
+            }
+            if(pro_DAL.deleteProductDAL(productID))
+            {
+                return "Đã xóa";
+            }
+            return "Thất bại";
+            
         }
 
         public List<PRODUCT> searchProductBLL(string productSearch)
