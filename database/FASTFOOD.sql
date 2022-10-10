@@ -5,10 +5,10 @@ use FASTFOOD
 go
 
 create table EMPLOYEE(
-	employee_id char(10) primary key,
+	employee_id varchar(10) primary key,
 	employee_name nvarchar(100),
 	employee_img image null,
-	phone_number char(10) null,
+	phone_number varchar(10) null,
 	birth date,
 	gender bit not null,
 	position nvarchar(20)	
@@ -16,8 +16,8 @@ create table EMPLOYEE(
 go
 
 create table ACCOUNT(
-	employee_id char(10) references EMPLOYEE(employee_id),
-	passwd char(10) not null,
+	employee_id varchar(10) references EMPLOYEE(employee_id),
+	passwd varchar(10) not null,
 	permission bit,
 	primary key(employee_id)
 )
@@ -36,7 +36,7 @@ create table PRODUCT(
 go
 
 create table VOUCHER(
-	voucher_id char(10) primary key,
+	voucher_id varchar(10) primary key,
 	apply_price int constraint min_money check (apply_price>=0) not null,
 	off_percent int constraint percent_off check (off_percent>=0 and off_percent<=50),
 	max_money float constraint max_money check(max_money<=100000),
@@ -45,10 +45,10 @@ create table VOUCHER(
 go
 
 create table BILL(
-	bill_id char(10) primary key,
+	bill_id varchar(10) primary key,
 	date_created datetime not null,
-	employee_id char(10) references EMPLOYEE(employee_id)not null,
-	voucher_id char(10) references VOUCHER(voucher_id) null,
+	employee_id varchar(10) references EMPLOYEE(employee_id)not null,
+	voucher_id varchar(10) references VOUCHER(voucher_id) null,
 	bill_price int constraint check_bill_price check(bill_price>=0),
 	off_money int constraint check_final_money check (off_money>=0),
 	total_money int constraint check_total_money check (total_money>=0),
@@ -56,7 +56,7 @@ create table BILL(
 go
 
 create table BILL_DETAIL(
-	bill_id char(10) references BILL(bill_id),
+	bill_id varchar(10) references BILL(bill_id),
 	product_id int references PRODUCT(product_id),
 	amount int constraint check_amount_detail check(amount>0),
 	primary key(bill_id,product_id)
@@ -66,7 +66,7 @@ go
 
 --Add
 create proc add_Employee
-	@id char(10),
+	@id varchar(10),
 	@name nvarchar(100),
 	@image image,
 	@phone char(10),
@@ -91,7 +91,7 @@ as
 go
 
 create proc add_Voucher
-	@id char(10),
+	@id varchar(10),
 	@apply_price int,
 	@percent float
 as
@@ -100,17 +100,17 @@ as
 go
 
 create proc add_Bill
-	@bill_id char(10),
+	@bill_id varchar(10),
 	@date datetime,
-	@employee_id char(10),
-	@voucher_id char(10)
+	@employee_id varchar(10),
+	@voucher_id varchar(10)
 as
 	insert into BILL(bill_id,date_created,employee_id,voucher_id,bill_price,off_money)
 	values (@bill_id,@date,@employee_id,@voucher_id,0,0)
 go
 
 create proc add_Bill_detail
-	@bill_id char(10),
+	@bill_id varchar(10),
 	@product_id int,
 	@amount int
 as
@@ -119,8 +119,8 @@ as
 go
 
 create proc add_Account
-	@id char(10),
-	@pass char(10),
+	@id varchar(10),
+	@pass varchar(10),
 	@permit bit
 as
 	insert into ACCOUNT(employee_id,passwd,permission)
@@ -129,7 +129,7 @@ go
 
 --Update
 create proc update_Bill
-	@id char(10)
+	@id varchar(10)
 as 
 	--declare @off_money float=(select off_money from VOUCHER where voucher_id=(select voucher_id from BILL where bill_id=@id))
 	update BILL
@@ -165,7 +165,7 @@ go
 
 
 create proc update_Voucher_Used
-	@id char(10)
+	@id varchar(10)
 as
 	update VOUCHER
 	set used=1
@@ -173,10 +173,10 @@ as
 go
 
 create proc update_Employee
-	@id char(10),
+	@id varchar(10),
 	@name nvarchar(100),
 	@image image,
-	@phone char(10),
+	@phone varchar(10),
 	@position nvarchar(20)
 as
 	update EMPLOYEE

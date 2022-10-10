@@ -64,6 +64,7 @@
     <Compile Include="BILL_DETAIL.cs">
       <DependentUpon>FASTFOODModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BILL_LIST.cs" />
     <Compile Include="EmployeeDAL.cs" />
     <Compile Include="OrderDAL.cs" />
     <Compile Include="ProductDAL.cs" />
@@ -93,9 +94,6 @@
       <DependentUpon>FASTFOODModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>FASTFOODModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>FASTFOODModel.tt</DependentUpon>
     </Compile>
     <Compile Include="VOUCHER.cs">

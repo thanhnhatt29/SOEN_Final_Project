@@ -16,7 +16,8 @@ namespace DAL
     {
         public string voucher_id { get; set; }
         public int apply_price { get; set; }
-        public Nullable<double> off_percent { get; set; }
+        public Nullable<int> off_percent { get; set; }
         public Nullable<bool> used { get; set; }
+        public Nullable<double> max_money { get; set; }
     }
 }

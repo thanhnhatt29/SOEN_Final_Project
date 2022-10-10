@@ -157,11 +157,30 @@ namespace UI
             dataGridView_bill.DataSource = dt;
             lb_totalPrice.Text = order_BLL.TotalBillPrice(bill_list).ToString();
             lb_totalAmount.Text = order_BLL.TotalProductAmount(bill_list).ToString();
+            lb_finalPrice.Text = (Convert.ToInt32(lb_totalPrice.Text) - Convert.ToInt32(lb_offPrice.Text)).ToString();
         }
 
         private void bt_checkVoucher_Click(object sender, EventArgs e)
         {
-
+            VOUCHER voucher = new VOUCHER();
+            voucher = order_BLL.CheckVoucher(textBox_voucher.Text);
+            if (voucher != null)
+            {
+                double off_value = (double)voucher.off_percent * (Convert.ToDouble(lb_totalPrice.Text)) / 100;
+                if (off_value >= voucher.max_money)
+                {
+                    lb_offPrice.Text = (voucher.max_money).ToString();
+                }
+                else
+                {
+                    lb_offPrice.Text = (off_value).ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mã không hợp lệ!");
+            }
+            LoadData();
         }
     }
 }

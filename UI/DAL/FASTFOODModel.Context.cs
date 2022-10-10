@@ -32,7 +32,6 @@ namespace DAL
         public virtual DbSet<BILL_DETAIL> BILL_DETAIL { get; set; }
         public virtual DbSet<EMPLOYEE> EMPLOYEEs { get; set; }
         public virtual DbSet<PRODUCT> PRODUCTs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<VOUCHER> VOUCHERs { get; set; }
     
         public virtual int add_Account(string id, string pass, Nullable<bool> permit)

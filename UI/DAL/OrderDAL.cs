@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -44,9 +45,26 @@ namespace DAL
             return total;
         }
 
-        public int CheckVoucher ()
+        public VOUCHER CheckVoucher (string voucher_key)
         {
-            return 0;
+            List<VOUCHER> dt = new List<VOUCHER>();
+            using (FASTFOODEntities db = new FASTFOODEntities())
+            {
+                var table = from c in db.VOUCHERs
+                            select c;
+                foreach (var voucher in table)
+                {
+                    dt.Add((voucher));
+                }
+            }
+            foreach (var voucher in dt)
+            {
+                if (voucher.voucher_id.Equals(voucher_key))
+                {
+                    return voucher;
+                }
+            }
+            return null;
         }
     }
 }

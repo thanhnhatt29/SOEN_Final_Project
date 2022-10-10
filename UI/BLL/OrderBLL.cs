@@ -24,5 +24,10 @@ namespace BLL
         {
             return order_DAL.TotalProductAmount(dt);
         }
+
+        public VOUCHER CheckVoucher(string voucher_key)
+        {
+            return order_DAL.CheckVoucher(voucher_key);
+        }
     }
 }

@@ -20,5 +20,6 @@ namespace DAL
         public string voucher_id { get; set; }
         public Nullable<int> bill_price { get; set; }
         public Nullable<int> off_money { get; set; }
+        public Nullable<int> total_money { get; set; }
     }
 }

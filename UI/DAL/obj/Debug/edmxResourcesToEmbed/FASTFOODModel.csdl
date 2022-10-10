@@ -4,27 +4,28 @@
     <Key>
       <PropertyRef Name="employee_id" />
     </Key>
-    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="passwd" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passwd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="permission" Type="Boolean" />
   </EntityType>
   <EntityType Name="BILL">
     <Key>
       <PropertyRef Name="bill_id" />
     </Key>
-    <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="bill_price" Type="Int32" />
     <Property Name="off_money" Type="Int32" />
+    <Property Name="total_money" Type="Int32" />
   </EntityType>
   <EntityType Name="BILL_DETAIL">
     <Key>
       <PropertyRef Name="bill_id" />
       <PropertyRef Name="product_id" />
     </Key>
-    <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="product_id" Type="Int32" Nullable="false" />
     <Property Name="amount" Type="Int32" />
   </EntityType>
@@ -32,10 +33,10 @@
     <Key>
       <PropertyRef Name="employee_id" />
     </Key>
-    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="employee_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="employee_img" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="phone_number" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="phone_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="birth" Type="DateTime" Precision="0" />
     <Property Name="gender" Type="Boolean" Nullable="false" />
     <Property Name="position" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -51,24 +52,15 @@
     <Property Name="update_date" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="detail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="VOUCHER">
     <Key>
       <PropertyRef Name="voucher_id" />
     </Key>
-    <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="apply_price" Type="Int32" Nullable="false" />
-    <Property Name="off_percent" Type="Double" />
+    <Property Name="off_percent" Type="Int32" />
     <Property Name="used" Type="Boolean" />
+    <Property Name="max_money" Type="Double" />
   </EntityType>
   <Association Name="FK__ACCOUNT__employe__267ABA7A">
     <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
@@ -136,7 +128,6 @@
     <EntitySet Name="BILL_DETAIL" EntityType="Self.BILL_DETAIL" />
     <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
     <EntitySet Name="PRODUCTs" EntityType="Self.PRODUCT" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="VOUCHERs" EntityType="Self.VOUCHER" />
     <AssociationSet Name="FK__ACCOUNT__employe__267ABA7A" Association="Self.FK__ACCOUNT__employe__267ABA7A">
       <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />

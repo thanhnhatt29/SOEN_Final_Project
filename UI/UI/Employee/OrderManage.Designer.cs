@@ -54,6 +54,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lb_finalPrice = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_bill)).BeginInit();
@@ -62,13 +64,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lb_finalPrice);
             this.panel1.Controls.Add(this.bt_checkVoucher);
             this.panel1.Controls.Add(this.textBox_voucher);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lb_offPrice);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.lb_totalPrice);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.bt_cancelBill);
             this.panel1.Controls.Add(this.button2);
@@ -109,14 +111,14 @@
             this.lb_offPrice.AutoSize = true;
             this.lb_offPrice.Location = new System.Drawing.Point(132, 499);
             this.lb_offPrice.Name = "lb_offPrice";
-            this.lb_offPrice.Size = new System.Drawing.Size(45, 16);
+            this.lb_offPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_offPrice.TabIndex = 15;
-            this.lb_offPrice.Text = "0 VNĐ";
+            this.lb_offPrice.Text = "0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 499);
+            this.label2.Location = new System.Drawing.Point(150, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 5;
@@ -128,10 +130,12 @@
             this.groupBox2.Controls.Add(this.lb_totalAmount);
             this.groupBox2.Controls.Add(this.dataGridView_bill);
             this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.lb_billID);
-            this.groupBox2.Location = new System.Drawing.Point(3, 192);
+            this.groupBox2.Controls.Add(this.lb_totalPrice);
+            this.groupBox2.Location = new System.Drawing.Point(3, 172);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(412, 262);
+            this.groupBox2.Size = new System.Drawing.Size(412, 282);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hoá đơn";
@@ -139,7 +143,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(292, 234);
+            this.label5.Location = new System.Drawing.Point(297, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 7;
@@ -148,7 +152,7 @@
             // lb_totalAmount
             // 
             this.lb_totalAmount.AutoSize = true;
-            this.lb_totalAmount.Location = new System.Drawing.Point(361, 234);
+            this.lb_totalAmount.Location = new System.Drawing.Point(366, 214);
             this.lb_totalAmount.Name = "lb_totalAmount";
             this.lb_totalAmount.Size = new System.Drawing.Size(28, 16);
             this.lb_totalAmount.TabIndex = 8;
@@ -162,13 +166,13 @@
             this.dataGridView_bill.Name = "dataGridView_bill";
             this.dataGridView_bill.RowHeadersWidth = 51;
             this.dataGridView_bill.RowTemplate.Height = 24;
-            this.dataGridView_bill.Size = new System.Drawing.Size(400, 201);
+            this.dataGridView_bill.Size = new System.Drawing.Size(400, 178);
             this.dataGridView_bill.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 234);
+            this.label3.Location = new System.Drawing.Point(26, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 3;
@@ -177,7 +181,7 @@
             // lb_billID
             // 
             this.lb_billID.AutoSize = true;
-            this.lb_billID.Location = new System.Drawing.Point(106, 234);
+            this.lb_billID.Location = new System.Drawing.Point(111, 214);
             this.lb_billID.Name = "lb_billID";
             this.lb_billID.Size = new System.Drawing.Size(28, 16);
             this.lb_billID.TabIndex = 4;
@@ -186,11 +190,11 @@
             // lb_totalPrice
             // 
             this.lb_totalPrice.AutoSize = true;
-            this.lb_totalPrice.Location = new System.Drawing.Point(313, 499);
+            this.lb_totalPrice.Location = new System.Drawing.Point(222, 241);
             this.lb_totalPrice.Name = "lb_totalPrice";
-            this.lb_totalPrice.Size = new System.Drawing.Size(45, 16);
+            this.lb_totalPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_totalPrice.TabIndex = 6;
-            this.lb_totalPrice.Text = "0 VNĐ";
+            this.lb_totalPrice.Text = "0";
             // 
             // groupBox1
             // 
@@ -202,9 +206,9 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lb_productPrice);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(3, 25);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(412, 161);
+            this.groupBox1.Size = new System.Drawing.Size(412, 163);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin món ăn";
@@ -270,9 +274,9 @@
             this.lb_productPrice.AutoSize = true;
             this.lb_productPrice.Location = new System.Drawing.Point(276, 61);
             this.lb_productPrice.Name = "lb_productPrice";
-            this.lb_productPrice.Size = new System.Drawing.Size(45, 16);
+            this.lb_productPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_productPrice.TabIndex = 9;
-            this.lb_productPrice.Text = "0 VNĐ";
+            this.lb_productPrice.Text = "0";
             // 
             // label8
             // 
@@ -318,6 +322,24 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(560, 599);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(247, 499);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Tổng thu:";
+            // 
+            // lb_finalPrice
+            // 
+            this.lb_finalPrice.AutoSize = true;
+            this.lb_finalPrice.Location = new System.Drawing.Point(319, 499);
+            this.lb_finalPrice.Name = "lb_finalPrice";
+            this.lb_finalPrice.Size = new System.Drawing.Size(14, 16);
+            this.lb_finalPrice.TabIndex = 10;
+            this.lb_finalPrice.Text = "0";
             // 
             // OrderManage
             // 
@@ -368,5 +390,7 @@
         private System.Windows.Forms.TextBox textBox_voucher;
         private System.Windows.Forms.Label lb_productID;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lb_finalPrice;
     }
 }

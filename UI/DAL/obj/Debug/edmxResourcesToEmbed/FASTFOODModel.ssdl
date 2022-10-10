@@ -4,27 +4,28 @@
     <Key>
       <PropertyRef Name="employee_id" />
     </Key>
-    <Property Name="employee_id" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="passwd" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="employee_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="passwd" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="permission" Type="bit" />
   </EntityType>
   <EntityType Name="BILL">
     <Key>
       <PropertyRef Name="bill_id" />
     </Key>
-    <Property Name="bill_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="bill_id" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="date_created" Type="datetime" Nullable="false" />
-    <Property Name="employee_id" Type="char" MaxLength="10" Nullable="false" />
-    <Property Name="voucher_id" Type="char" MaxLength="10" />
+    <Property Name="employee_id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="voucher_id" Type="varchar" MaxLength="10" />
     <Property Name="bill_price" Type="int" />
     <Property Name="off_money" Type="int" />
+    <Property Name="total_money" Type="int" />
   </EntityType>
   <EntityType Name="BILL_DETAIL">
     <Key>
       <PropertyRef Name="bill_id" />
       <PropertyRef Name="product_id" />
     </Key>
-    <Property Name="bill_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="bill_id" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="product_id" Type="int" Nullable="false" />
     <Property Name="amount" Type="int" />
   </EntityType>
@@ -32,10 +33,10 @@
     <Key>
       <PropertyRef Name="employee_id" />
     </Key>
-    <Property Name="employee_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="employee_id" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="employee_name" Type="nvarchar" MaxLength="100" />
     <Property Name="employee_img" Type="image" />
-    <Property Name="phone_number" Type="char" MaxLength="10" />
+    <Property Name="phone_number" Type="varchar" MaxLength="10" />
     <Property Name="birth" Type="date" />
     <Property Name="gender" Type="bit" Nullable="false" />
     <Property Name="position" Type="nvarchar" MaxLength="20" />
@@ -51,23 +52,14 @@
     <Property Name="update_date" Type="datetime" Nullable="false" />
     <Property Name="detail" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="VOUCHER">
     <Key>
       <PropertyRef Name="voucher_id" />
     </Key>
-    <Property Name="voucher_id" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="voucher_id" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="apply_price" Type="int" Nullable="false" />
-    <Property Name="off_percent" Type="float" />
+    <Property Name="off_percent" Type="int" />
+    <Property Name="max_money" Type="float" />
     <Property Name="used" Type="bit" />
   </EntityType>
   <Association Name="FK__ACCOUNT__employe__267ABA7A">
@@ -82,7 +74,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL__employee_i__300424B4">
+  <Association Name="FK__BILL__employee_i__30F848ED">
     <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
     <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
     <ReferentialConstraint>
@@ -94,7 +86,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL__voucher_id__30F848ED">
+  <Association Name="FK__BILL__voucher_id__31EC6D26">
     <End Role="VOUCHER" Type="Self.VOUCHER" Multiplicity="0..1" />
     <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
     <ReferentialConstraint>
@@ -106,7 +98,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL_DETA__bill___35BCFE0A">
+  <Association Name="FK__BILL_DETA__bill___37A5467C">
     <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
     <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
     <ReferentialConstraint>
@@ -118,7 +110,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BILL_DETA__produ__36B12243">
+  <Association Name="FK__BILL_DETA__produ__38996AB5">
     <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="1" />
     <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
     <ReferentialConstraint>
@@ -131,23 +123,23 @@
     </ReferentialConstraint>
   </Association>
   <Function Name="add_Account" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="id" Type="char" Mode="In" />
-    <Parameter Name="pass" Type="char" Mode="In" />
+    <Parameter Name="id" Type="varchar" Mode="In" />
+    <Parameter Name="pass" Type="varchar" Mode="In" />
     <Parameter Name="permit" Type="bit" Mode="In" />
   </Function>
   <Function Name="add_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="bill_id" Type="char" Mode="In" />
+    <Parameter Name="bill_id" Type="varchar" Mode="In" />
     <Parameter Name="date" Type="datetime" Mode="In" />
-    <Parameter Name="employee_id" Type="char" Mode="In" />
-    <Parameter Name="voucher_id" Type="char" Mode="In" />
+    <Parameter Name="employee_id" Type="varchar" Mode="In" />
+    <Parameter Name="voucher_id" Type="varchar" Mode="In" />
   </Function>
   <Function Name="add_Bill_detail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="bill_id" Type="char" Mode="In" />
+    <Parameter Name="bill_id" Type="varchar" Mode="In" />
     <Parameter Name="product_id" Type="int" Mode="In" />
     <Parameter Name="amount" Type="int" Mode="In" />
   </Function>
   <Function Name="add_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="id" Type="char" Mode="In" />
+    <Parameter Name="id" Type="varchar" Mode="In" />
     <Parameter Name="name" Type="nvarchar" Mode="In" />
     <Parameter Name="image" Type="image" Mode="In" />
     <Parameter Name="phone" Type="char" Mode="In" />
@@ -163,55 +155,24 @@
     <Parameter Name="detail" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="add_Voucher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="id" Type="char" Mode="In" />
+    <Parameter Name="id" Type="varchar" Mode="In" />
     <Parameter Name="apply_price" Type="int" Mode="In" />
     <Parameter Name="percent" Type="float" Mode="In" />
   </Function>
-  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="Revenue_Day" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
     <Parameter Name="date" Type="datetime" Mode="In" />
   </Function>
   <Function Name="Revenue_Month" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="float">
     <Parameter Name="date" Type="datetime" Mode="In" />
   </Function>
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="update_Bill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="id" Type="char" Mode="In" />
+    <Parameter Name="id" Type="varchar" Mode="In" />
   </Function>
   <Function Name="update_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="id" Type="char" Mode="In" />
+    <Parameter Name="id" Type="varchar" Mode="In" />
     <Parameter Name="name" Type="nvarchar" Mode="In" />
     <Parameter Name="image" Type="image" Mode="In" />
-    <Parameter Name="phone" Type="char" Mode="In" />
+    <Parameter Name="phone" Type="varchar" Mode="In" />
     <Parameter Name="position" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="update_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -223,7 +184,7 @@
     <Parameter Name="detail" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="update_Voucher_Used" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="id" Type="char" Mode="In" />
+    <Parameter Name="id" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="FASTFOODModelStoreContainer">
     <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
@@ -231,25 +192,24 @@
     <EntitySet Name="BILL_DETAIL" EntityType="Self.BILL_DETAIL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VOUCHER" EntityType="Self.VOUCHER" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__ACCOUNT__employe__267ABA7A" Association="Self.FK__ACCOUNT__employe__267ABA7A">
       <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
       <End Role="ACCOUNT" EntitySet="ACCOUNT" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL__employee_i__300424B4" Association="Self.FK__BILL__employee_i__300424B4">
+    <AssociationSet Name="FK__BILL__employee_i__30F848ED" Association="Self.FK__BILL__employee_i__30F848ED">
       <End Role="EMPLOYEE" EntitySet="EMPLOYEE" />
       <End Role="BILL" EntitySet="BILL" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL__voucher_id__30F848ED" Association="Self.FK__BILL__voucher_id__30F848ED">
+    <AssociationSet Name="FK__BILL__voucher_id__31EC6D26" Association="Self.FK__BILL__voucher_id__31EC6D26">
       <End Role="VOUCHER" EntitySet="VOUCHER" />
       <End Role="BILL" EntitySet="BILL" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL_DETA__bill___35BCFE0A" Association="Self.FK__BILL_DETA__bill___35BCFE0A">
+    <AssociationSet Name="FK__BILL_DETA__bill___37A5467C" Association="Self.FK__BILL_DETA__bill___37A5467C">
       <End Role="BILL" EntitySet="BILL" />
       <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
     </AssociationSet>
-    <AssociationSet Name="FK__BILL_DETA__produ__36B12243" Association="Self.FK__BILL_DETA__produ__36B12243">
+    <AssociationSet Name="FK__BILL_DETA__produ__38996AB5" Association="Self.FK__BILL_DETA__produ__38996AB5">
       <End Role="PRODUCT" EntitySet="PRODUCT" />
       <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
     </AssociationSet>

@@ -10,8 +10,7 @@
         <EntityTypeShape EntityType="FASTFOODModel.BILL_DETAIL" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="FASTFOODModel.EMPLOYEE" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FASTFOODModel.PRODUCT" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FASTFOODModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FASTFOODModel.VOUCHER" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FASTFOODModel.VOUCHER" Width="1.5" PointX="5.375" PointY="6.875" IsExpanded="true" />
         <AssociationConnector Association="FASTFOODModel.FK__ACCOUNT__employe__267ABA7A" ManuallyRouted="false" />
         <AssociationConnector Association="FASTFOODModel.FK__BILL__employee_i__300424B4" ManuallyRouted="false" />
         <AssociationConnector Association="FASTFOODModel.FK__BILL__voucher_id__30F848ED" ManuallyRouted="false" />
