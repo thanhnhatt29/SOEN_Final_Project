@@ -14,5 +14,15 @@ namespace BLL
         {
             return order_DAL.getDataProduct();
         }
+
+        public int TotalBillPrice(List<BILL_LIST> dt)
+        {
+            return order_DAL.TotalBillPrice(dt);
+        }
+
+        public int TotalProductAmount(List<BILL_LIST> dt)
+        {
+            return order_DAL.TotalProductAmount(dt);
+        }
     }
 }

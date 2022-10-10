@@ -40,7 +40,7 @@
             this.dataGridView_bill = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_billID = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lb_totalPrice = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_productID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lb_productPrice = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.bt_cancelBill = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,9 +68,9 @@
             this.panel1.Controls.Add(this.lb_offPrice);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lb_totalPrice);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.bt_cancelBill);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(578, 12);
@@ -86,6 +86,7 @@
             this.bt_checkVoucher.TabIndex = 17;
             this.bt_checkVoucher.Text = "Check";
             this.bt_checkVoucher.UseVisualStyleBackColor = true;
+            this.bt_checkVoucher.Click += new System.EventHandler(this.bt_checkVoucher_Click);
             // 
             // textBox_voucher
             // 
@@ -182,14 +183,14 @@
             this.lb_billID.TabIndex = 4;
             this.lb_billID.Text = "123";
             // 
-            // label4
+            // lb_totalPrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(313, 499);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "0 VNĐ";
+            this.lb_totalPrice.AutoSize = true;
+            this.lb_totalPrice.Location = new System.Drawing.Point(313, 499);
+            this.lb_totalPrice.Name = "lb_totalPrice";
+            this.lb_totalPrice.Size = new System.Drawing.Size(45, 16);
+            this.lb_totalPrice.TabIndex = 6;
+            this.lb_totalPrice.Text = "0 VNĐ";
             // 
             // groupBox1
             // 
@@ -282,14 +283,15 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Giá tiền:";
             // 
-            // button3
+            // bt_cancelBill
             // 
-            this.button3.Location = new System.Drawing.Point(270, 529);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 55);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Hủy đơn";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bt_cancelBill.Location = new System.Drawing.Point(270, 529);
+            this.bt_cancelBill.Name = "bt_cancelBill";
+            this.bt_cancelBill.Size = new System.Drawing.Size(93, 55);
+            this.bt_cancelBill.TabIndex = 7;
+            this.bt_cancelBill.Text = "Hủy đơn";
+            this.bt_cancelBill.UseVisualStyleBackColor = true;
+            this.bt_cancelBill.Click += new System.EventHandler(this.bt_cancelBill_Click);
             // 
             // button2
             // 
@@ -343,7 +345,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_cancelBill;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lb_billID;
         private System.Windows.Forms.Label label3;
@@ -357,7 +359,7 @@
         private System.Windows.Forms.Button bt_deleteProduct;
         private System.Windows.Forms.Button bt_addProduct;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lb_totalPrice;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lb_totalAmount;
         private System.Windows.Forms.Label label9;

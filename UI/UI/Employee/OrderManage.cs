@@ -22,6 +22,7 @@ namespace UI
     {
 
         OrderBLL order_BLL = new OrderBLL();
+        ListToDataTable converter = new ListToDataTable();
         List<BILL_LIST> bill_list = new List<BILL_LIST>();
 
         public OrderManage()
@@ -79,13 +80,11 @@ namespace UI
             Load_Image(product_list);
 
             ListToDataTable converter = new ListToDataTable();
-            DataTable dt = converter.ToDataTable(bill_list);
-            dataGridView_bill.DataSource = dt;
+            LoadData();
         }
 
         private void bt_addProduct_Click(object sender, EventArgs e)
         {
-            ListToDataTable converter = new ListToDataTable();
             BILL_LIST temp = new BILL_LIST();
             if (bill_list.Exists(x => x.ID == lb_productID.Text) == true)
             {
@@ -97,17 +96,16 @@ namespace UI
             {
                 temp.ID = lb_productID.Text;
                 temp.Product = lb_productName.Text;
-                temp.Price = lb_productPrice.Text;
+                temp.Price = Int32.Parse(lb_productPrice.Text);
                 temp.Amount = 1;
                 bill_list.Add(temp);
             }
-            DataTable dt = converter.ToDataTable(bill_list);
-            dataGridView_bill.DataSource = dt;
+            LoadData();
         }
 
         private void bt_deleteProduct_Click(object sender, EventArgs e)
         {
-            ListToDataTable converter = new ListToDataTable();
+            
             BILL_LIST temp = new BILL_LIST();
             if (bill_list.Exists(x => x.ID == lb_productID.Text) == true)
             {
@@ -121,8 +119,7 @@ namespace UI
                     bill_list.RemoveAt(index);
                 }
             }
-            DataTable dt = converter.ToDataTable(bill_list);
-            dataGridView_bill.DataSource = dt;
+            LoadData();
         }
 
         public class ListToDataTable
@@ -148,12 +145,23 @@ namespace UI
             }
         }
 
-        public partial class BILL_LIST
+        private void bt_cancelBill_Click(object sender, EventArgs e)
         {
-            public string ID { get; set; }
-            public string Product { get; set; }
-            public string Price { get; set; }
-            public Nullable<int> Amount { get; set; }
+            bill_list.Clear();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            DataTable dt = converter.ToDataTable(bill_list);
+            dataGridView_bill.DataSource = dt;
+            lb_totalPrice.Text = order_BLL.TotalBillPrice(bill_list).ToString();
+            lb_totalAmount.Text = order_BLL.TotalProductAmount(bill_list).ToString();
+        }
+
+        private void bt_checkVoucher_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

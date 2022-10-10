@@ -23,5 +23,30 @@ namespace DAL
                 return dt;
             }
         }
+
+        public int TotalBillPrice(List<BILL_LIST> dt)
+        {
+            int total = 0;
+            foreach (var item in dt)
+            {
+                total = total + (item.Price * item.Amount);
+            }
+            return total;
+        }
+
+        public int TotalProductAmount(List<BILL_LIST> dt)
+        {
+            int total = 0;
+            foreach (var item in dt)
+            {
+                total = total + item.Amount;
+            }
+            return total;
+        }
+
+        public int CheckVoucher ()
+        {
+            return 0;
+        }
     }
 }
