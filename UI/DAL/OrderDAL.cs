@@ -66,5 +66,29 @@ namespace DAL
             }
             return null;
         }
+
+        public bool AddOrderBill(String bill_id, DataTable bill_list)
+        {
+            using (FASTFOODEntities db = new FASTFOODEntities())
+            {
+                foreach (DataRow dr in bill_list.Rows)
+                {
+                    BILL_DETAIL bill = new BILL_DETAIL();
+                    bill.bill_id = bill_id;
+                    bill.product_id = Convert.ToInt32(dr[0]);
+                    bill.amount = Convert.ToInt32(dr[3]);
+                    try
+                    {
+                        db.BILL_DETAIL.Add(bill);
+                        db.SaveChanges();
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
     }
 }

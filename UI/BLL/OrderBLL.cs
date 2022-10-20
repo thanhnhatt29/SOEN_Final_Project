@@ -29,5 +29,10 @@ namespace BLL
         {
             return order_DAL.CheckVoucher(voucher_key);
         }
+
+        public bool AddOrderBill(String bill_id, DataTable bill_list)
+        {
+            return order_DAL.AddOrderBill(bill_id, bill_list);
+        }
     }
 }

@@ -145,3 +145,4 @@ C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\DAL.dll.config
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.xml
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.FinishOrder.resources

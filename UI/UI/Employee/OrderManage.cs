@@ -79,7 +79,6 @@ namespace UI
             lb_totalAmount.Text = "";
             Load_Image(product_list);
 
-            ListToDataTable converter = new ListToDataTable();
             LoadData();
         }
 
@@ -149,6 +148,10 @@ namespace UI
         {
             bill_list.Clear();
             LoadData();
+            lb_offPrice.Text = "0";
+            lb_finalPrice.Text = "0";
+            textBox_moneyPay.Text = "0";
+            textBox_voucher.Clear();
         }
 
         private void LoadData()
@@ -158,6 +161,7 @@ namespace UI
             lb_totalPrice.Text = order_BLL.TotalBillPrice(bill_list).ToString();
             lb_totalAmount.Text = order_BLL.TotalProductAmount(bill_list).ToString();
             lb_finalPrice.Text = (Convert.ToInt32(lb_totalPrice.Text) - Convert.ToInt32(lb_offPrice.Text)).ToString();
+            
         }
 
         private void bt_checkVoucher_Click(object sender, EventArgs e)
@@ -181,6 +185,51 @@ namespace UI
                 MessageBox.Show("Mã không hợp lệ!");
             }
             LoadData();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (textBox_moneyPay.TextLength == 0)
+            {
+                textBox_moneyPay.Text = "0";
+            }
+
+            string totalPrice = lb_totalPrice.Text;
+            string offPrice = lb_offPrice.Text;
+            string finalPrice = lb_finalPrice.Text;
+            string moneyGet = textBox_moneyPay.Text;
+            string moneyReturn = (Convert.ToInt32(textBox_moneyPay.Text) - Convert.ToInt32(lb_finalPrice.Text)).ToString();
+
+            bool check = false;
+            FinishOrder finishOrder = new FinishOrder();
+            finishOrder.finalPrice = finalPrice;
+            finishOrder.offPrice = offPrice;
+            finishOrder.moneyGet = moneyGet;
+            finishOrder.moneyReturn = moneyReturn;
+            finishOrder.totalPrice = totalPrice;
+
+            finishOrder.ShowDialog();
+
+            check = finishOrder.check;
+
+            if (check)
+            {
+                DataTable dt = converter.ToDataTable(bill_list);
+                bool check_2 = order_BLL.AddOrderBill("bill1", dt);
+                if (check_2)
+                {
+                    MessageBox.Show("Thanh toán thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Thanh toán không thành công!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Đã huỷ thanh toán!");
+            }
         }
     }
 }
