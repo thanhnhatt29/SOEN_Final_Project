@@ -47,8 +47,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Information.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -58,7 +60,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox1.Location = new System.Drawing.Point(260, 156);
+            this.comboBox1.Location = new System.Drawing.Point(276, 165);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 24);
             this.comboBox1.TabIndex = 9;
@@ -66,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 159);
+            this.label2.Location = new System.Drawing.Point(215, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 8;
@@ -74,28 +76,31 @@
             // 
             // money
             // 
-            this.money.Location = new System.Drawing.Point(443, 117);
+            this.money.Location = new System.Drawing.Point(524, 117);
             this.money.Name = "money";
             this.money.Size = new System.Drawing.Size(133, 22);
             this.money.TabIndex = 7;
             // 
             // percent
             // 
-            this.percent.Location = new System.Drawing.Point(443, 38);
+            this.percent.Location = new System.Drawing.Point(524, 53);
             this.percent.Name = "percent";
             this.percent.Size = new System.Drawing.Size(133, 22);
             this.percent.TabIndex = 6;
             // 
             // price
             // 
-            this.price.Location = new System.Drawing.Point(140, 112);
+            this.price.Location = new System.Drawing.Point(128, 117);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(130, 22);
             this.price.TabIndex = 5;
             // 
             // voucher
             // 
-            this.voucher.Location = new System.Drawing.Point(140, 43);
+            this.voucher.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.voucher.Location = new System.Drawing.Point(104, 40);
             this.voucher.Name = "voucher";
             this.voucher.Size = new System.Drawing.Size(130, 22);
             this.voucher.TabIndex = 4;
@@ -103,7 +108,7 @@
             // max_money
             // 
             this.max_money.AutoSize = true;
-            this.max_money.Location = new System.Drawing.Point(318, 117);
+            this.max_money.Location = new System.Drawing.Point(389, 117);
             this.max_money.Name = "max_money";
             this.max_money.Size = new System.Drawing.Size(87, 17);
             this.max_money.TabIndex = 3;
@@ -112,7 +117,7 @@
             // lb
             // 
             this.lb.AutoSize = true;
-            this.lb.Location = new System.Drawing.Point(321, 38);
+            this.lb.Location = new System.Drawing.Point(392, 58);
             this.lb.Name = "lb";
             this.lb.Size = new System.Drawing.Size(84, 17);
             this.lb.TabIndex = 2;
@@ -121,7 +126,7 @@
             // apply_price
             // 
             this.apply_price.AutoSize = true;
-            this.apply_price.Location = new System.Drawing.Point(21, 117);
+            this.apply_price.Location = new System.Drawing.Point(37, 122);
             this.apply_price.Name = "apply_price";
             this.apply_price.Size = new System.Drawing.Size(85, 17);
             this.apply_price.TabIndex = 1;
@@ -130,7 +135,7 @@
             // voucher_id
             // 
             this.voucher_id.AutoSize = true;
-            this.voucher_id.Location = new System.Drawing.Point(24, 43);
+            this.voucher_id.Location = new System.Drawing.Point(16, 45);
             this.voucher_id.Name = "voucher_id";
             this.voucher_id.Size = new System.Drawing.Size(82, 17);
             this.voucher_id.TabIndex = 0;
@@ -138,26 +143,27 @@
             // 
             // Information
             // 
+            this.Information.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Information.Controls.Add(this.panel1);
             this.Information.Controls.Add(this.comboBox1);
             this.Information.Controls.Add(this.label2);
             this.Information.Controls.Add(this.money);
             this.Information.Controls.Add(this.percent);
             this.Information.Controls.Add(this.price);
-            this.Information.Controls.Add(this.voucher);
             this.Information.Controls.Add(this.max_money);
             this.Information.Controls.Add(this.lb);
             this.Information.Controls.Add(this.apply_price);
-            this.Information.Controls.Add(this.voucher_id);
             this.Information.Location = new System.Drawing.Point(12, 351);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(679, 194);
+            this.Information.Size = new System.Drawing.Size(685, 202);
             this.Information.TabIndex = 18;
             this.Information.TabStop = false;
             this.Information.Text = "Information";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(246, 10);
+            this.button6.Location = new System.Drawing.Point(322, 9);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(81, 25);
             this.button6.TabIndex = 17;
@@ -167,13 +173,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 13);
+            this.textBox1.Location = new System.Drawing.Point(102, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 22);
+            this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 16;
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Location = new System.Drawing.Point(714, 516);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 37);
@@ -184,6 +191,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Location = new System.Drawing.Point(714, 419);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(96, 37);
@@ -194,6 +202,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(714, 468);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 37);
@@ -204,6 +213,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(714, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 37);
@@ -224,6 +234,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 52);
@@ -234,11 +247,20 @@
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.voucher_id);
+            this.panel1.Controls.Add(this.voucher);
+            this.panel1.Location = new System.Drawing.Point(24, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 77);
+            this.panel1.TabIndex = 10;
+            // 
             // VoucherManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 563);
+            this.ClientSize = new System.Drawing.Size(831, 576);
             this.Controls.Add(this.Information);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
@@ -254,6 +276,8 @@
             this.Information.ResumeLayout(false);
             this.Information.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +304,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
