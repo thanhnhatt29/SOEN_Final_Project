@@ -14,7 +14,8 @@ namespace UI
 {
     public partial class VoucherManage : Form
     {
-        SqlConnection connection;
+        SqlConnection connection=new SqlConnection();
+        
         SqlCommand command;
         string str = "Data Source=LAPTOP-0460STTB;Initial Catalog=FASTFOOD;Integrated Security=True";
         SqlDataAdapter da = new SqlDataAdapter();

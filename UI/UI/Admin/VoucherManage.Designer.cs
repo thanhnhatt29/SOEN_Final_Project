@@ -39,6 +39,7 @@
             this.apply_price = new System.Windows.Forms.Label();
             this.voucher_id = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -47,10 +48,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Information.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -145,6 +145,7 @@
             // 
             this.Information.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Information.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Information.Controls.Add(this.panel1);
             this.Information.Controls.Add(this.comboBox1);
             this.Information.Controls.Add(this.label2);
@@ -154,16 +155,25 @@
             this.Information.Controls.Add(this.max_money);
             this.Information.Controls.Add(this.lb);
             this.Information.Controls.Add(this.apply_price);
-            this.Information.Location = new System.Drawing.Point(12, 351);
+            this.Information.Location = new System.Drawing.Point(12, 352);
             this.Information.Name = "Information";
-            this.Information.Size = new System.Drawing.Size(685, 202);
+            this.Information.Size = new System.Drawing.Size(685, 212);
             this.Information.TabIndex = 18;
             this.Information.TabStop = false;
             this.Information.Text = "Information";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.voucher_id);
+            this.panel1.Controls.Add(this.voucher);
+            this.panel1.Location = new System.Drawing.Point(24, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(291, 77);
+            this.panel1.TabIndex = 10;
+            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(322, 9);
+            this.button6.Location = new System.Drawing.Point(329, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(81, 25);
             this.button6.TabIndex = 17;
@@ -173,7 +183,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 12);
+            this.textBox1.Location = new System.Drawing.Point(112, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 16;
@@ -238,6 +248,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 52);
             this.dataGridView1.Name = "dataGridView1";
@@ -247,19 +258,11 @@
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.voucher_id);
-            this.panel1.Controls.Add(this.voucher);
-            this.panel1.Location = new System.Drawing.Point(24, 18);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(291, 77);
-            this.panel1.TabIndex = 10;
-            // 
             // VoucherManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::UI.Properties.Resources.pngtree_fashion_gold_voucher_template_image_261964;
             this.ClientSize = new System.Drawing.Size(831, 576);
             this.Controls.Add(this.Information);
             this.Controls.Add(this.button6);
@@ -275,9 +278,9 @@
             this.Load += new System.EventHandler(this.VoucherManage_Load);
             this.Information.ResumeLayout(false);
             this.Information.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
