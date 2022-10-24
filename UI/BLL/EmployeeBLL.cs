@@ -86,7 +86,7 @@ namespace BLL
             string ID = "";
             for (int i = 0; i < 10; i++)
             {
-                char rand = chars[random.Next(0, chars.Length - 1)];
+                char rand = chars[random.Next(0, chars.Length)];
                 ID += rand;
             }
             return ID;

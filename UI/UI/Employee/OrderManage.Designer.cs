@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.bt_payBill = new System.Windows.Forms.Panel();
+            this.textBox_moneyPay = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_finalPrice = new System.Windows.Forms.Label();
             this.bt_checkVoucher = new System.Windows.Forms.Button();
@@ -56,8 +58,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBox_moneyPay = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.bt_payBill.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_bill)).BeginInit();
@@ -83,6 +83,23 @@
             this.bt_payBill.Name = "bt_payBill";
             this.bt_payBill.Size = new System.Drawing.Size(418, 599);
             this.bt_payBill.TabIndex = 0;
+            // 
+            // textBox_moneyPay
+            // 
+            this.textBox_moneyPay.Location = new System.Drawing.Point(117, 494);
+            this.textBox_moneyPay.Name = "textBox_moneyPay";
+            this.textBox_moneyPay.Size = new System.Drawing.Size(162, 22);
+            this.textBox_moneyPay.TabIndex = 19;
+            this.textBox_moneyPay.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(51, 497);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 16);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Tiền nhận:";
             // 
             // label4
             // 
@@ -202,10 +219,9 @@
             // 
             // lb_billID
             // 
-            this.lb_billID.AutoSize = true;
-            this.lb_billID.Location = new System.Drawing.Point(113, 226);
+            this.lb_billID.Location = new System.Drawing.Point(115, 226);
             this.lb_billID.Name = "lb_billID";
-            this.lb_billID.Size = new System.Drawing.Size(28, 16);
+            this.lb_billID.Size = new System.Drawing.Size(85, 16);
             this.lb_billID.TabIndex = 4;
             this.lb_billID.Text = "123";
             // 
@@ -345,23 +361,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(560, 599);
             this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // textBox_moneyPay
-            // 
-            this.textBox_moneyPay.Location = new System.Drawing.Point(117, 494);
-            this.textBox_moneyPay.Name = "textBox_moneyPay";
-            this.textBox_moneyPay.Size = new System.Drawing.Size(162, 22);
-            this.textBox_moneyPay.TabIndex = 19;
-            this.textBox_moneyPay.Text = "0";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 497);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 16);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Tiền nhận:";
             // 
             // OrderManage
             // 

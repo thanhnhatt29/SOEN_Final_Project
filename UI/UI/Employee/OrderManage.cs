@@ -24,6 +24,7 @@ namespace UI
         OrderBLL order_BLL = new OrderBLL();
         ListToDataTable converter = new ListToDataTable();
         List<BILL_LIST> bill_list = new List<BILL_LIST>();
+        public string billid;
 
         public OrderManage()
         {
@@ -161,7 +162,14 @@ namespace UI
             lb_totalPrice.Text = order_BLL.TotalBillPrice(bill_list).ToString();
             lb_totalAmount.Text = order_BLL.TotalProductAmount(bill_list).ToString();
             lb_finalPrice.Text = (Convert.ToInt32(lb_totalPrice.Text) - Convert.ToInt32(lb_offPrice.Text)).ToString();
-            
+            billid = "bill" + order_BLL.randID();
+            while (true)
+            {
+                if (order_BLL.ChechNewBillID(billid))
+                    break;
+                billid = "bill" + order_BLL.randID();
+            }
+            lb_billID.Text = billid;
         }
 
         private void bt_checkVoucher_Click(object sender, EventArgs e)
@@ -216,8 +224,10 @@ namespace UI
             if (check)
             {
                 DataTable dt = converter.ToDataTable(bill_list);
-                bool check_2 = order_BLL.AddOrderBill("bill1", dt);
-                if (check_2)
+                bool check_2 = order_BLL.AddBill(billid, "aaa", textBox_voucher.Text, Int32.Parse(totalPrice), Int32.Parse(offPrice), Int32.Parse(finalPrice));
+                bool check_3 = order_BLL.AddBillDetail(billid, dt);
+                
+                if (check_2 == true & check_3 == true)
                 {
                     MessageBox.Show("Thanh toán thành công!");
                 }
