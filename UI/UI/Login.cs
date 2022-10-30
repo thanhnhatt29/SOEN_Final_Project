@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BLL;
 namespace UI
 {
     public partial class Login : Form
     {
+        AccountBLL acc_BLL = new AccountBLL();
         public Login()
         {
             InitializeComponent();
-            textBox2.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
+            passw_Box.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -25,21 +26,30 @@ namespace UI
         // Login button
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DashBoard dashBoard = new DashBoard();
-            dashBoard.ShowDialog();
-            this.Show();
+            bool success = acc_BLL.loginBLL(empId_Box.Text, passw_Box.Text);
+            if(success)
+            {
+                this.Hide();
+                DashBoard dashBoard = new DashBoard();
+                dashBoard.ShowDialog();
+                this.Show();
+            }    
+            else
+            {
+                MessageBox.Show("Thông tin đăng nhập chưa chính xác");
+            }    
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (showPassw.Checked)
             {
-                textBox2.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
+                passw_Box.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
+                passw_Box.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
             }
         }
     }

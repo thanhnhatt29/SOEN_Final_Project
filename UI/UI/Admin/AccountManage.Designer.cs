@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.accData = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.accData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,15 +81,15 @@
             this.button1.Text = "+ Thêm";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // accData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 52);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(689, 368);
-            this.dataGridView1.TabIndex = 7;
+            this.accData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.accData.Location = new System.Drawing.Point(15, 52);
+            this.accData.Name = "accData";
+            this.accData.RowHeadersWidth = 51;
+            this.accData.RowTemplate.Height = 24;
+            this.accData.Size = new System.Drawing.Size(689, 368);
+            this.accData.TabIndex = 7;
             // 
             // AccountManage
             // 
@@ -101,10 +101,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.accData);
             this.Name = "AccountManage";
             this.Text = "AccountManage";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +117,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView accData;
     }
 }

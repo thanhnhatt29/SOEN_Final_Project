@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.passw_Link = new System.Windows.Forms.LinkLabel();
+            this.showPassw = new System.Windows.Forms.CheckBox();
+            this.passw_Box = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.empId_Box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -77,11 +77,11 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.linkLabel1);
-            this.panel3.Controls.Add(this.checkBox1);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.passw_Link);
+            this.panel3.Controls.Add(this.showPassw);
+            this.panel3.Controls.Add(this.passw_Box);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.empId_Box);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 87);
@@ -103,39 +103,39 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // linkLabel1
+            // passw_Link
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(331, 216);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(158, 21);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot password?";
+            this.passw_Link.AutoSize = true;
+            this.passw_Link.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passw_Link.Location = new System.Drawing.Point(331, 216);
+            this.passw_Link.Name = "passw_Link";
+            this.passw_Link.Size = new System.Drawing.Size(158, 21);
+            this.passw_Link.TabIndex = 6;
+            this.passw_Link.TabStop = true;
+            this.passw_Link.Text = "Forgot password?";
             // 
-            // checkBox1
+            // showPassw
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBox1.Location = new System.Drawing.Point(78, 216);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(160, 25);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Show password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.showPassw.AutoSize = true;
+            this.showPassw.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPassw.ForeColor = System.Drawing.Color.DimGray;
+            this.showPassw.Location = new System.Drawing.Point(78, 216);
+            this.showPassw.Name = "showPassw";
+            this.showPassw.Size = new System.Drawing.Size(160, 25);
+            this.showPassw.TabIndex = 5;
+            this.showPassw.Text = "Show password";
+            this.showPassw.UseVisualStyleBackColor = true;
+            this.showPassw.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // textBox2
+            // passw_Box
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox2.Location = new System.Drawing.Point(78, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(411, 36);
-            this.textBox2.TabIndex = 4;
+            this.passw_Box.BackColor = System.Drawing.Color.Gainsboro;
+            this.passw_Box.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passw_Box.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.passw_Box.Location = new System.Drawing.Point(78, 155);
+            this.passw_Box.Name = "passw_Box";
+            this.passw_Box.Size = new System.Drawing.Size(411, 36);
+            this.passw_Box.TabIndex = 4;
             // 
             // label3
             // 
@@ -149,15 +149,15 @@
             this.label3.Text = "PASSWORD";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox1
+            // empId_Box
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(78, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(411, 36);
-            this.textBox1.TabIndex = 2;
+            this.empId_Box.BackColor = System.Drawing.Color.Gainsboro;
+            this.empId_Box.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empId_Box.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.empId_Box.Location = new System.Drawing.Point(78, 63);
+            this.empId_Box.Name = "empId_Box";
+            this.empId_Box.Size = new System.Drawing.Size(411, 36);
+            this.empId_Box.TabIndex = 2;
             // 
             // label2
             // 
@@ -194,12 +194,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox passw_Box;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox empId_Box;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.LinkLabel passw_Link;
+        private System.Windows.Forms.CheckBox showPassw;
     }
 }
