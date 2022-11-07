@@ -33,9 +33,23 @@ namespace BLL
                 }
 
                 return false;
-            }    
-            
+            }               
 
+        }
+
+        public string addAccountBLL(string id, string passw, string passw_re,bool admin)
+        {
+            if (passw != passw_re)
+            {
+                return "Mat khau nhap lai chua chinh xac";
+            }
+            else
+            {
+                bool success = acc_DAL.addAccountDAL(id,passw,admin);
+                if(success)
+                    return "Thanh cong";
+                return "That bai";
+            }
         }
     }
 }

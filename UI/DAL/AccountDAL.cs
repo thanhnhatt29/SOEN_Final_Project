@@ -38,5 +38,21 @@ namespace DAL
             }
           
         }
+
+        public bool addAccountDAL(string id, string passw, bool admin)
+        {
+            using(FASTFOODEntities db = new FASTFOODEntities())
+            {
+                ACCOUNT acc = new ACCOUNT();
+
+                acc.employee_id = id;
+                acc.passwd = passw;
+                acc.permission = admin;
+
+                db.ACCOUNTs.Add(acc);
+                db.SaveChanges();
+                return true;
+            }
+        }
     }
 }

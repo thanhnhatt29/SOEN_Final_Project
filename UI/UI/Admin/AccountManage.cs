@@ -28,6 +28,12 @@ namespace UI.Admin
         {
             accData.DataSource = acc_BLL.getDataAccBLL();
             accData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }    
+        }
+
+        private void addAccount_Click(object sender, EventArgs e)
+        {
+            AddAccount addAccount = new AddAccount();
+            addAccount.ShowDialog();
+        }
     }
 }

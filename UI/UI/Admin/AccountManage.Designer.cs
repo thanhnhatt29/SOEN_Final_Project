@@ -32,7 +32,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addAccount = new System.Windows.Forms.Button();
             this.accData = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.accData)).BeginInit();
             this.SuspendLayout();
@@ -72,14 +72,15 @@
             this.textBox1.Size = new System.Drawing.Size(242, 34);
             this.textBox1.TabIndex = 9;
             // 
-            // button1
+            // addAccount
             // 
-            this.button1.Location = new System.Drawing.Point(476, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 42);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "+ Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addAccount.Location = new System.Drawing.Point(476, 426);
+            this.addAccount.Name = "addAccount";
+            this.addAccount.Size = new System.Drawing.Size(111, 42);
+            this.addAccount.TabIndex = 8;
+            this.addAccount.Text = "+ Thêm";
+            this.addAccount.UseVisualStyleBackColor = true;
+            this.addAccount.Click += new System.EventHandler(this.addAccount_Click);
             // 
             // accData
             // 
@@ -100,7 +101,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addAccount);
             this.Controls.Add(this.accData);
             this.Name = "AccountManage";
             this.Text = "AccountManage";
@@ -116,7 +117,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addAccount;
         private System.Windows.Forms.DataGridView accData;
     }
 }
