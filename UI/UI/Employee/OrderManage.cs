@@ -81,6 +81,7 @@ namespace UI
             Load_Image(product_list);
 
             LoadData();
+            CreateBillID();
         }
 
         private void bt_addProduct_Click(object sender, EventArgs e)
@@ -153,6 +154,7 @@ namespace UI
             lb_finalPrice.Text = "0";
             textBox_moneyPay.Text = "0";
             textBox_voucher.Clear();
+            CreateBillID();
         }
 
         private void LoadData()
@@ -162,6 +164,10 @@ namespace UI
             lb_totalPrice.Text = order_BLL.TotalBillPrice(bill_list).ToString();
             lb_totalAmount.Text = order_BLL.TotalProductAmount(bill_list).ToString();
             lb_finalPrice.Text = (Convert.ToInt32(lb_totalPrice.Text) - Convert.ToInt32(lb_offPrice.Text)).ToString();
+        }
+
+        private void CreateBillID()
+        {
             billid = "bill" + order_BLL.randID();
             while (true)
             {
@@ -224,6 +230,10 @@ namespace UI
             if (check)
             {
                 DataTable dt = converter.ToDataTable(bill_list);
+                if (textBox_voucher.TextLength == 0)
+                {
+                    textBox_voucher.Text = "Khong";
+                }
                 bool check_2 = order_BLL.AddBill(billid, "aaa", textBox_voucher.Text, Int32.Parse(totalPrice), Int32.Parse(offPrice), Int32.Parse(finalPrice));
                 bool check_3 = order_BLL.AddBillDetail(billid, dt);
                 
@@ -240,6 +250,7 @@ namespace UI
             {
                 MessageBox.Show("Đã huỷ thanh toán!");
             }
+            CreateBillID();
         }
     }
 }

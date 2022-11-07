@@ -16,6 +16,11 @@ namespace UI
         public DashBoard()
         {
             InitializeComponent();
+            OrderManage orderManage = new OrderManage() { Dock = DockStyle.Fill, TopLevel = false };
+            orderManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            dashboard_panel.Controls.Clear();
+            dashboard_panel.Controls.Add(orderManage);
+            orderManage.Show();
         }
         
         private void order_button_Click(object sender, EventArgs e)
