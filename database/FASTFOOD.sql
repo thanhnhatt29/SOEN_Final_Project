@@ -48,7 +48,7 @@ create table BILL(
 	bill_id varchar(10) primary key,
 	date_created datetime not null,
 	employee_id varchar(10) references EMPLOYEE(employee_id)not null,
-	voucher_id varchar(10) references VOUCHER(voucher_id) null,
+	voucher_id varchar(10) references VOUCHER(voucher_id) on Delete set null,
 	bill_price int constraint check_bill_price check(bill_price>=0),
 	off_money int constraint check_final_money check (off_money>=0),
 	total_money int constraint check_total_money check (total_money>=0),
@@ -63,7 +63,7 @@ create table BILL_DETAIL(
 )
 go
 
-
+-- For insert sql file
 --Add
 create proc add_Employee
 	@id varchar(10),
