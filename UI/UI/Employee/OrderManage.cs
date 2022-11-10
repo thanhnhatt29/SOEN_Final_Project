@@ -32,10 +32,13 @@ namespace UI
             
         }
 
-        public void Load_Image(List<PRODUCT> dt)
+
+        public void Load_Image(List<PRODUCT> productdata)
         {
-            foreach (var item in dt)
+
+            foreach (var item in productdata)
             {
+                
                 Button new_button = new Button();
                 new_button.Height = 125;
                 new_button.Width = 125;
@@ -43,11 +46,22 @@ namespace UI
                 new_button.Text = item.product_name.ToString();
                 new_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 
-                string path = System.IO.Directory.GetCurrentDirectory();
-                path = path.Replace("\\UI\\bin\\Debug", "\\images\\product_id_product.jpg");
-                path = path.Replace("id_product", item.product_id.ToString());
+                
+                Image food_image = null;
+                byte[] imageData = item.product_img;
+                if (imageData != null)
+                {
+                    MemoryStream ms = new MemoryStream(imageData);
+                    food_image = Image.FromStream(ms);
+                }
+                else
+                {
+                    string path = System.IO.Directory.GetCurrentDirectory();
+                    path = path.Replace("\\UI\\bin\\Debug", "\\images\\empty_image.jpg");
+                    food_image = Image.FromFile(path);
+                }
+                
 
-                Image food_image = Image.FromFile(path);
                 food_image = (Image)(new Bitmap(food_image, new Size(125, 100)));
                 new_button.BackgroundImage = food_image;
                 new_button.BackgroundImageLayout = ImageLayout.None;
