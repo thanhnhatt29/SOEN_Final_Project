@@ -13,6 +13,7 @@ namespace UI
 {
     public partial class EmployeeManage : Form
     {
+        List<DAL.EMPLOYEE> empList = new List<DAL.EMPLOYEE>();
         EmployeeBLL emp_BLL = new EmployeeBLL();
         public EmployeeManage()
         {
@@ -32,7 +33,8 @@ namespace UI
 
         void getData()
         {
-            empData.DataSource = emp_BLL.getDataBLL();
+            empList = emp_BLL.getDataBLL();
+            empData.DataSource = empList;
             DataGridViewImageColumn pic = new DataGridViewImageColumn();
             empData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             pic = (DataGridViewImageColumn)empData.Columns[2];
@@ -40,14 +42,95 @@ namespace UI
         }
         void headerChange()
         {
-            empData.Columns[0].HeaderText = "ID";
-            empData.Columns[1].HeaderText = "Name";
-            empData.Columns[2].HeaderText = "Image";
-            empData.Columns[3].HeaderText = "Phone";
-            empData.Columns[4].HeaderText = "Date of birth";
-            empData.Columns[5].HeaderText = "Female";
-            empData.Columns[6].HeaderText = "Position";
+            empData.Columns[0].HeaderText = "Mã nhân viên";
+            empData.Columns[1].HeaderText = "Tên nhân viên";
+            empData.Columns[2].HeaderText = "Ảnh";
+            empData.Columns[3].HeaderText = "Số điện thoại";
+            empData.Columns[4].HeaderText = "Ngày sinh";
+            empData.Columns[5].HeaderText = "Nữ";
+            empData.Columns[5].Width = 30;
+            empData.Columns[6].HeaderText = "Công việc";
+            empData.ReadOnly = true;
+
+            empData.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
         }
+        bool id_des = false;
+        bool name_des = false;
+        bool doB_des = false;
+        bool gender_des = false;
+
+        private void sort(int index)
+        {
+            if(index == 0)
+            {
+                if (id_des)
+                {
+                    id_des = false;
+                    empData.DataSource = empList.OrderBy(x=>x.employee_id).ToList();
+                }
+                else
+                {
+                    id_des = true;
+                    name_des = false;
+                    doB_des = false;
+                    gender_des = false;
+                    empData.DataSource = empList.OrderByDescending(x=>x.employee_id).ToList();
+                }
+            }
+            if(index == 1)
+            {
+                if (name_des)
+                {
+                    name_des = false;
+                    empData.DataSource = empList.OrderBy(x => x.employee_name).ToList();
+                }
+                else
+                {
+                    id_des = false;
+                    name_des = true;
+                    doB_des = false;
+                    gender_des = false;
+                    empData.DataSource = empList.OrderByDescending(x => x.employee_name).ToList();
+                }
+            }
+            if(index == 4)
+            {
+                if (doB_des)
+                {
+                    doB_des = false;
+                    empData.DataSource = empList.OrderBy(x => x.birth).ToList();
+                }
+                else
+                {
+                    id_des = false;
+                    name_des = false;
+                    doB_des = true;
+                    gender_des = false;
+                    empData.DataSource = empList.OrderByDescending(x => x.birth).ToList();
+                }
+            }
+            if(index == 5)
+            {
+                if (gender_des)
+                {
+                    gender_des = false;
+                    empData.DataSource = empList.OrderBy(x => x.gender).ToList();
+                }
+                else
+                {
+                    id_des = false;
+                    name_des = false;
+                    doB_des = false;
+                    gender_des = true;
+                    empData.DataSource = empList.OrderByDescending(x => x.gender).ToList();
+                }
+            }
+
+            clearEmpBinding();
+            addEmpBinding();
+        }
+
         string id;
         string name;
         byte[] img;
@@ -148,7 +231,8 @@ namespace UI
 
         private void searchName_Box_TextChanged(object sender, EventArgs e)
         {
-            empData.DataSource = emp_BLL.searchEmployeeBLL(searchName_Box.Text.TrimEnd());
+            empList = emp_BLL.searchEmployeeBLL(searchName_Box.Text.TrimEnd());
+            empData.DataSource = empList;
             clearEmpBinding();
             addEmpBinding();
         }
@@ -186,6 +270,11 @@ namespace UI
             {
                 empImg.ImageLocation = openFileDialog.FileName;
             }
+        }
+
+        private void empData_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            sort(e.ColumnIndex);
         }
     }
 }

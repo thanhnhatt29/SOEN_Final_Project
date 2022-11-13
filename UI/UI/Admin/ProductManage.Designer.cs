@@ -85,9 +85,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(255, 218);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.Size = new System.Drawing.Size(59, 16);
             this.label8.TabIndex = 37;
-            this.label8.Text = "Picture";
+            this.label8.Text = "Hình ảnh";
             // 
             // productImg
             // 
@@ -121,7 +121,7 @@
             this.remove_Button.Name = "remove_Button";
             this.remove_Button.Size = new System.Drawing.Size(194, 70);
             this.remove_Button.TabIndex = 34;
-            this.remove_Button.Text = "REMOVE";
+            this.remove_Button.Text = "XÓA";
             this.remove_Button.UseVisualStyleBackColor = false;
             this.remove_Button.Click += new System.EventHandler(this.remove_Button_Click);
             // 
@@ -133,7 +133,7 @@
             this.add_Button.Name = "add_Button";
             this.add_Button.Size = new System.Drawing.Size(194, 70);
             this.add_Button.TabIndex = 31;
-            this.add_Button.Text = "ADD";
+            this.add_Button.Text = "THÊM";
             this.add_Button.UseVisualStyleBackColor = false;
             this.add_Button.Click += new System.EventHandler(this.add_Button_Click);
             // 
@@ -145,7 +145,7 @@
             this.cancel_Button.Name = "cancel_Button";
             this.cancel_Button.Size = new System.Drawing.Size(194, 70);
             this.cancel_Button.TabIndex = 32;
-            this.cancel_Button.Text = "CANCEL";
+            this.cancel_Button.Text = "LÀM MỚI";
             this.cancel_Button.UseVisualStyleBackColor = false;
             this.cancel_Button.Click += new System.EventHandler(this.cancel_Button_Click);
             // 
@@ -157,7 +157,7 @@
             this.update_Button.Name = "update_Button";
             this.update_Button.Size = new System.Drawing.Size(194, 70);
             this.update_Button.TabIndex = 33;
-            this.update_Button.Text = "UPDATE";
+            this.update_Button.Text = "SỬA";
             this.update_Button.UseVisualStyleBackColor = false;
             this.update_Button.Click += new System.EventHandler(this.update_Button_Click);
             // 
@@ -178,9 +178,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Product ID";
+            this.label1.Text = "Mã sản phẩm";
             // 
             // productPrice_box
             // 
@@ -221,7 +221,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 16);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Product Name";
+            this.label4.Text = "Tên sản phẩm";
             // 
             // label6
             // 
@@ -229,9 +229,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 16);
+            this.label6.Size = new System.Drawing.Size(108, 16);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Details";
+            this.label6.Text = "Chi tiết sản phẩm";
             // 
             // label5
             // 
@@ -239,9 +239,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(255, 67);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 16);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Price";
+            this.label5.Text = "Giá tiền";
             // 
             // panel4
             // 
@@ -264,12 +264,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Product List";
+            this.label3.Text = "Danh sách sản phẩm";
             // 
             // productData
             // 
+            this.productData.AllowUserToOrderColumns = true;
             this.productData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -283,6 +284,7 @@
             this.productData.Size = new System.Drawing.Size(417, 372);
             this.productData.TabIndex = 16;
             this.productData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productData_CellContentClick);
+            this.productData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productData_ColumnHeaderMouseClick);
             // 
             // label2
             // 
@@ -291,9 +293,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(11, 469);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 16);
+            this.label2.Size = new System.Drawing.Size(142, 16);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Search for name";
+            this.label2.Text = "Tìm theo tên sản phẩm";
             // 
             // searchName_Box
             // 

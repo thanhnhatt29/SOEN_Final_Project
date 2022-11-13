@@ -89,9 +89,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(319, 72);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.Size = new System.Drawing.Size(30, 16);
             this.label8.TabIndex = 36;
-            this.label8.Text = "Picture";
+            this.label8.Text = "Ảnh";
             // 
             // empImg
             // 
@@ -120,9 +120,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(288, 290);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.Size = new System.Drawing.Size(67, 16);
             this.label7.TabIndex = 32;
-            this.label7.Text = "Date of Birth";
+            this.label7.Text = "Ngày sinh";
             // 
             // label4
             // 
@@ -130,9 +130,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(53, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 27;
-            this.label4.Text = "Employee ID";
+            this.label4.Text = "Mã nhân viên";
             // 
             // empID_Box
             // 
@@ -151,9 +151,9 @@
             this.empFemale.AutoSize = true;
             this.empFemale.Location = new System.Drawing.Point(56, 199);
             this.empFemale.Name = "empFemale";
-            this.empFemale.Size = new System.Drawing.Size(75, 20);
+            this.empFemale.Size = new System.Drawing.Size(46, 20);
             this.empFemale.TabIndex = 25;
-            this.empFemale.Text = "Female";
+            this.empFemale.Text = "Nữ";
             this.empFemale.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -162,9 +162,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(59, 287);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Position";
+            this.label3.Text = "Công việc";
             // 
             // remove_Button
             // 
@@ -174,7 +174,7 @@
             this.remove_Button.Name = "remove_Button";
             this.remove_Button.Size = new System.Drawing.Size(175, 72);
             this.remove_Button.TabIndex = 30;
-            this.remove_Button.Text = "REMOVE";
+            this.remove_Button.Text = "XÓA";
             this.remove_Button.UseVisualStyleBackColor = false;
             this.remove_Button.Click += new System.EventHandler(this.remove_Button_Click);
             // 
@@ -184,9 +184,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(56, 232);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Phone Number";
+            this.label2.Text = "Số điện thoại";
             // 
             // add_Button
             // 
@@ -196,7 +196,7 @@
             this.add_Button.Name = "add_Button";
             this.add_Button.Size = new System.Drawing.Size(175, 72);
             this.add_Button.TabIndex = 27;
-            this.add_Button.Text = "ADD";
+            this.add_Button.Text = "THÊM";
             this.add_Button.UseVisualStyleBackColor = false;
             this.add_Button.Click += new System.EventHandler(this.add_Button_Click);
             // 
@@ -206,9 +206,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(53, 129);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(91, 16);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Employee Name";
+            this.label1.Text = "Tên nhân viên";
             // 
             // cancel_Button
             // 
@@ -218,7 +218,7 @@
             this.cancel_Button.Name = "cancel_Button";
             this.cancel_Button.Size = new System.Drawing.Size(175, 72);
             this.cancel_Button.TabIndex = 28;
-            this.cancel_Button.Text = "CANCEL";
+            this.cancel_Button.Text = "LÀM MỚI";
             this.cancel_Button.UseVisualStyleBackColor = false;
             this.cancel_Button.Click += new System.EventHandler(this.cancel_Button_Click);
             // 
@@ -230,7 +230,7 @@
             this.update_Button.Name = "update_Button";
             this.update_Button.Size = new System.Drawing.Size(175, 72);
             this.update_Button.TabIndex = 29;
-            this.update_Button.Text = "UPDATE";
+            this.update_Button.Text = "SỬA";
             this.update_Button.UseVisualStyleBackColor = false;
             this.update_Button.Click += new System.EventHandler(this.update_Button_Click);
             // 
@@ -285,9 +285,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 16);
+            this.label6.Size = new System.Drawing.Size(131, 16);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Employee list";
+            this.label6.Text = "Danh sách nhân viên";
             // 
             // empData
             // 
@@ -304,6 +304,7 @@
             this.empData.RowTemplate.Height = 70;
             this.empData.Size = new System.Drawing.Size(440, 432);
             this.empData.TabIndex = 16;
+            this.empData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.empData_ColumnHeaderMouseClick);
             // 
             // searchName_Box
             // 
@@ -322,9 +323,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 514);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 16);
+            this.label5.Size = new System.Drawing.Size(172, 16);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Search by Name";
+            this.label5.Text = "Tìm kiếm theo tên nhân viên";
             // 
             // EmployeeManage
             // 
