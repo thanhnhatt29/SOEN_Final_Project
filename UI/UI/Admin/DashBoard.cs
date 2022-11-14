@@ -148,5 +148,10 @@ namespace UI
         {
             Application.Exit();
         }
+
+        private void llb_logout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

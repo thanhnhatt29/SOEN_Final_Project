@@ -29,6 +29,7 @@ namespace UI
                 dashBoard.hiddenName = empId_Box.Text;
                 dashBoard.ShowDialog();
                 this.Show();
+                passw_Box.Clear();
             }    
             else
             {
