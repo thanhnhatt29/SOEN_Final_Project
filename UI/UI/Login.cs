@@ -18,11 +18,6 @@ namespace UI
             InitializeComponent();
             passw_Box.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
         // Login button
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,6 +26,7 @@ namespace UI
             {
                 this.Hide();
                 DashBoard dashBoard = new DashBoard();
+                dashBoard.hiddenName = empId_Box.Text;
                 dashBoard.ShowDialog();
                 this.Show();
             }    

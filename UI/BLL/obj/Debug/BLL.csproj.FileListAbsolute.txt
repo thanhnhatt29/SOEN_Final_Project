@@ -46,3 +46,15 @@ C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.pdb
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.dll.config
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\BLL\bin\Debug\EntityFramework.xml
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\BLL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\BLL.pdb
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\EntityFramework.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.pdb
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\DAL.dll.config
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Debug\EntityFramework.xml
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Debug\BLL.pdb

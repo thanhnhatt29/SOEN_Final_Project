@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FASTFOODModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passwd" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="permission" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="BILL">
+    <Key>
+      <PropertyRef Name="bill_id" />
+    </Key>
+    <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="bill_price" Type="Int32" />
+    <Property Name="off_money" Type="Int32" />
+    <Property Name="total_money" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BILL_DETAIL">
+    <Key>
+      <PropertyRef Name="bill_id" />
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="bill_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="employee_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="employee_img" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="phone_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="birth" Type="DateTime" Precision="0" />
+    <Property Name="gender" Type="Boolean" Nullable="false" />
+    <Property Name="position" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="product_img" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="update_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="detail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VOUCHER">
+    <Key>
+      <PropertyRef Name="voucher_id" />
+    </Key>
+    <Property Name="voucher_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apply_price" Type="Int32" Nullable="false" />
+    <Property Name="off_percent" Type="Int32" />
+    <Property Name="used" Type="Boolean" />
+    <Property Name="max_money" Type="Double" />
+  </EntityType>
+  <Association Name="FK__ACCOUNT__employe__267ABA7A">
+    <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
+    <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="ACCOUNT">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL__employee_i__300424B4">
+    <End Role="EMPLOYEE" Type="Self.EMPLOYEE" Multiplicity="1" />
+    <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLOYEE">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="BILL">
+        <PropertyRef Name="employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL__voucher_id__30F848ED">
+    <End Role="VOUCHER" Type="Self.VOUCHER" Multiplicity="0..1" />
+    <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VOUCHER">
+        <PropertyRef Name="voucher_id" />
+      </Principal>
+      <Dependent Role="BILL">
+        <PropertyRef Name="voucher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL_DETA__bill___35BCFE0A">
+    <End Role="BILL" Type="Self.BILL" Multiplicity="1" />
+    <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BILL">
+        <PropertyRef Name="bill_id" />
+      </Principal>
+      <Dependent Role="BILL_DETAIL">
+        <PropertyRef Name="bill_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BILL_DETA__produ__36B12243">
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="1" />
+    <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="BILL_DETAIL">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FASTFOODEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACCOUNTs" EntityType="Self.ACCOUNT" />
+    <EntitySet Name="BILLs" EntityType="Self.BILL" />
+    <EntitySet Name="BILL_DETAIL" EntityType="Self.BILL_DETAIL" />
+    <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+    <EntitySet Name="PRODUCTs" EntityType="Self.PRODUCT" />
+    <EntitySet Name="VOUCHERs" EntityType="Self.VOUCHER" />
+    <AssociationSet Name="FK__ACCOUNT__employe__267ABA7A" Association="Self.FK__ACCOUNT__employe__267ABA7A">
+      <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+      <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL__employee_i__300424B4" Association="Self.FK__BILL__employee_i__300424B4">
+      <End Role="EMPLOYEE" EntitySet="EMPLOYEEs" />
+      <End Role="BILL" EntitySet="BILLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL__voucher_id__30F848ED" Association="Self.FK__BILL__voucher_id__30F848ED">
+      <End Role="VOUCHER" EntitySet="VOUCHERs" />
+      <End Role="BILL" EntitySet="BILLs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL_DETA__bill___35BCFE0A" Association="Self.FK__BILL_DETA__bill___35BCFE0A">
+      <End Role="BILL" EntitySet="BILLs" />
+      <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BILL_DETA__produ__36B12243" Association="Self.FK__BILL_DETA__produ__36B12243">
+      <End Role="PRODUCT" EntitySet="PRODUCTs" />
+      <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+    </AssociationSet>
+    <FunctionImport Name="add_Account">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+      <Parameter Name="permit" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="add_Bill">
+      <Parameter Name="bill_id" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="employee_id" Mode="In" Type="String" />
+      <Parameter Name="voucher_id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="add_Bill_detail">
+      <Parameter Name="bill_id" Mode="In" Type="String" />
+      <Parameter Name="product_id" Mode="In" Type="Int32" />
+      <Parameter Name="amount" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="add_Employee">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="image" Mode="In" Type="Binary" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="birth" Mode="In" Type="DateTime" />
+      <Parameter Name="sex" Mode="In" Type="Boolean" />
+      <Parameter Name="position" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="add_Product">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="image" Mode="In" Type="Binary" />
+      <Parameter Name="price" Mode="In" Type="Int32" />
+      <Parameter Name="update_date" Mode="In" Type="DateTime" />
+      <Parameter Name="detail" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="add_Voucher">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="apply_price" Mode="In" Type="Int32" />
+      <Parameter Name="percent" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FASTFOODModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FASTFOODModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="update_Bill">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="update_Employee">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="image" Mode="In" Type="Binary" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="position" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="update_Product">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="image" Mode="In" Type="Binary" />
+      <Parameter Name="price" Mode="In" Type="Double" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="detail" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="update_Voucher_Used">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

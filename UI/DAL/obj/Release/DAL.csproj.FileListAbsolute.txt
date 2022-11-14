@@ -1,0 +1,12 @@
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\DAL.dll.config
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\DAL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\DAL.pdb
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\EntityFramework.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\EntityFramework.xml
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\obj\Release\DAL.csproj.AssemblyReference.cache
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\obj\Release\DAL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\DAL\obj\Release\DAL.pdb

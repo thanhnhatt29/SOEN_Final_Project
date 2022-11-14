@@ -1,13 +1,14 @@
-﻿use FASTFOOD
-go
+﻿USE FASTFOOD
+GO
 
-exec add_Employee 'abc',N'Phước', null, '0357648144','2002-7-5',false,'administrator'
+EXEC add_Employee 'abc',N'Phước', null, '0357648144','2002-7-5',false,'administrator'
 exec add_Employee 'aaa',N'Nhật', null, '0123456789','2022-1-1',false,'manager'
 exec add_Employee 'bbb',N'Đồng', null, '0246813579','2022-1-1',false,'seller'
 
 
-exec add_Account 'abc',0357648144,true
-exec add_Account 'aaa',0123456789,false
+exec add_Account 'abc',0123,true
+exec add_Account 'aaa',0123,false
+exec add_Account 'bbb',0123,true
 
 exec add_Product N'Cà phê',null,20000,'2000-2-2', N'Không có'
 exec add_Product N'Gà chiên',null,50000,'2000-2-2',N'Không có'

@@ -41,15 +41,25 @@ namespace BLL
         {
             if (passw != passw_re)
             {
-                return "Mat khau nhap lai chua chinh xac";
+                return "Mật khẩu nhập lại chưa chính xác";
             }
             else
             {
                 bool success = acc_DAL.addAccountDAL(id,passw,admin);
                 if(success)
-                    return "Thanh cong";
-                return "That bai";
+                    return "Thêm tài khoản thành công";
+                return "Thất bại";
             }
+        }
+
+        public List<ACCOUNT> FindAccBLL(string name)
+        {
+            return acc_DAL.FindAccDAL(name);
+        }
+
+        public bool DelAccountBLL(string id_del)
+        {
+            return acc_DAL.DelAccountDAL(id_del);
         }
     }
 }

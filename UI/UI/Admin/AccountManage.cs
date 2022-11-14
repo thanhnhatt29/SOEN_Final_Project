@@ -35,5 +35,33 @@ namespace UI.Admin
             AddAccount addAccount = new AddAccount();
             addAccount.ShowDialog();
         }
+
+
+
+        private void tx_findAcc_TextChanged(object sender, EventArgs e)
+        {
+            if (tx_findAcc.Text != null)
+            {
+                accData.DataSource = acc_BLL.FindAccBLL(tx_findAcc.Text);
+            }
+            else
+            {
+                getData();
+            }
+        }
+
+        private void bt_delete_Click(object sender, EventArgs e)
+        {
+            string id_del = accData.CurrentRow.Cells[0].Value.ToString();
+            if (acc_BLL.DelAccountBLL(id_del))
+            {
+                MessageBox.Show("Xoá tài khoản thành công");
+                //Load();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi");
+            }
+        }
     }
 }

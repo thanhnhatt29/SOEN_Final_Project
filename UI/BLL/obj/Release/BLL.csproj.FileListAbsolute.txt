@@ -1,0 +1,12 @@
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\BLL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\BLL.pdb
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\DAL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\EntityFramework.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\DAL.pdb
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\DAL.dll.config
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\bin\Release\EntityFramework.xml
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Release\BLL.csproj.AssemblyReference.cache
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Release\BLL.csproj.CopyComplete
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Release\BLL.dll
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\BLL\obj\Release\BLL.pdb

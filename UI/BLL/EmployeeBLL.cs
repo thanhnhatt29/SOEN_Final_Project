@@ -32,6 +32,13 @@ namespace BLL
             else return "Thất bại";
         }
 
+        public EMPLOYEE InfoBLL(string hidname)
+        {
+            EMPLOYEE emp = new EMPLOYEE();
+            emp = emp_DAL.getInfoDAL(hidname);
+            return emp;
+        }
+
         public string updateEmpBLL(string empID, string empName, byte[] empImg, string phone, DateTime doB, bool female, string position)
         {
             if (!checkAge(doB))

@@ -47,6 +47,16 @@ namespace DAL
             }
         }
 
+        public EMPLOYEE getInfoDAL(string hidname)
+        {
+            using (FASTFOODEntities db = new FASTFOODEntities())
+            {
+                EMPLOYEE emp = db.EMPLOYEEs.Find(hidname);
+                return emp;
+            }
+            
+        }
+
         public bool addEmpDAL(string empID,string empName,byte[] empImg, string phone, DateTime doB, bool female, string position)
         {
             using(FASTFOODEntities db = new FASTFOODEntities())
