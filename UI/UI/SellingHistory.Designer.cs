@@ -32,6 +32,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.bt_deleteHoaDon = new System.Windows.Forms.Button();
+            this.bt_exportCSV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +75,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // bt_deleteHoaDon
+            // 
+            this.bt_deleteHoaDon.Location = new System.Drawing.Point(686, 393);
+            this.bt_deleteHoaDon.Name = "bt_deleteHoaDon";
+            this.bt_deleteHoaDon.Size = new System.Drawing.Size(93, 41);
+            this.bt_deleteHoaDon.TabIndex = 6;
+            this.bt_deleteHoaDon.Text = "Xoá hoá đơn";
+            this.bt_deleteHoaDon.UseVisualStyleBackColor = true;
+            // 
+            // bt_exportCSV
+            // 
+            this.bt_exportCSV.Location = new System.Drawing.Point(559, 393);
+            this.bt_exportCSV.Name = "bt_exportCSV";
+            this.bt_exportCSV.Size = new System.Drawing.Size(93, 41);
+            this.bt_exportCSV.TabIndex = 7;
+            this.bt_exportCSV.Text = "Xuất file csv";
+            this.bt_exportCSV.UseVisualStyleBackColor = true;
+            this.bt_exportCSV.Click += new System.EventHandler(this.bt_exportCSV_Click);
+            // 
             // SellingHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 450);
+            this.Controls.Add(this.bt_exportCSV);
+            this.Controls.Add(this.bt_deleteHoaDon);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -97,5 +120,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_deleteHoaDon;
+        private System.Windows.Forms.Button bt_exportCSV;
     }
 }
