@@ -17,7 +17,7 @@ namespace UI
         SqlConnection connection=new SqlConnection();
         
         SqlCommand command;
-        string str = "Data Source=HARUNA\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
+        string str = "Data Source=.\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
 

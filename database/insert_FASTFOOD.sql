@@ -1,23 +1,48 @@
 ﻿USE FASTFOOD
 GO
 
-EXEC add_Employee 'abc',N'Phước', null, '0357648144','2002-7-5',false,'administrator'
-exec add_Employee 'aaa',N'Nhật', null, '0123456789','2022-1-1',false,'manager'
-exec add_Employee 'bbb',N'Đồng', null, '0246813579','2022-1-1',false,'seller'
+insert into PRODUCT(product_name,product_img,price,update_date,detail)
+values
+(N'Cà phê',null,20000,'2000-2-2', N'Không có'),
+(N'Gà chiên',null,50000,'2000-2-2',N'Không có'),
+(N'CocaCola',null,10000,'2000-2-2',N'Không có'),
+(N'Cơm trưa',null,30000,'2022-9-17','Không có'),
+(N'Cà phê sữa',null,25000,'2022-11-1','Không có'),
+(N'Kem dâu',null,25000,'2022-11-1','Không có'),
+(N'Kem socola',null,25000,'2022-11-1','Không có'),
+(N'Bạc xỉu',null,25000,'2022-11-1','Không có'),
+(N'Sữa tươi',null,25000,'2022-11-1','Không có'),
+(N'Bánh cá',null,25000,'2022-11-1','Không có'),
+(N'Trà sữa',null,25000,'2022-11-1','Không có'),
+(N'Cam ép',null,25000,'2022-11-1','Không có')
+
+insert into EMPLOYEE(employee_id,employee_name,employee_img,phone_number,birth,gender,position)
+values
+('abc',N'Phước', null, '0357648144','2002-7-5',0,N'Bán hàng'),
+('aaa',N'Nhật', null, '0123456789','2002-1-1',0,'Bán hàng'),
+('bbb',N'Đồng', null, '0246813579','2002-1-1',0,'Bán hàng'),
+('admin',N'Quang',null,'0123456787','2002-1-1',0,'Chủ tiệm')
 
 
-exec add_Account 'abc',0123,true
-exec add_Account 'aaa',0123,false
-exec add_Account 'bbb',0123,true
+insert into ACCOUNT(employee_id,passwd,permission)
+values
+('abc','123456789',0),
+('aaa','123456789',0),
+('bbb','123456789',0),
+('admin','123456789',1)
 
-exec add_Product N'Cà phê',null,20000,'2000-2-2', N'Không có'
-exec add_Product N'Gà chiên',null,50000,'2000-2-2',N'Không có'
-exec add_Product N'CocaCola',null,10000,'2000-2-2',N'Không có'
-exec add_Product N'Cơm trưa',null,30000,'2022-9-17','Không có'
 
-exec add_Voucher 'Khong',0,0
-exec add_Voucher 'giamgiane',0,20
+insert into VOUCHER(voucher_id,apply_price,off_percent,max_money,used)
+values
+('Khong',0,0,null,0),
+('10%off',0,10,null,0),
+('20%off',0,20,null,0),
+('30%off',0,30,null,0),
+('40%off',0,40,null,0),
 
+
+
+/*
 exec add_Bill 'bill1','9-17-2022','aaa','Khong'
 exec add_Bill 'bill2','9-17-2022','aaa','giamgiane'
 
@@ -31,9 +56,10 @@ exec update_Bill 'bill1'
 exec update_Bill 'bill2'
 
 --COI CHỪNG LỖI FONT--
-/*
+
 select*from BILL
 select off_percent from VOUCHER where voucher_id=(select voucher_id from BILL where bill_id='bill2')
 select *from VOUCHER
 select(50000-20000)
+
 */
