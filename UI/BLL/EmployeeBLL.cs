@@ -90,8 +90,8 @@ namespace BLL
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             Random random = new Random();
-            string ID = "";
-            for (int i = 0; i < 10; i++)
+            string ID = "NV";
+            for (int i = 0; i < 8; i++)
             {
                 char rand = chars[random.Next(0, chars.Length)];
                 ID += rand;

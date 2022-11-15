@@ -15,6 +15,7 @@ namespace UI
     {
         List<DAL.EMPLOYEE> empList = new List<DAL.EMPLOYEE>();
         EmployeeBLL emp_BLL = new EmployeeBLL();
+        AccountBLL accountBLL = new AccountBLL();
         public EmployeeManage()
         {
             InitializeComponent();
@@ -220,7 +221,12 @@ namespace UI
             getValues();
             try
             {
-                MessageBox.Show(emp_BLL.updateEmpBLL(id, name, img, phone, doB, female, "Đã nghỉ")+" nhân viên nghỉ");
+                
+                if (accountBLL.DelAccountBLL(id))
+                {
+                    MessageBox.Show(emp_BLL.updateEmpBLL(id, name, img, phone, doB, female, "Đã nghỉ") + " nhân viên nghỉ.");
+                }
+                
             }
             catch(Exception ex)
             {
