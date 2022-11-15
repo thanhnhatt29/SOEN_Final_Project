@@ -59,7 +59,7 @@ namespace DAL
             }
             foreach (var voucher in dt)
             {
-                if (voucher.voucher_id.Equals(voucher_key))
+                if (voucher.voucher_id.TrimEnd().Equals(voucher_key))
                 {
                     return voucher;
                 }

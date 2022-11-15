@@ -25,6 +25,7 @@ namespace UI
         ListToDataTable converter = new ListToDataTable();
         List<BILL_LIST> bill_list = new List<BILL_LIST>();
         public string billid;
+        public string emp_id;
 
         public OrderManage()
         {
@@ -248,7 +249,7 @@ namespace UI
                 {
                     textBox_voucher.Text = "Khong";
                 }
-                bool check_2 = order_BLL.AddBill(billid, "aaa", textBox_voucher.Text, Int32.Parse(totalPrice), Int32.Parse(offPrice), Int32.Parse(finalPrice));
+                bool check_2 = order_BLL.AddBill(billid, emp_id, textBox_voucher.Text, Int32.Parse(totalPrice), Int32.Parse(offPrice), Int32.Parse(finalPrice));
                 bool check_3 = order_BLL.AddBillDetail(billid, dt);
                 
                 if (check_2 == true & check_3 == true)

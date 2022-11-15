@@ -67,6 +67,7 @@ namespace UI
             orderManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(orderManage);
+            orderManage.emp_id = hiddenName;
             orderManage.Show();
             ClearColorButton();
             order_button.BackColor = System.Drawing.SystemColors.HotTrack;
