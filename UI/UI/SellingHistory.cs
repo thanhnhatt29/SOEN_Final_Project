@@ -31,6 +31,13 @@ namespace UI
             bill_list = sellhistory.getDataSellingBLL();
             DataTable dt = converter.ToDataTable(bill_list);
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].HeaderText = "Mã hóa đơn";
+            dataGridView1.Columns[1].HeaderText = "Ngày tạo đơn";
+            dataGridView1.Columns[2].HeaderText = "Mã nhân viên";
+            dataGridView1.Columns[3].HeaderText = "Mã giảm giá";
+            dataGridView1.Columns[4].HeaderText = "Giá đơn hàng";
+            dataGridView1.Columns[5].HeaderText = "Tiền giảm giá";
+            dataGridView1.Columns[6].HeaderText = "Tổng tiền"; 
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -179,6 +179,10 @@ namespace UI
             lb_totalPrice.Text = order_BLL.TotalBillPrice(bill_list).ToString();
             lb_totalAmount.Text = order_BLL.TotalProductAmount(bill_list).ToString();
             lb_finalPrice.Text = (Convert.ToInt32(lb_totalPrice.Text) - Convert.ToInt32(lb_offPrice.Text)).ToString();
+            dataGridView_bill.Columns[0].HeaderText = "Mã sản phẩm";
+            dataGridView_bill.Columns[1].HeaderText = "Tên sản phẩm";
+            dataGridView_bill.Columns[2].HeaderText = "Giá tiền";
+            dataGridView_bill.Columns[3].HeaderText = "Số lượng";
         }
 
         private void CreateBillID()

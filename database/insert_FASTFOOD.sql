@@ -6,22 +6,22 @@ values
 (N'Cà phê',null,20000,'2000-2-2', N'Không có'),
 (N'Gà chiên',null,50000,'2000-2-2',N'Không có'),
 (N'CocaCola',null,10000,'2000-2-2',N'Không có'),
-(N'Cơm trưa',null,30000,'2022-9-17','Không có'),
-(N'Cà phê sữa',null,25000,'2022-11-1','Không có'),
-(N'Kem dâu',null,25000,'2022-11-1','Không có'),
-(N'Kem socola',null,25000,'2022-11-1','Không có'),
-(N'Bạc xỉu',null,25000,'2022-11-1','Không có'),
-(N'Sữa tươi',null,25000,'2022-11-1','Không có'),
-(N'Bánh cá',null,25000,'2022-11-1','Không có'),
-(N'Trà sữa',null,25000,'2022-11-1','Không có'),
-(N'Cam ép',null,25000,'2022-11-1','Không có')
+(N'Cơm trưa',null,30000,'2022-9-17',N'Không có'),
+(N'Cà phê sữa',null,25000,'2022-11-1',N'Không có'),
+(N'Kem dâu',null,25000,'2022-11-1',N'Không có'),
+(N'Kem socola',null,25000,'2022-11-1',N'Không có'),
+(N'Bạc xỉu',null,25000,'2022-11-1',N'Không có'),
+(N'Sữa tươi',null,25000,'2022-11-1',N'Không có'),
+(N'Bánh cá',null,25000,'2022-11-1',N'Không có'),
+(N'Trà sữa',null,25000,'2022-11-1',N'Không có'),
+(N'Cam ép',null,25000,'2022-11-1',N'Không có')
 
 insert into EMPLOYEE(employee_id,employee_name,employee_img,phone_number,birth,gender,position)
 values
 ('abc',N'Phước', null, '0357648144','2002-7-5',0,N'Bán hàng'),
-('aaa',N'Nhật', null, '0123456789','2002-1-1',0,'Bán hàng'),
-('bbb',N'Đồng', null, '0246813579','2002-1-1',0,'Bán hàng'),
-('admin',N'Quang',null,'0123456787','2002-1-1',0,'Chủ tiệm')
+('aaa',N'Nhật', null, '0123456789','2002-1-1',0,N'Bán hàng'),
+('bbb',N'Đồng', null, '0246813579','2002-1-1',0,N'Bán hàng'),
+('admin',N'Quang',null,'0123456787','2002-1-1',0,N'Chủ tiệm')
 
 
 insert into ACCOUNT(employee_id,passwd,permission)
