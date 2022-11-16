@@ -39,22 +39,79 @@ values
 ('20%off',0,20,null,0),
 ('30%off',0,30,null,0),
 ('40%off',0,40,null,0),
+('giamgiane',0,20,null,0)
 
 
 
-/*
+
 exec add_Bill 'bill1','9-17-2022','aaa','Khong'
 exec add_Bill 'bill2','9-17-2022','aaa','giamgiane'
 
+exec add_Bill 'bill3','2022-10-1','aaa','Khong'
+exec add_Bill 'bill4','2022-10-1','aaa','giamgiane'
+
+exec add_Bill 'bill5','2022-11-1','aaa','Khong'
+exec add_Bill 'bill6','2022-10-1','aaa','giamgiane'
+
+exec add_Bill 'bill7','2022-8-1','aaa','Khong'
+exec add_Bill 'bill8','2022-8-1','aaa','giamgiane'
+
+exec add_Bill 'bill9','2022-7-1','aaa','Khong'
+exec add_Bill 'bill0','2022-7-1','aaa','giamgiane'
+
+
 exec add_Bill_detail 'bill1',1,2
 exec add_Bill_detail 'bill1',2,2
+
 exec add_Bill_detail 'bill2',2,1
+exec add_Bill_detail 'bill2',3,2
+
+exec add_Bill_detail 'bill3',2,1
+exec add_Bill_detail 'bill3',1,2
+
+exec add_Bill_detail 'bill4',3,1
+exec add_Bill_detail 'bill4',1,2
+
+exec add_Bill_detail 'bill5',2,1
+exec add_Bill_detail 'bill5',3,2
+
+exec add_Bill_detail 'bill6',3,1
+exec add_Bill_detail 'bill6',1,2
+
+exec add_Bill_detail 'bill7',2,1
+exec add_Bill_detail 'bill7',1,2
+
+exec add_Bill_detail 'bill8',3,1
+
+exec add_Bill_detail 'bill9',1,2
+
+exec add_Bill_detail 'bill0',3,1
+exec add_Bill_detail 'bill0',1,2
+
+
 
 
 exec update_Bill 'bill1'
-
+go
 exec update_Bill 'bill2'
+go
+exec update_Bill 'bill3'
+go
+exec update_Bill 'bill4'
+go
+exec update_Bill 'bill5'
+go
+exec update_Bill 'bill6'
+go
+exec update_Bill 'bill7'
+go
+exec update_Bill 'bill8'
+go
+exec update_Bill 'bill9'
+go
+exec update_Bill 'bill0'
 
+/*
 --COI CHỪNG LỖI FONT--
 
 select*from BILL
