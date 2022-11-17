@@ -42,9 +42,13 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -193,6 +197,111 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pngtree-fashion-gold-voucher-template-image_261964.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Btn3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chiTietDonHang48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doanhThu48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donHang48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\donHang481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LichLamViec48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginIcon50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginIcon75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maGiamGia48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newOrder2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nguyenLieu50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhaCungCap48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhaCungCap481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renew30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SanPham48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Total33.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

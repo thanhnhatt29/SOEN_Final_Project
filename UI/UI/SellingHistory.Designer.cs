@@ -31,9 +31,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bt_deleteHoaDon = new System.Windows.Forms.Button();
-            this.bt_exportCSV = new System.Windows.Forms.Button();
+            this.bt_exportCSV = new MaterialSkin.Controls.MaterialButton();
+            this.bt_deleteHoaDona = new MaterialSkin.Controls.MaterialButton();
+            this.bt_Refresh = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,70 +41,109 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 23);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(925, 364);
+            this.dataGridView1.Size = new System.Drawing.Size(756, 498);
             this.dataGridView1.TabIndex = 0;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 402);
+            this.textBox1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(112, 540);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(208, 27);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 405);
+            this.label1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 543);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 16);
+            this.label1.Size = new System.Drawing.Size(81, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Tìm kiếm:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(803, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 41);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Làm mới";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bt_deleteHoaDon
-            // 
-            this.bt_deleteHoaDon.Location = new System.Drawing.Point(686, 393);
-            this.bt_deleteHoaDon.Name = "bt_deleteHoaDon";
-            this.bt_deleteHoaDon.Size = new System.Drawing.Size(93, 41);
-            this.bt_deleteHoaDon.TabIndex = 6;
-            this.bt_deleteHoaDon.Text = "Xoá hoá đơn";
-            this.bt_deleteHoaDon.UseVisualStyleBackColor = true;
-            // 
             // bt_exportCSV
             // 
-            this.bt_exportCSV.Location = new System.Drawing.Point(559, 393);
+            this.bt_exportCSV.AutoSize = false;
+            this.bt_exportCSV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_exportCSV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_exportCSV.Depth = 0;
+            this.bt_exportCSV.HighEmphasis = true;
+            this.bt_exportCSV.Icon = null;
+            this.bt_exportCSV.Location = new System.Drawing.Point(476, 540);
+            this.bt_exportCSV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_exportCSV.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_exportCSV.Name = "bt_exportCSV";
-            this.bt_exportCSV.Size = new System.Drawing.Size(93, 41);
-            this.bt_exportCSV.TabIndex = 7;
-            this.bt_exportCSV.Text = "Xuất file csv";
+            this.bt_exportCSV.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_exportCSV.Size = new System.Drawing.Size(97, 36);
+            this.bt_exportCSV.TabIndex = 8;
+            this.bt_exportCSV.Text = "Xuất File";
+            this.bt_exportCSV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_exportCSV.UseAccentColor = false;
             this.bt_exportCSV.UseVisualStyleBackColor = true;
             this.bt_exportCSV.Click += new System.EventHandler(this.bt_exportCSV_Click);
             // 
+            // bt_deleteHoaDona
+            // 
+            this.bt_deleteHoaDona.AutoSize = false;
+            this.bt_deleteHoaDona.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_deleteHoaDona.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_deleteHoaDona.Depth = 0;
+            this.bt_deleteHoaDona.HighEmphasis = true;
+            this.bt_deleteHoaDona.Icon = null;
+            this.bt_deleteHoaDona.Location = new System.Drawing.Point(581, 540);
+            this.bt_deleteHoaDona.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_deleteHoaDona.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_deleteHoaDona.Name = "bt_deleteHoaDona";
+            this.bt_deleteHoaDona.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_deleteHoaDona.Size = new System.Drawing.Size(97, 36);
+            this.bt_deleteHoaDona.TabIndex = 9;
+            this.bt_deleteHoaDona.Text = "Xoá hoá đơn";
+            this.bt_deleteHoaDona.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_deleteHoaDona.UseAccentColor = false;
+            this.bt_deleteHoaDona.UseVisualStyleBackColor = true;
+            // 
+            // bt_Refresh
+            // 
+            this.bt_Refresh.AutoSize = false;
+            this.bt_Refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_Refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_Refresh.Depth = 0;
+            this.bt_Refresh.HighEmphasis = true;
+            this.bt_Refresh.Icon = null;
+            this.bt_Refresh.Location = new System.Drawing.Point(686, 540);
+            this.bt_Refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_Refresh.Name = "bt_Refresh";
+            this.bt_Refresh.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_Refresh.Size = new System.Drawing.Size(97, 36);
+            this.bt_Refresh.TabIndex = 10;
+            this.bt_Refresh.Text = "Làm mới";
+            this.bt_Refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_Refresh.UseAccentColor = false;
+            this.bt_Refresh.UseVisualStyleBackColor = true;
+            this.bt_Refresh.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SellingHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(949, 450);
+            this.ClientSize = new System.Drawing.Size(810, 591);
+            this.Controls.Add(this.bt_Refresh);
+            this.Controls.Add(this.bt_deleteHoaDona);
             this.Controls.Add(this.bt_exportCSV);
-            this.Controls.Add(this.bt_deleteHoaDon);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SellingHistory";
             this.Text = "SellingHistory";
             this.Load += new System.EventHandler(this.SellingHistory_Load);
@@ -119,8 +158,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button bt_deleteHoaDon;
-        private System.Windows.Forms.Button bt_exportCSV;
+        private MaterialSkin.Controls.MaterialButton bt_exportCSV;
+        private MaterialSkin.Controls.MaterialButton bt_deleteHoaDona;
+        private MaterialSkin.Controls.MaterialButton bt_Refresh;
     }
 }

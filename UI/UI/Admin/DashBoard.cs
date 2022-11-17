@@ -23,7 +23,7 @@ namespace UI
         private void DashBoard_Load(object sender, EventArgs e)
         {
             order_button.PerformClick();
-            lb_greet.Text = "Chào " + GetUserName(hiddenName);
+            //lb_greet.Text = "Chào " + GetUserName(hiddenName) + " <3"; //sau khi set lại form login thì phải uncomment dòng này
 
         }
         public string GetUserName(string hidname)

@@ -179,3 +179,4 @@ D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\UI\obj\Debug\UI.pdb
 D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\UI\bin\Debug\UI.exe.config
 D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\UI\bin\Debug\UI.pdb
 D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\UI\obj\Debug\UI.csproj.CopyComplete
+D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\UI\bin\Debug\MaterialSkin.dll

@@ -67,14 +67,14 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("#LQC02 AllRoundGothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(421, 71);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ACCOUNT LOGIN";
+            this.label1.Text = "VUI LÒNG ĐĂNG NHẬP";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel3
@@ -97,40 +97,40 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("#LQC02 AllRoundGothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(58, 210);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 45);
+            this.button1.Size = new System.Drawing.Size(309, 45);
             this.button1.TabIndex = 7;
-            this.button1.Text = "LOGIN";
+            this.button1.Text = "Đăng Nhập";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // passw_Link
             // 
             this.passw_Link.AutoSize = true;
-            this.passw_Link.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passw_Link.Location = new System.Drawing.Point(248, 176);
+            this.passw_Link.Font = new System.Drawing.Font("#LQC01 Quicksand", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passw_Link.Location = new System.Drawing.Point(241, 176);
             this.passw_Link.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.passw_Link.Name = "passw_Link";
-            this.passw_Link.Size = new System.Drawing.Size(129, 19);
+            this.passw_Link.Size = new System.Drawing.Size(126, 23);
             this.passw_Link.TabIndex = 6;
             this.passw_Link.TabStop = true;
-            this.passw_Link.Text = "Forgot password?";
+            this.passw_Link.Text = "Quên mật khẩu?";
             // 
             // showPassw
             // 
             this.showPassw.AutoSize = true;
-            this.showPassw.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPassw.Font = new System.Drawing.Font("#LQC01 Quicksand", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPassw.ForeColor = System.Drawing.Color.DimGray;
             this.showPassw.Location = new System.Drawing.Point(58, 176);
             this.showPassw.Margin = new System.Windows.Forms.Padding(2);
             this.showPassw.Name = "showPassw";
-            this.showPassw.Size = new System.Drawing.Size(134, 23);
+            this.showPassw.Size = new System.Drawing.Size(152, 27);
             this.showPassw.TabIndex = 5;
-            this.showPassw.Text = "Show password";
+            this.showPassw.Text = "Hiển thị mật khẩu";
             this.showPassw.UseVisualStyleBackColor = true;
             this.showPassw.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -148,14 +148,14 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("#LQC01 Quicksand", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(56, 96);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 19);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = "PASSWORD";
+            this.label3.Text = "MẬT KHẨU";
             // 
             // empId_Box
             // 
@@ -171,14 +171,14 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("#LQC01 Quicksand", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(56, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
+            this.label2.Size = new System.Drawing.Size(117, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "EMPLOYEE ID";
+            this.label2.Text = "MÃ NHÂN VIÊN";
             // 
             // Login
             // 
@@ -192,6 +192,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
