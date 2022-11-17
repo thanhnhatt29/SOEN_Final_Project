@@ -8,116 +8,183 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using BLL;
 
 namespace UI
 {
     public partial class VoucherManage : Form
     {
-        SqlConnection connection=new SqlConnection();
-        
-        SqlCommand command;
-        string str = "Data Source=.\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
-        SqlDataAdapter da = new SqlDataAdapter();
-        DataTable dt = new DataTable();
-
+        List<DAL.VOUCHER> vouchersList = new List<DAL.VOUCHER>();
+        VoucherBLL voucherBLL = new VoucherBLL();
         public VoucherManage()
         {
             InitializeComponent();
-        }
-        public void LoadData()
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from VOUCHER";
-            da.SelectCommand = command;
-            dt.Clear();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "insert into VOUCHER values('" + voucher.Text + "','" + price.Text + "','" + percent.Text + "','" + money.Text + "','" + comboBox1.Text + "')";
-            command.ExecuteNonQuery();
             LoadData();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        #region
+        void LoadData()
         {
+            clearDataBinding();
+            getData();
+            addDataBinding();
+            headerChange();
+        }
+
+        void getData()
+        {
+            vouchersList = voucherBLL.getDataVoucherBLL();
+            dataVoucher.DataSource = vouchersList;
+
+        }
+
+        void clearDataBinding()
+        {
+            voucherId_Box.DataBindings.Clear();
+            price_Box.DataBindings.Clear();
+            money_Box.DataBindings.Clear();
+            percent_Box.DataBindings.Clear();
+            used_Box.DataBindings.Clear();
+        }
+        void addDataBinding()
+        {
+            voucherId_Box.DataBindings.Add(new Binding("Text", dataVoucher.DataSource, "voucher_id",true,DataSourceUpdateMode.Never));
+            price_Box.DataBindings.Add(new Binding("Text", dataVoucher.DataSource, "apply_price", true, DataSourceUpdateMode.Never));
+            money_Box.DataBindings.Add(new Binding("Text", dataVoucher.DataSource, "max_money", true, DataSourceUpdateMode.Never));
+            percent_Box.DataBindings.Add(new Binding("Text", dataVoucher.DataSource, "off_percent", true, DataSourceUpdateMode.Never));
+            used_Box.DataBindings.Add(new Binding("Text", dataVoucher.DataSource, "used", true, DataSourceUpdateMode.Never));
+        }
+        void headerChange()
+        {
+            dataVoucher.Columns[0].HeaderText = "Mã giảm giá";
+            dataVoucher.Columns[1].HeaderText = "Giá áp dụng";
+            dataVoucher.Columns[2].HeaderText = "Phần trăm";
+            dataVoucher.Columns[3].HeaderText = "Không thể dùng";
+            dataVoucher.Columns[4].HeaderText = "Tiền tối đa";
+        }
+
+        void getValues()
+        {
+            id = voucherId_Box.Text.Trim();
+            price = price_Box.Text.Trim();
+            percent = percent_Box.Text.Trim();
+            money = money_Box.Text.Trim();
+        }
+        #endregion
+
+        string id;
+        string price;
+        string money;
+        string percent;
+
+        private void add_Button_Click(object sender, EventArgs e)
+        {
+            getValues();
+            MessageBox.Show(money);
             try
             {
-                command = connection.CreateCommand();
-                command.CommandText = "select * from VOUCHER where voucher_id like('%" + textBox1.Text + "%')";
-                command.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter a = new SqlDataAdapter(command);
-                a.Fill(dt);
-                int i = Convert.ToInt32(dt.Rows.Count.ToString());
-                dataGridView1.DataSource = dt;
-                if (i == 0)
-                {
-                    MessageBox.Show("No Found voucher!");
-                }
+
+                MessageBox.Show(voucherBLL.addVoucherBLL(id, price, percent, money));
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Fail");
             }
+            LoadData();
+            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void update_Button_Click(object sender, EventArgs e)
         {
+            getValues();
+            MessageBox.Show(money);
             try
             {
-                command = connection.CreateCommand();
-                command.CommandText = "update VOUCHER set apply_price = " + price.Text + " , off_percent = " + percent.Text + ", max_money = " + money.Text + " ,used='" + comboBox1.Text + "' where voucher_id='" + voucher.Text + "'";
-                command.ExecuteNonQuery();
-                LoadData();
+
+                MessageBox.Show(voucherBLL.updateVoucherBLL(id, price, percent, money));
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Fail");
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                command = connection.CreateCommand();
-                command.CommandText = "delete from VOUCHER where voucher_id='" + voucher.Text + "'";
-                command.ExecuteNonQuery();
-                LoadData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // voucher.ReadOnly = true;
-            int i;
-            i = dataGridView1.CurrentRow.Index;
-            voucher.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            price.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            percent.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-            money.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            comboBox1.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
-        }
-
-        private void VoucherManage_Load(object sender, EventArgs e)
-        {
-            connection = new SqlConnection(str);
-            connection.Open();
             LoadData();
         }
+
+        private void delete_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exit_Button_Click(object sender, EventArgs e)
+        {
+
+        }
+        /*   SqlConnection connection =new SqlConnection();
+
+SqlCommand command;
+string str = "Data Source=.\\SQLEXPRESS;Initial Catalog=FASTFOOD;Integrated Security=True";
+SqlDataAdapter da = new SqlDataAdapter();
+DataTable dt = new DataTable();
+
+public VoucherManage()
+{
+InitializeComponent();
+}
+
+public void LoadData()
+{
+command = connection.CreateCommand();
+command.CommandText = "select * from VOUCHER";
+da.SelectCommand = command;
+dt.Clear();
+da.Fill(dt);
+dataGridView1.DataSource = dt;
+}
+
+private void button1_Click(object sender, EventArgs e)
+{
+
+}
+
+private void button6_Click(object sender, EventArgs e)
+{
+
+}
+
+private void button4_Click(object sender, EventArgs e)
+{
+
+}
+
+private void button3_Click(object sender, EventArgs e)
+{
+
+}
+
+private void button5_Click(object sender, EventArgs e)
+{
+this.Hide();
+}
+
+private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+{
+// voucher.ReadOnly = true;
+int i;
+i = dataGridView1.CurrentRow.Index;
+voucher.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+price.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+percent.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+money.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+comboBox1.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+}
+
+private void VoucherManage_Load(object sender, EventArgs e)
+{
+
+}
+
+
+*/
+
     }
 }

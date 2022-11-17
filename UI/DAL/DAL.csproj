@@ -101,6 +101,7 @@
     <Compile Include="VOUCHER.cs">
       <DependentUpon>FASTFOODModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VoucherDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -28,126 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.used_Box = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.money = new System.Windows.Forms.TextBox();
-            this.percent = new System.Windows.Forms.TextBox();
-            this.price = new System.Windows.Forms.TextBox();
-            this.voucher = new System.Windows.Forms.TextBox();
             this.max_money = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
             this.apply_price = new System.Windows.Forms.Label();
             this.voucher_id = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.search_Button = new System.Windows.Forms.Button();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.exit_Button = new System.Windows.Forms.Button();
+            this.update_Button = new System.Windows.Forms.Button();
+            this.delete_Button = new System.Windows.Forms.Button();
+            this.add_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataVoucher = new System.Windows.Forms.DataGridView();
+            this.percent_Box = new System.Windows.Forms.TextBox();
+            this.money_Box = new System.Windows.Forms.TextBox();
+            this.price_Box = new System.Windows.Forms.TextBox();
+            this.voucherId_Box = new System.Windows.Forms.TextBox();
             this.Information.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVoucher)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // used_Box
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.used_Box.Cursor = System.Windows.Forms.Cursors.Default;
+            this.used_Box.FormattingEnabled = true;
+            this.used_Box.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox1.Location = new System.Drawing.Point(207, 134);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(102, 21);
-            this.comboBox1.TabIndex = 9;
+            this.used_Box.Location = new System.Drawing.Point(276, 165);
+            this.used_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.used_Box.Name = "used_Box";
+            this.used_Box.Size = new System.Drawing.Size(135, 24);
+            this.used_Box.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 136);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(215, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "used:";
-            // 
-            // money
-            // 
-            this.money.Location = new System.Drawing.Point(393, 95);
-            this.money.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.money.Name = "money";
-            this.money.Size = new System.Drawing.Size(101, 20);
-            this.money.TabIndex = 7;
-            // 
-            // percent
-            // 
-            this.percent.Location = new System.Drawing.Point(393, 43);
-            this.percent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.percent.Name = "percent";
-            this.percent.Size = new System.Drawing.Size(101, 20);
-            this.percent.TabIndex = 6;
-            // 
-            // price
-            // 
-            this.price.Location = new System.Drawing.Point(96, 95);
-            this.price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(98, 20);
-            this.price.TabIndex = 5;
-            // 
-            // voucher
-            // 
-            this.voucher.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.voucher.Location = new System.Drawing.Point(78, 32);
-            this.voucher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.voucher.Name = "voucher";
-            this.voucher.Size = new System.Drawing.Size(98, 20);
-            this.voucher.TabIndex = 4;
             // 
             // max_money
             // 
             this.max_money.AutoSize = true;
-            this.max_money.Location = new System.Drawing.Point(292, 95);
-            this.max_money.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.max_money.Location = new System.Drawing.Point(389, 117);
             this.max_money.Name = "max_money";
-            this.max_money.Size = new System.Drawing.Size(66, 13);
+            this.max_money.Size = new System.Drawing.Size(83, 16);
             this.max_money.TabIndex = 3;
             this.max_money.Text = "max_money:";
             // 
             // lb
             // 
             this.lb.AutoSize = true;
-            this.lb.Location = new System.Drawing.Point(294, 47);
-            this.lb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb.Location = new System.Drawing.Point(392, 58);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(64, 13);
+            this.lb.Size = new System.Drawing.Size(76, 16);
             this.lb.TabIndex = 2;
             this.lb.Text = "percent_off:";
             // 
             // apply_price
             // 
             this.apply_price.AutoSize = true;
-            this.apply_price.Location = new System.Drawing.Point(28, 99);
-            this.apply_price.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.apply_price.Location = new System.Drawing.Point(37, 122);
             this.apply_price.Name = "apply_price";
-            this.apply_price.Size = new System.Drawing.Size(64, 13);
+            this.apply_price.Size = new System.Drawing.Size(81, 16);
             this.apply_price.TabIndex = 1;
             this.apply_price.Text = "apply_price:";
             // 
             // voucher_id
             // 
             this.voucher_id.AutoSize = true;
-            this.voucher_id.Location = new System.Drawing.Point(12, 37);
-            this.voucher_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.voucher_id.Location = new System.Drawing.Point(42, 58);
             this.voucher_id.Name = "voucher_id";
-            this.voucher_id.Size = new System.Drawing.Size(63, 13);
+            this.voucher_id.Size = new System.Drawing.Size(76, 16);
             this.voucher_id.TabIndex = 0;
             this.voucher_id.Text = "voucher_id:";
             // 
@@ -156,152 +114,165 @@
             this.Information.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Information.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Information.Controls.Add(this.panel1);
-            this.Information.Controls.Add(this.comboBox1);
+            this.Information.Controls.Add(this.voucherId_Box);
+            this.Information.Controls.Add(this.price_Box);
+            this.Information.Controls.Add(this.money_Box);
+            this.Information.Controls.Add(this.percent_Box);
+            this.Information.Controls.Add(this.voucher_id);
+            this.Information.Controls.Add(this.used_Box);
             this.Information.Controls.Add(this.label2);
-            this.Information.Controls.Add(this.money);
-            this.Information.Controls.Add(this.percent);
-            this.Information.Controls.Add(this.price);
             this.Information.Controls.Add(this.max_money);
             this.Information.Controls.Add(this.lb);
             this.Information.Controls.Add(this.apply_price);
-            this.Information.Location = new System.Drawing.Point(9, 409);
-            this.Information.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Information.Location = new System.Drawing.Point(12, 503);
+            this.Information.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Information.Name = "Information";
-            this.Information.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Information.Size = new System.Drawing.Size(701, 172);
+            this.Information.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Information.Size = new System.Drawing.Size(935, 212);
             this.Information.TabIndex = 18;
             this.Information.TabStop = false;
             this.Information.Text = "Information";
             // 
-            // panel1
+            // search_Button
             // 
-            this.panel1.Controls.Add(this.voucher_id);
-            this.panel1.Controls.Add(this.voucher);
-            this.panel1.Location = new System.Drawing.Point(18, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 63);
-            this.panel1.TabIndex = 10;
+            this.search_Button.Location = new System.Drawing.Point(329, 12);
+            this.search_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.search_Button.Name = "search_Button";
+            this.search_Button.Size = new System.Drawing.Size(81, 25);
+            this.search_Button.TabIndex = 17;
+            this.search_Button.Text = "search";
+            this.search_Button.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // searchBox
             // 
-            this.button6.Location = new System.Drawing.Point(247, 10);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(61, 20);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "search";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.searchBox.Location = new System.Drawing.Point(112, 12);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(196, 22);
+            this.searchBox.TabIndex = 16;
             // 
-            // textBox1
+            // exit_Button
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 10);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 20);
-            this.textBox1.TabIndex = 16;
+            this.exit_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.exit_Button.Location = new System.Drawing.Point(964, 667);
+            this.exit_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit_Button.Name = "exit_Button";
+            this.exit_Button.Size = new System.Drawing.Size(96, 37);
+            this.exit_Button.TabIndex = 15;
+            this.exit_Button.Text = "exit";
+            this.exit_Button.UseVisualStyleBackColor = true;
+            this.exit_Button.Click += new System.EventHandler(this.exit_Button_Click);
             // 
-            // button5
+            // update_Button
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(723, 542);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(72, 30);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "exit";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.update_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.update_Button.Location = new System.Drawing.Point(964, 570);
+            this.update_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.update_Button.Name = "update_Button";
+            this.update_Button.Size = new System.Drawing.Size(96, 37);
+            this.update_Button.TabIndex = 14;
+            this.update_Button.Text = "update";
+            this.update_Button.UseVisualStyleBackColor = true;
+            this.update_Button.Click += new System.EventHandler(this.update_Button_Click);
             // 
-            // button4
+            // delete_Button
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(723, 463);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 30);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "update";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.delete_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.delete_Button.Location = new System.Drawing.Point(964, 619);
+            this.delete_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.delete_Button.Name = "delete_Button";
+            this.delete_Button.Size = new System.Drawing.Size(96, 37);
+            this.delete_Button.TabIndex = 13;
+            this.delete_Button.Text = "delete";
+            this.delete_Button.UseVisualStyleBackColor = true;
+            this.delete_Button.Click += new System.EventHandler(this.delete_Button_Click);
             // 
-            // button3
+            // add_Button
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(723, 503);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 30);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "delete";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(723, 423);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 30);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.add_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.add_Button.Location = new System.Drawing.Point(964, 521);
+            this.add_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.add_Button.Name = "add_Button";
+            this.add_Button.Size = new System.Drawing.Size(96, 37);
+            this.add_Button.TabIndex = 12;
+            this.add_Button.Text = "add";
+            this.add_Button.UseVisualStyleBackColor = true;
+            this.add_Button.Click += new System.EventHandler(this.add_Button_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(75, 18);
             this.label1.TabIndex = 11;
             this.label1.Text = "Voucher:";
             // 
-            // dataGridView1
+            // dataVoucher
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 42);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(785, 352);
-            this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataVoucher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataVoucher.BackgroundColor = System.Drawing.Color.White;
+            this.dataVoucher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataVoucher.Location = new System.Drawing.Point(12, 52);
+            this.dataVoucher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataVoucher.Name = "dataVoucher";
+            this.dataVoucher.RowHeadersWidth = 51;
+            this.dataVoucher.RowTemplate.Height = 24;
+            this.dataVoucher.Size = new System.Drawing.Size(1047, 433);
+            this.dataVoucher.TabIndex = 10;
+            // 
+            // percent_Box
+            // 
+            this.percent_Box.Location = new System.Drawing.Point(489, 55);
+            this.percent_Box.Name = "percent_Box";
+            this.percent_Box.Size = new System.Drawing.Size(100, 22);
+            this.percent_Box.TabIndex = 10;
+            // 
+            // money_Box
+            // 
+            this.money_Box.Location = new System.Drawing.Point(489, 111);
+            this.money_Box.Name = "money_Box";
+            this.money_Box.Size = new System.Drawing.Size(100, 22);
+            this.money_Box.TabIndex = 11;
+            // 
+            // price_Box
+            // 
+            this.price_Box.Location = new System.Drawing.Point(135, 122);
+            this.price_Box.Name = "price_Box";
+            this.price_Box.Size = new System.Drawing.Size(100, 22);
+            this.price_Box.TabIndex = 12;
+            // 
+            // voucherId_Box
+            // 
+            this.voucherId_Box.Location = new System.Drawing.Point(135, 55);
+            this.voucherId_Box.Name = "voucherId_Box";
+            this.voucherId_Box.Size = new System.Drawing.Size(100, 22);
+            this.voucherId_Box.TabIndex = 13;
             // 
             // VoucherManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 591);
+            this.ClientSize = new System.Drawing.Size(1080, 727);
             this.Controls.Add(this.Information);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.search_Button);
+            this.Controls.Add(this.searchBox);
+            this.Controls.Add(this.exit_Button);
+            this.Controls.Add(this.update_Button);
+            this.Controls.Add(this.delete_Button);
+            this.Controls.Add(this.add_Button);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.dataVoucher);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "VoucherManage";
             this.Text = "VourcherManage";
-            this.Load += new System.EventHandler(this.VoucherManage_Load);
             this.Information.ResumeLayout(false);
             this.Information.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataVoucher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,25 +280,24 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox used_Box;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox money;
-        private System.Windows.Forms.TextBox percent;
-        private System.Windows.Forms.TextBox price;
-        private System.Windows.Forms.TextBox voucher;
         private System.Windows.Forms.Label max_money;
         private System.Windows.Forms.Label lb;
         private System.Windows.Forms.Label apply_price;
         private System.Windows.Forms.Label voucher_id;
         private System.Windows.Forms.GroupBox Information;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button search_Button;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Button exit_Button;
+        private System.Windows.Forms.Button update_Button;
+        private System.Windows.Forms.Button delete_Button;
+        private System.Windows.Forms.Button add_Button;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataVoucher;
+        private System.Windows.Forms.TextBox voucherId_Box;
+        private System.Windows.Forms.TextBox price_Box;
+        private System.Windows.Forms.TextBox money_Box;
+        private System.Windows.Forms.TextBox percent_Box;
     }
 }
