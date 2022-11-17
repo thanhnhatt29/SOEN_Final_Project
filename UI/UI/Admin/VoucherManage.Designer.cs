@@ -125,8 +125,7 @@
             // 
             // Information
             // 
-            this.Information.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Information.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Information.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(161)))));
             this.Information.Controls.Add(this.voucherId_Box);
             this.Information.Controls.Add(this.price_Box);
@@ -186,6 +185,7 @@
             // 
             // searchBox
             // 
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBox.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.Location = new System.Drawing.Point(539, 11);
             this.searchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -311,6 +311,7 @@
             // 
             // search_Button
             // 
+            this.search_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.search_Button.AutoSize = false;
             this.search_Button.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.search_Button.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -328,6 +329,7 @@
             this.search_Button.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.search_Button.UseAccentColor = false;
             this.search_Button.UseVisualStyleBackColor = true;
+            this.search_Button.Click += new System.EventHandler(this.search_Button_Click);
             // 
             // VoucherManage
             // 

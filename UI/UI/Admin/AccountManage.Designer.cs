@@ -33,13 +33,20 @@
             this.bt_Delele = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tx_findAcc = new MaterialSkin.Controls.MaterialTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.accData)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // accData
             // 
+            this.accData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.accData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accData.Location = new System.Drawing.Point(21, 25);
+            this.accData.Location = new System.Drawing.Point(18, 11);
             this.accData.Margin = new System.Windows.Forms.Padding(2);
             this.accData.Name = "accData";
             this.accData.RowHeadersWidth = 51;
@@ -49,13 +56,14 @@
             // 
             // addAccount
             // 
+            this.addAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.addAccount.AutoSize = false;
             this.addAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.addAccount.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.addAccount.Depth = 0;
             this.addAccount.HighEmphasis = true;
             this.addAccount.Icon = null;
-            this.addAccount.Location = new System.Drawing.Point(571, 540);
+            this.addAccount.Location = new System.Drawing.Point(559, 12);
             this.addAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addAccount.MouseState = MaterialSkin.MouseState.HOVER;
             this.addAccount.Name = "addAccount";
@@ -70,13 +78,14 @@
             // 
             // bt_Delele
             // 
+            this.bt_Delele.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Delele.AutoSize = false;
             this.bt_Delele.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.bt_Delele.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.bt_Delele.Depth = 0;
             this.bt_Delele.HighEmphasis = true;
             this.bt_Delele.Icon = null;
-            this.bt_Delele.Location = new System.Drawing.Point(682, 540);
+            this.bt_Delele.Location = new System.Drawing.Point(670, 12);
             this.bt_Delele.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Delele.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Delele.Name = "bt_Delele";
@@ -94,7 +103,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(27, 546);
+            this.materialLabel1.Location = new System.Drawing.Point(15, 18);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(67, 19);
@@ -106,36 +115,56 @@
             this.tx_findAcc.AnimateReadOnly = false;
             this.tx_findAcc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tx_findAcc.Depth = 0;
-            this.tx_findAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.tx_findAcc.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tx_findAcc.LeadingIcon = null;
-            this.tx_findAcc.Location = new System.Drawing.Point(100, 529);
+            this.tx_findAcc.Location = new System.Drawing.Point(88, 1);
             this.tx_findAcc.MaxLength = 50;
             this.tx_findAcc.MouseState = MaterialSkin.MouseState.OUT;
             this.tx_findAcc.Multiline = false;
             this.tx_findAcc.Name = "tx_findAcc";
             this.tx_findAcc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tx_findAcc.Size = new System.Drawing.Size(212, 50);
+            this.tx_findAcc.Size = new System.Drawing.Size(328, 50);
             this.tx_findAcc.TabIndex = 16;
             this.tx_findAcc.Text = "";
             this.tx_findAcc.TrailingIcon = null;
             this.tx_findAcc.TextChanged += new System.EventHandler(this.tx_findAcc_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.accData);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(810, 591);
+            this.panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tx_findAcc);
+            this.panel2.Controls.Add(this.materialLabel1);
+            this.panel2.Controls.Add(this.bt_Delele);
+            this.panel2.Controls.Add(this.addAccount);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 525);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(810, 66);
+            this.panel2.TabIndex = 18;
             // 
             // AccountManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 591);
-            this.Controls.Add(this.tx_findAcc);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.bt_Delele);
-            this.Controls.Add(this.addAccount);
-            this.Controls.Add(this.accData);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AccountManage";
             this.Text = "AccountManage";
             ((System.ComponentModel.ISupportInitialize)(this.accData)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -145,5 +174,7 @@
         private MaterialSkin.Controls.MaterialButton bt_Delele;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialTextBox tx_findAcc;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

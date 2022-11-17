@@ -61,6 +61,7 @@ namespace UI
             dataVoucher.Columns[2].HeaderText = "Phần trăm";
             dataVoucher.Columns[3].HeaderText = "Không thể dùng";
             dataVoucher.Columns[4].HeaderText = "Tiền tối đa";
+            dataVoucher.Columns[3].Visible = false;  
         }
 
         void getValues()

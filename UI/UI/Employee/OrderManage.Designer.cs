@@ -79,51 +79,58 @@
             this.bt_payBill.Controls.Add(this.bt_cancelBill);
             this.bt_payBill.Controls.Add(this.button2);
             this.bt_payBill.Controls.Add(this.label1);
-            this.bt_payBill.Location = new System.Drawing.Point(578, 12);
+            this.bt_payBill.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bt_payBill.Location = new System.Drawing.Point(440, 0);
+            this.bt_payBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_payBill.Name = "bt_payBill";
-            this.bt_payBill.Size = new System.Drawing.Size(418, 599);
+            this.bt_payBill.Size = new System.Drawing.Size(314, 506);
             this.bt_payBill.TabIndex = 0;
             // 
             // textBox_moneyPay
             // 
-            this.textBox_moneyPay.Location = new System.Drawing.Point(117, 494);
+            this.textBox_moneyPay.Location = new System.Drawing.Point(88, 401);
+            this.textBox_moneyPay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_moneyPay.Name = "textBox_moneyPay";
-            this.textBox_moneyPay.Size = new System.Drawing.Size(162, 22);
+            this.textBox_moneyPay.Size = new System.Drawing.Size(122, 20);
             this.textBox_moneyPay.TabIndex = 19;
             this.textBox_moneyPay.Text = "0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 497);
+            this.label7.Location = new System.Drawing.Point(38, 404);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 16);
+            this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 18;
             this.label7.Text = "Tiền nhận:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(251, 467);
+            this.label4.Location = new System.Drawing.Point(188, 379);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 16);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Tổng thu:";
             // 
             // lb_finalPrice
             // 
             this.lb_finalPrice.AutoSize = true;
-            this.lb_finalPrice.Location = new System.Drawing.Point(323, 467);
+            this.lb_finalPrice.Location = new System.Drawing.Point(242, 379);
+            this.lb_finalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_finalPrice.Name = "lb_finalPrice";
-            this.lb_finalPrice.Size = new System.Drawing.Size(14, 16);
+            this.lb_finalPrice.Size = new System.Drawing.Size(13, 13);
             this.lb_finalPrice.TabIndex = 10;
             this.lb_finalPrice.Text = "0";
             // 
             // bt_checkVoucher
             // 
-            this.bt_checkVoucher.Location = new System.Drawing.Point(295, 425);
+            this.bt_checkVoucher.Location = new System.Drawing.Point(221, 345);
+            this.bt_checkVoucher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_checkVoucher.Name = "bt_checkVoucher";
-            this.bt_checkVoucher.Size = new System.Drawing.Size(72, 28);
+            this.bt_checkVoucher.Size = new System.Drawing.Size(54, 23);
             this.bt_checkVoucher.TabIndex = 17;
             this.bt_checkVoucher.Text = "Check";
             this.bt_checkVoucher.UseVisualStyleBackColor = true;
@@ -131,26 +138,29 @@
             // 
             // textBox_voucher
             // 
-            this.textBox_voucher.Location = new System.Drawing.Point(117, 428);
+            this.textBox_voucher.Location = new System.Drawing.Point(88, 348);
+            this.textBox_voucher.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox_voucher.Name = "textBox_voucher";
-            this.textBox_voucher.Size = new System.Drawing.Size(162, 22);
+            this.textBox_voucher.Size = new System.Drawing.Size(122, 20);
             this.textBox_voucher.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(51, 467);
+            this.label9.Location = new System.Drawing.Point(38, 379);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 16);
+            this.label9.Size = new System.Drawing.Size(65, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Khuyến mãi:";
             // 
             // lb_offPrice
             // 
             this.lb_offPrice.AutoSize = true;
-            this.lb_offPrice.Location = new System.Drawing.Point(136, 467);
+            this.lb_offPrice.Location = new System.Drawing.Point(102, 379);
+            this.lb_offPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_offPrice.Name = "lb_offPrice";
-            this.lb_offPrice.Size = new System.Drawing.Size(14, 16);
+            this.lb_offPrice.Size = new System.Drawing.Size(13, 13);
             this.lb_offPrice.TabIndex = 15;
             this.lb_offPrice.Text = "0";
             // 
@@ -163,9 +173,11 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.lb_billID);
             this.groupBox2.Controls.Add(this.lb_totalPrice);
-            this.groupBox2.Location = new System.Drawing.Point(3, 140);
+            this.groupBox2.Location = new System.Drawing.Point(2, 114);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(412, 282);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(309, 229);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hoá đơn";
@@ -173,18 +185,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 226);
+            this.label5.Location = new System.Drawing.Point(224, 184);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 16);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Số lượng:";
             // 
             // lb_totalAmount
             // 
             this.lb_totalAmount.AutoSize = true;
-            this.lb_totalAmount.Location = new System.Drawing.Point(368, 226);
+            this.lb_totalAmount.Location = new System.Drawing.Point(276, 184);
+            this.lb_totalAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_totalAmount.Name = "lb_totalAmount";
-            this.lb_totalAmount.Size = new System.Drawing.Size(28, 16);
+            this.lb_totalAmount.Size = new System.Drawing.Size(25, 13);
             this.lb_totalAmount.TabIndex = 8;
             this.lb_totalAmount.Text = "123";
             // 
@@ -192,45 +206,50 @@
             // 
             this.dataGridView_bill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_bill.Location = new System.Drawing.Point(6, 21);
+            this.dataGridView_bill.Location = new System.Drawing.Point(4, 17);
+            this.dataGridView_bill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView_bill.Name = "dataGridView_bill";
             this.dataGridView_bill.RowHeadersWidth = 51;
             this.dataGridView_bill.RowTemplate.Height = 24;
-            this.dataGridView_bill.Size = new System.Drawing.Size(400, 202);
+            this.dataGridView_bill.Size = new System.Drawing.Size(300, 164);
             this.dataGridView_bill.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 226);
+            this.label3.Location = new System.Drawing.Point(21, 184);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Mã hoá đơn:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 253);
+            this.label2.Location = new System.Drawing.Point(114, 206);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tổng tiền:";
             // 
             // lb_billID
             // 
-            this.lb_billID.Location = new System.Drawing.Point(115, 226);
+            this.lb_billID.Location = new System.Drawing.Point(86, 184);
+            this.lb_billID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_billID.Name = "lb_billID";
-            this.lb_billID.Size = new System.Drawing.Size(85, 16);
+            this.lb_billID.Size = new System.Drawing.Size(64, 13);
             this.lb_billID.TabIndex = 4;
             this.lb_billID.Text = "123";
             // 
             // lb_totalPrice
             // 
             this.lb_totalPrice.AutoSize = true;
-            this.lb_totalPrice.Location = new System.Drawing.Point(224, 253);
+            this.lb_totalPrice.Location = new System.Drawing.Point(168, 206);
+            this.lb_totalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_totalPrice.Name = "lb_totalPrice";
-            this.lb_totalPrice.Size = new System.Drawing.Size(14, 16);
+            this.lb_totalPrice.Size = new System.Drawing.Size(13, 13);
             this.lb_totalPrice.TabIndex = 6;
             this.lb_totalPrice.Text = "0";
             // 
@@ -244,9 +263,11 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lb_productPrice);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(412, 131);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(309, 106);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin món ăn";
@@ -254,26 +275,29 @@
             // lb_productID
             // 
             this.lb_productID.AutoSize = true;
-            this.lb_productID.Location = new System.Drawing.Point(211, 30);
+            this.lb_productID.Location = new System.Drawing.Point(158, 24);
+            this.lb_productID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_productID.Name = "lb_productID";
-            this.lb_productID.Size = new System.Drawing.Size(70, 16);
+            this.lb_productID.Size = new System.Drawing.Size(57, 13);
             this.lb_productID.TabIndex = 17;
             this.lb_productID.Text = "product_id";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(142, 30);
+            this.label10.Location = new System.Drawing.Point(106, 24);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 16);
+            this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 16;
             this.label10.Text = "Mã món:";
             // 
             // bt_deleteProduct
             // 
-            this.bt_deleteProduct.Location = new System.Drawing.Point(247, 91);
+            this.bt_deleteProduct.Location = new System.Drawing.Point(185, 74);
+            this.bt_deleteProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_deleteProduct.Name = "bt_deleteProduct";
-            this.bt_deleteProduct.Size = new System.Drawing.Size(93, 30);
+            this.bt_deleteProduct.Size = new System.Drawing.Size(70, 24);
             this.bt_deleteProduct.TabIndex = 15;
             this.bt_deleteProduct.Text = "-";
             this.bt_deleteProduct.UseVisualStyleBackColor = true;
@@ -282,17 +306,19 @@
             // lb_productName
             // 
             this.lb_productName.AutoSize = true;
-            this.lb_productName.Location = new System.Drawing.Point(87, 61);
+            this.lb_productName.Location = new System.Drawing.Point(65, 50);
+            this.lb_productName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_productName.Name = "lb_productName";
-            this.lb_productName.Size = new System.Drawing.Size(93, 16);
+            this.lb_productName.Size = new System.Drawing.Size(75, 13);
             this.lb_productName.TabIndex = 11;
             this.lb_productName.Text = "product_name";
             // 
             // bt_addProduct
             // 
-            this.bt_addProduct.Location = new System.Drawing.Point(41, 91);
+            this.bt_addProduct.Location = new System.Drawing.Point(31, 74);
+            this.bt_addProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_addProduct.Name = "bt_addProduct";
-            this.bt_addProduct.Size = new System.Drawing.Size(93, 30);
+            this.bt_addProduct.Size = new System.Drawing.Size(70, 24);
             this.bt_addProduct.TabIndex = 14;
             this.bt_addProduct.Text = "+";
             this.bt_addProduct.UseVisualStyleBackColor = true;
@@ -301,35 +327,39 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 61);
+            this.label6.Location = new System.Drawing.Point(14, 50);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 16);
+            this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Tên món:";
             // 
             // lb_productPrice
             // 
             this.lb_productPrice.AutoSize = true;
-            this.lb_productPrice.Location = new System.Drawing.Point(276, 61);
+            this.lb_productPrice.Location = new System.Drawing.Point(207, 50);
+            this.lb_productPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_productPrice.Name = "lb_productPrice";
-            this.lb_productPrice.Size = new System.Drawing.Size(14, 16);
+            this.lb_productPrice.Size = new System.Drawing.Size(13, 13);
             this.lb_productPrice.TabIndex = 9;
             this.lb_productPrice.Text = "0";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(215, 61);
+            this.label8.Location = new System.Drawing.Point(161, 50);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 16);
+            this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 8;
             this.label8.Text = "Giá tiền:";
             // 
             // bt_cancelBill
             // 
-            this.bt_cancelBill.Location = new System.Drawing.Point(270, 545);
+            this.bt_cancelBill.Location = new System.Drawing.Point(202, 443);
+            this.bt_cancelBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_cancelBill.Name = "bt_cancelBill";
-            this.bt_cancelBill.Size = new System.Drawing.Size(93, 39);
+            this.bt_cancelBill.Size = new System.Drawing.Size(70, 32);
             this.bt_cancelBill.TabIndex = 7;
             this.bt_cancelBill.Text = "Hủy đơn";
             this.bt_cancelBill.UseVisualStyleBackColor = true;
@@ -337,9 +367,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(64, 545);
+            this.button2.Location = new System.Drawing.Point(48, 443);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 39);
+            this.button2.Size = new System.Drawing.Size(70, 32);
             this.button2.TabIndex = 6;
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = true;
@@ -348,27 +379,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 431);
+            this.label1.Location = new System.Drawing.Point(38, 350);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Voucher:";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(560, 599);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(440, 506);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // OrderManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 623);
+            this.ClientSize = new System.Drawing.Size(754, 506);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.bt_payBill);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OrderManage";
             this.Text = "OrderManage";
             this.Load += new System.EventHandler(this.OrderManage_Load);

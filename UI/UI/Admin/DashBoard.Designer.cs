@@ -68,6 +68,7 @@
             // 
             // llb_logout
             // 
+            this.llb_logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.llb_logout.AutoSize = true;
             this.llb_logout.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llb_logout.LinkColor = System.Drawing.Color.White;
