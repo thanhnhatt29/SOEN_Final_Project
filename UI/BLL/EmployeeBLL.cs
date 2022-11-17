@@ -41,6 +41,11 @@ namespace BLL
 
         public string updateEmpBLL(string empID, string empName, byte[] empImg, string phone, DateTime doB, bool female, string position)
         {
+            List<EMPLOYEE> emp_list = emp_DAL.getDataEmpDAL();
+            if (emp_list.Where(x => x.employee_id == empID).Count() == 0)
+            {
+                return "Không tìm thấy";
+            }
             if (!checkAge(doB))
             {
                 return "Không đủ tuổi";

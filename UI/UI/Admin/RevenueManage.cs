@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BLL;
 namespace UI
 {
     public partial class RevenueManage : Form
     {
-        SqlConnection connection;
+        /*SqlConnection connection;
         SqlCommand command;
         string str = "Data Source=LAPTOP-0460STTB;Initial Catalog=FASTFOOD;Integrated Security=True";
         SqlDataAdapter da = new SqlDataAdapter();
@@ -36,6 +37,34 @@ namespace UI
             connection = new SqlConnection(str);
             connection.Open();
             LoadData();
+        }*/
+
+
+        RevenueBLL revenueBLL = new RevenueBLL();
+        public RevenueManage()
+        {
+            InitializeComponent();
+            //dataRevenue.DataSource = revenueBLL.getDataDate();
+            //dataRevenue.DataSource = revenueBLL.getDataMonth();
+            dataRevenue.DataSource = revenueBLL.getDataDate();
+            dataRevenue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataRevenue.ReadOnly = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.Text == "Ngày")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataDate();
+            }
+            else if(comboBox1.Text == "Tháng")
+            {
+                dataRevenue.DataSource=revenueBLL.getDataMonth();
+            }
+            else if(comboBox1.Text == "Năm")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataYear();
+            }
         }
     }
 }
