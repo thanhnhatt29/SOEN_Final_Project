@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.productImg = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.productID_Box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.productPrice_box = new System.Windows.Forms.TextBox();
@@ -40,23 +40,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.productData = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cancel_Button = new MaterialSkin.Controls.MaterialButton();
             this.update_Button = new MaterialSkin.Controls.MaterialButton();
             this.remove_Button = new MaterialSkin.Controls.MaterialButton();
             this.add_Button = new MaterialSkin.Controls.MaterialButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.searchName_Box = new MaterialSkin.Controls.MaterialTextBox2();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.productData = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productImg)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productData)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -71,6 +71,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(302, 591);
             this.panel3.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(161)))));
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.productImg);
+            this.groupBox1.Controls.Add(this.productID_Box);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.productPrice_box);
+            this.groupBox1.Controls.Add(this.productDetail);
+            this.groupBox1.Controls.Add(this.productName_Box);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(7, 37);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(283, 337);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin";
             // 
             // label8
             // 
@@ -98,18 +119,6 @@
             this.productImg.TabIndex = 36;
             this.productImg.TabStop = false;
             this.productImg.Click += new System.EventHandler(this.productImg_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(316, 119);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 21);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "VNĐ";
             // 
             // productID_Box
             // 
@@ -205,77 +214,16 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Giá tiền";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.searchName_Box);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.productData);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(508, 591);
-            this.panel4.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 24);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Danh sách sản phẩm";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // productData
-            // 
-            this.productData.AllowUserToOrderColumns = true;
-            this.productData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.productData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.productData.ColumnHeadersHeight = 29;
-            this.productData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.productData.Location = new System.Drawing.Point(8, 36);
-            this.productData.Margin = new System.Windows.Forms.Padding(2);
-            this.productData.Name = "productData";
-            this.productData.RowHeadersWidth = 51;
-            this.productData.RowTemplate.Height = 70;
-            this.productData.Size = new System.Drawing.Size(489, 397);
-            this.productData.TabIndex = 16;
-            this.productData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productData_CellContentClick);
-            this.productData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productData_ColumnHeaderMouseClick);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 470);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 24);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Tìm theo tên sản phẩm";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(215)))), ((int)(((byte)(227)))));
             this.groupBox2.Controls.Add(this.cancel_Button);
             this.groupBox2.Controls.Add(this.update_Button);
             this.groupBox2.Controls.Add(this.remove_Button);
             this.groupBox2.Controls.Add(this.add_Button);
             this.groupBox2.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(7, 424);
+            this.groupBox2.Location = new System.Drawing.Point(7, 401);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(283, 145);
             this.groupBox2.TabIndex = 43;
@@ -366,11 +314,35 @@
             this.add_Button.UseVisualStyleBackColor = true;
             this.add_Button.Click += new System.EventHandler(this.add_Button_Click);
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(316, 119);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 21);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "VNĐ";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.searchName_Box);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.productData);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(508, 591);
+            this.panel4.TabIndex = 3;
+            // 
             // searchName_Box
             // 
-            this.searchName_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchName_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.searchName_Box.AnimateReadOnly = false;
             this.searchName_Box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.searchName_Box.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -390,7 +362,7 @@
             this.searchName_Box.SelectionLength = 0;
             this.searchName_Box.SelectionStart = 0;
             this.searchName_Box.ShortcutsEnabled = true;
-            this.searchName_Box.Size = new System.Drawing.Size(489, 48);
+            this.searchName_Box.Size = new System.Drawing.Size(500, 48);
             this.searchName_Box.TabIndex = 28;
             this.searchName_Box.TabStop = false;
             this.searchName_Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -398,26 +370,51 @@
             this.searchName_Box.UseSystemPasswordChar = false;
             this.searchName_Box.TextChanged += new System.EventHandler(this.searchName_Box_TextChanged);
             // 
-            // groupBox1
+            // label3
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(161)))));
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.productImg);
-            this.groupBox1.Controls.Add(this.productID_Box);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.productPrice_box);
-            this.groupBox1.Controls.Add(this.productDetail);
-            this.groupBox1.Controls.Add(this.productName_Box);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(7, 37);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 337);
-            this.groupBox1.TabIndex = 44;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin";
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(169, 24);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Danh sách sản phẩm";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // productData
+            // 
+            this.productData.AllowUserToOrderColumns = true;
+            this.productData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.productData.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.productData.ColumnHeadersHeight = 29;
+            this.productData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.productData.Location = new System.Drawing.Point(8, 36);
+            this.productData.Margin = new System.Windows.Forms.Padding(2);
+            this.productData.Name = "productData";
+            this.productData.RowHeadersWidth = 51;
+            this.productData.RowTemplate.Height = 70;
+            this.productData.Size = new System.Drawing.Size(489, 397);
+            this.productData.TabIndex = 16;
+            this.productData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productData_CellContentClick);
+            this.productData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.productData_ColumnHeaderMouseClick);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 470);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 24);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Tìm theo tên sản phẩm";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ProductManage
             // 
@@ -431,13 +428,13 @@
             this.Text = "ProductManage";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productImg)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productData)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

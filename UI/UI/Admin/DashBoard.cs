@@ -75,7 +75,7 @@ namespace UI
         
         private void voucher_button_Click(object sender, EventArgs e)
         {
-            lb_nameForm.Text = "Quản lý Voucher";
+            lb_nameForm.Text = "Quản lý Mã giảm giá";
             VoucherManage voucherManage = new VoucherManage() { Dock = DockStyle.Fill, TopLevel = false };
             voucherManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             dashboard_panel.Controls.Clear();
