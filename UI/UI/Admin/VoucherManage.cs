@@ -80,7 +80,7 @@ namespace UI
         private void add_Button_Click(object sender, EventArgs e)
         {
             getValues();
-            MessageBox.Show(money);
+            
             try
             {
 
@@ -97,11 +97,11 @@ namespace UI
         private void update_Button_Click(object sender, EventArgs e)
         {
             getValues();
-            MessageBox.Show(money);
+            
             try
             {
 
-                MessageBox.Show(voucherBLL.updateVoucherBLL(id, price, percent, money));
+                MessageBox.Show(voucherBLL.updateVoucherBLL(id, price, percent, money, used_Box.Text));
             }
             catch
             {
@@ -112,13 +112,41 @@ namespace UI
 
         private void delete_Button_Click(object sender, EventArgs e)
         {
-
+            getValues();
+            
+            try
+            {
+                if (voucherBLL.delVoucherBLL(id))
+                {
+                    MessageBox.Show("Thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thất bại");
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Fail");
+            }
+            LoadData();
         }
 
         private void exit_Button_Click(object sender, EventArgs e)
         {
-
+            LoadData();
         }
+
+        private void search_Button_Click(object sender, EventArgs e)
+        {
+            vouchersList = voucherBLL.searchVoucher(searchBox.Text);
+            dataVoucher.DataSource=vouchersList;
+            clearDataBinding();
+            addDataBinding();
+        }
+
+
         /*   SqlConnection connection =new SqlConnection();
 
 SqlCommand command;

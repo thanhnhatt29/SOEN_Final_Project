@@ -58,7 +58,7 @@ namespace BLL
             else return "Thất bại";
         }
 
-        public string updateVoucherBLL(string id, string apply_price, string percent, string max_money)
+        public string updateVoucherBLL(string id, string apply_price, string percent, string max_money, string used)
         {
             List<VOUCHER> list = vou_DAL.getDataVoucherDAL();
             if (list.Where(x => x.voucher_id == id).Count()==0)
@@ -79,10 +79,13 @@ namespace BLL
             {
                 max_money = "0";
             }
+            
             if (!int.TryParse(apply_price, out result) || !int.TryParse(percent, out result) || !int.TryParse(max_money, out result))
             {
                 return "Dữ liệu nhập sai kiểu";
             }
+            bool used_b = bool.Parse(used);
+
             int money = int.Parse(max_money);
             int price = int.Parse(apply_price);
             int per = int.Parse(percent);
@@ -100,7 +103,7 @@ namespace BLL
             {
                 return "Giá tối đa chưa hợp lệ";
             }
-            else if (vou_DAL.addVoucherDAL(id, price, per, money))
+            else if (vou_DAL.updateVoucherDAL(id, price, per, money,used_b))
             {
                 return "Thành công";
             }
@@ -109,7 +112,28 @@ namespace BLL
 
         public bool delVoucherBLL(string id)
         {
+            List<VOUCHER> list = vou_DAL.getDataVoucherDAL();
+            if (list.Where(x => x.voucher_id == id).Count() == 0)
+            {
+                return false;
+            }
+
             return vou_DAL.DelVoucherDAL(id);
+        }
+
+        public List<VOUCHER> searchVoucher(string id)
+        {
+            List<VOUCHER> list = vou_DAL.getDataVoucherDAL();
+            List<VOUCHER> data = new List<VOUCHER>();
+            foreach(var voucher in list)
+            {
+                if (voucher.voucher_id.ToLower().Contains(id.ToLower().TrimEnd()))
+                {
+                    data.Add(voucher);
+                }
+            }
+            return data;
+     
         }
     }
 

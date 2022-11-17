@@ -35,6 +35,10 @@
             this.apply_price = new System.Windows.Forms.Label();
             this.voucher_id = new System.Windows.Forms.Label();
             this.Information = new System.Windows.Forms.GroupBox();
+            this.voucherId_Box = new System.Windows.Forms.TextBox();
+            this.price_Box = new System.Windows.Forms.TextBox();
+            this.money_Box = new System.Windows.Forms.TextBox();
+            this.percent_Box = new System.Windows.Forms.TextBox();
             this.search_Button = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.exit_Button = new System.Windows.Forms.Button();
@@ -43,10 +47,6 @@
             this.add_Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataVoucher = new System.Windows.Forms.DataGridView();
-            this.percent_Box = new System.Windows.Forms.TextBox();
-            this.money_Box = new System.Windows.Forms.TextBox();
-            this.price_Box = new System.Windows.Forms.TextBox();
-            this.voucherId_Box = new System.Windows.Forms.TextBox();
             this.Information.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVoucher)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +133,34 @@
             this.Information.TabStop = false;
             this.Information.Text = "Information";
             // 
+            // voucherId_Box
+            // 
+            this.voucherId_Box.Location = new System.Drawing.Point(135, 55);
+            this.voucherId_Box.Name = "voucherId_Box";
+            this.voucherId_Box.Size = new System.Drawing.Size(100, 22);
+            this.voucherId_Box.TabIndex = 13;
+            // 
+            // price_Box
+            // 
+            this.price_Box.Location = new System.Drawing.Point(135, 122);
+            this.price_Box.Name = "price_Box";
+            this.price_Box.Size = new System.Drawing.Size(100, 22);
+            this.price_Box.TabIndex = 12;
+            // 
+            // money_Box
+            // 
+            this.money_Box.Location = new System.Drawing.Point(489, 111);
+            this.money_Box.Name = "money_Box";
+            this.money_Box.Size = new System.Drawing.Size(100, 22);
+            this.money_Box.TabIndex = 11;
+            // 
+            // percent_Box
+            // 
+            this.percent_Box.Location = new System.Drawing.Point(489, 55);
+            this.percent_Box.Name = "percent_Box";
+            this.percent_Box.Size = new System.Drawing.Size(100, 22);
+            this.percent_Box.TabIndex = 10;
+            // 
             // search_Button
             // 
             this.search_Button.Location = new System.Drawing.Point(329, 12);
@@ -142,6 +170,7 @@
             this.search_Button.TabIndex = 17;
             this.search_Button.Text = "search";
             this.search_Button.UseVisualStyleBackColor = true;
+            this.search_Button.Click += new System.EventHandler(this.search_Button_Click);
             // 
             // searchBox
             // 
@@ -224,34 +253,6 @@
             this.dataVoucher.RowTemplate.Height = 24;
             this.dataVoucher.Size = new System.Drawing.Size(1047, 433);
             this.dataVoucher.TabIndex = 10;
-            // 
-            // percent_Box
-            // 
-            this.percent_Box.Location = new System.Drawing.Point(489, 55);
-            this.percent_Box.Name = "percent_Box";
-            this.percent_Box.Size = new System.Drawing.Size(100, 22);
-            this.percent_Box.TabIndex = 10;
-            // 
-            // money_Box
-            // 
-            this.money_Box.Location = new System.Drawing.Point(489, 111);
-            this.money_Box.Name = "money_Box";
-            this.money_Box.Size = new System.Drawing.Size(100, 22);
-            this.money_Box.TabIndex = 11;
-            // 
-            // price_Box
-            // 
-            this.price_Box.Location = new System.Drawing.Point(135, 122);
-            this.price_Box.Name = "price_Box";
-            this.price_Box.Size = new System.Drawing.Size(100, 22);
-            this.price_Box.TabIndex = 12;
-            // 
-            // voucherId_Box
-            // 
-            this.voucherId_Box.Location = new System.Drawing.Point(135, 55);
-            this.voucherId_Box.Name = "voucherId_Box";
-            this.voucherId_Box.Size = new System.Drawing.Size(100, 22);
-            this.voucherId_Box.TabIndex = 13;
             // 
             // VoucherManage
             // 
