@@ -31,10 +31,10 @@
             this.accData = new System.Windows.Forms.DataGridView();
             this.addAccount = new MaterialSkin.Controls.MaterialButton();
             this.bt_Delele = new MaterialSkin.Controls.MaterialButton();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.tx_findAcc = new MaterialSkin.Controls.MaterialTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accData)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,7 +63,7 @@
             this.addAccount.Depth = 0;
             this.addAccount.HighEmphasis = true;
             this.addAccount.Icon = null;
-            this.addAccount.Location = new System.Drawing.Point(559, 12);
+            this.addAccount.Location = new System.Drawing.Point(558, 6);
             this.addAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addAccount.MouseState = MaterialSkin.MouseState.HOVER;
             this.addAccount.Name = "addAccount";
@@ -85,7 +85,7 @@
             this.bt_Delele.Depth = 0;
             this.bt_Delele.HighEmphasis = true;
             this.bt_Delele.Icon = null;
-            this.bt_Delele.Location = new System.Drawing.Point(670, 12);
+            this.bt_Delele.Location = new System.Drawing.Point(669, 6);
             this.bt_Delele.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Delele.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Delele.Name = "bt_Delele";
@@ -98,18 +98,6 @@
             this.bt_Delele.UseVisualStyleBackColor = true;
             this.bt_Delele.Click += new System.EventHandler(this.bt_delete_Click);
             // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(15, 18);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(67, 19);
-            this.materialLabel1.TabIndex = 15;
-            this.materialLabel1.Text = "Tìm kiếm";
-            // 
             // tx_findAcc
             // 
             this.tx_findAcc.AnimateReadOnly = false;
@@ -117,7 +105,7 @@
             this.tx_findAcc.Depth = 0;
             this.tx_findAcc.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tx_findAcc.LeadingIcon = null;
-            this.tx_findAcc.Location = new System.Drawing.Point(88, 1);
+            this.tx_findAcc.Location = new System.Drawing.Point(72, 0);
             this.tx_findAcc.MaxLength = 50;
             this.tx_findAcc.MouseState = MaterialSkin.MouseState.OUT;
             this.tx_findAcc.Multiline = false;
@@ -140,8 +128,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.tx_findAcc);
-            this.panel2.Controls.Add(this.materialLabel1);
             this.panel2.Controls.Add(this.bt_Delele);
             this.panel2.Controls.Add(this.addAccount);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -149,6 +137,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(810, 66);
             this.panel2.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = global::UI.Properties.Resources.search45;
+            this.label5.Location = new System.Drawing.Point(14, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 48);
+            this.label5.TabIndex = 21;
             // 
             // AccountManage
             // 
@@ -163,7 +162,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.accData)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -172,9 +170,9 @@
         private System.Windows.Forms.DataGridView accData;
         private MaterialSkin.Controls.MaterialButton addAccount;
         private MaterialSkin.Controls.MaterialButton bt_Delele;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialTextBox tx_findAcc;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
     }
 }

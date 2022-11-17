@@ -49,10 +49,10 @@
             this.empPhone_Box = new System.Windows.Forms.TextBox();
             this.empName_Box = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.empData = new System.Windows.Forms.DataGridView();
             this.searchName_Box = new MaterialSkin.Controls.MaterialTextBox2();
+            this.empData = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,10 +67,10 @@
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 422);
+            this.panel3.Location = new System.Drawing.Point(0, 406);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(810, 169);
+            this.panel3.Size = new System.Drawing.Size(810, 185);
             this.panel3.TabIndex = 2;
             // 
             // groupBox2
@@ -82,7 +82,7 @@
             this.groupBox2.Controls.Add(this.remove_Button);
             this.groupBox2.Controls.Add(this.add_Button);
             this.groupBox2.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(522, 5);
+            this.groupBox2.Location = new System.Drawing.Point(522, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(269, 161);
             this.groupBox2.TabIndex = 42;
@@ -191,7 +191,7 @@
             this.groupBox1.Controls.Add(this.empPhone_Box);
             this.groupBox1.Controls.Add(this.empName_Box);
             this.groupBox1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 5);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(501, 161);
             this.groupBox1.TabIndex = 41;
@@ -354,59 +354,16 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.searchName_Box);
             this.panel4.Controls.Add(this.empData);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.searchName_Box);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(810, 422);
+            this.panel4.Size = new System.Drawing.Size(810, 406);
             this.panel4.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("#LQC01 Quicksand", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 12);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(224, 31);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Danh sách nhân viên";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(421, 19);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 24);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Tìm kiếm";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // empData
-            // 
-            this.empData.AllowUserToAddRows = false;
-            this.empData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.empData.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.empData.ColumnHeadersHeight = 29;
-            this.empData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.empData.Location = new System.Drawing.Point(11, 65);
-            this.empData.Margin = new System.Windows.Forms.Padding(2);
-            this.empData.Name = "empData";
-            this.empData.RowHeadersWidth = 51;
-            this.empData.RowTemplate.Height = 70;
-            this.empData.Size = new System.Drawing.Size(783, 337);
-            this.empData.TabIndex = 16;
-            this.empData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.empData_ColumnHeaderMouseClick);
             // 
             // searchName_Box
             // 
@@ -418,7 +375,7 @@
             this.searchName_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchName_Box.HideSelection = true;
             this.searchName_Box.LeadingIcon = null;
-            this.searchName_Box.Location = new System.Drawing.Point(506, 12);
+            this.searchName_Box.Location = new System.Drawing.Point(451, 12);
             this.searchName_Box.MaxLength = 32767;
             this.searchName_Box.MouseState = MaterialSkin.MouseState.OUT;
             this.searchName_Box.Name = "searchName_Box";
@@ -437,6 +394,48 @@
             this.searchName_Box.TrailingIcon = null;
             this.searchName_Box.UseSystemPasswordChar = false;
             this.searchName_Box.TextChanged += new System.EventHandler(this.searchName_Box_TextChanged);
+            // 
+            // empData
+            // 
+            this.empData.AllowUserToAddRows = false;
+            this.empData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.empData.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.empData.ColumnHeadersHeight = 29;
+            this.empData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.empData.Location = new System.Drawing.Point(11, 65);
+            this.empData.Margin = new System.Windows.Forms.Padding(2);
+            this.empData.Name = "empData";
+            this.empData.RowHeadersWidth = 51;
+            this.empData.RowTemplate.Height = 70;
+            this.empData.Size = new System.Drawing.Size(783, 321);
+            this.empData.TabIndex = 16;
+            this.empData.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.empData_ColumnHeaderMouseClick);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = global::UI.Properties.Resources.search45;
+            this.label5.Location = new System.Drawing.Point(741, 12);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 48);
+            this.label5.TabIndex = 20;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("#LQC01 Quicksand", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(224, 31);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Danh sách nhân viên";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // EmployeeManage
             // 

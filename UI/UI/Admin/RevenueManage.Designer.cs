@@ -36,13 +36,21 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bt_exportCSV = new MaterialSkin.Controls.MaterialButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataRevenue)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataRevenue
             // 
+            this.dataRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataRevenue.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataRevenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataRevenue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -53,12 +61,12 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataRevenue.Location = new System.Drawing.Point(15, 153);
-            this.dataRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataRevenue.Location = new System.Drawing.Point(17, 22);
+            this.dataRevenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataRevenue.Name = "dataRevenue";
             this.dataRevenue.RowHeadersWidth = 51;
             this.dataRevenue.RowTemplate.Height = 24;
-            this.dataRevenue.Size = new System.Drawing.Size(1053, 552);
+            this.dataRevenue.Size = new System.Drawing.Size(782, 466);
             this.dataRevenue.TabIndex = 0;
             // 
             // Column1
@@ -124,51 +132,96 @@
             this.Column7.Visible = false;
             this.Column7.Width = 125;
             // 
-            // label1
+            // bt_exportCSV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Thời gian theo";
+            this.bt_exportCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_exportCSV.AutoSize = false;
+            this.bt_exportCSV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_exportCSV.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_exportCSV.Depth = 0;
+            this.bt_exportCSV.HighEmphasis = true;
+            this.bt_exportCSV.Icon = null;
+            this.bt_exportCSV.Location = new System.Drawing.Point(698, 26);
+            this.bt_exportCSV.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_exportCSV.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_exportCSV.Name = "bt_exportCSV";
+            this.bt_exportCSV.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_exportCSV.Size = new System.Drawing.Size(97, 36);
+            this.bt_exportCSV.TabIndex = 15;
+            this.bt_exportCSV.Text = "Xuất File";
+            this.bt_exportCSV.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_exportCSV.UseAccentColor = false;
+            this.bt_exportCSV.UseVisualStyleBackColor = true;
+            this.bt_exportCSV.Visible = false;
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Ngày",
             "Tháng",
             "Năm"});
-            this.comboBox1.Location = new System.Drawing.Point(110, 84);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(132, 30);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Size = new System.Drawing.Size(147, 32);
+            this.comboBox1.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 24);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Thời gian theo";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bt_exportCSV);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 510);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(810, 81);
+            this.panel1.TabIndex = 16;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataRevenue);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(810, 510);
+            this.panel2.TabIndex = 17;
             // 
             // RevenueManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 727);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataRevenue);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(810, 591);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RevenueManage";
             this.Text = "RevenueManage";
             ((System.ComponentModel.ISupportInitialize)(this.dataRevenue)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataRevenue;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -176,5 +229,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private MaterialSkin.Controls.MaterialButton bt_exportCSV;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
