@@ -42,11 +42,9 @@
             this.pn_nameForm = new System.Windows.Forms.Panel();
             this.lb_nameForm = new System.Windows.Forms.Label();
             this.dashboard_panel = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pn_nameForm.SuspendLayout();
-            this.dashboard_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -271,20 +269,12 @@
             // 
             // dashboard_panel
             // 
-            this.dashboard_panel.Controls.Add(this.flowLayoutPanel1);
             this.dashboard_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboard_panel.Location = new System.Drawing.Point(158, 81);
             this.dashboard_panel.Margin = new System.Windows.Forms.Padding(2);
             this.dashboard_panel.Name = "dashboard_panel";
             this.dashboard_panel.Size = new System.Drawing.Size(826, 630);
             this.dashboard_panel.TabIndex = 14;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(718, 184);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // DashBoard
             // 
@@ -304,7 +294,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.pn_nameForm.ResumeLayout(false);
-            this.dashboard_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -324,7 +313,6 @@
         private System.Windows.Forms.Button revenue_button;
         private System.Windows.Forms.Label lb_nameForm;
         private System.Windows.Forms.Label lb_greet;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.LinkLabel llb_logout;
     }
 }
