@@ -33,7 +33,6 @@ namespace UI
             
         }
 
-
         public void Load_Image(List<PRODUCT> productdata)
         {
 
@@ -41,8 +40,8 @@ namespace UI
             {
                 
                 Button new_button = new Button();
-                new_button.Height = 125;
-                new_button.Width = 125;
+                new_button.Height = 150;
+                new_button.Width = 150;
 
                 new_button.Text = item.product_name.ToString();
                 new_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -63,7 +62,7 @@ namespace UI
                 }
                 
 
-                food_image = (Image)(new Bitmap(food_image, new Size(125, 100)));
+                food_image = (Image)(new Bitmap(food_image, new Size(150, 125)));
                 new_button.BackgroundImage = food_image;
                 new_button.BackgroundImageLayout = ImageLayout.None;
                 flowLayoutPanel1.Controls.Add(new_button);
@@ -136,29 +135,6 @@ namespace UI
                 }
             }
             LoadData();
-        }
-
-        public class ListToDataTable
-        {
-            public DataTable ToDataTable<T>(List<T> items)
-            {
-                DataTable dataTable = new DataTable(typeof(T).Name);
-                PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-                foreach (PropertyInfo prop in Props)
-                {
-                    dataTable.Columns.Add(prop.Name);
-                }
-                foreach (T item in items)
-                {
-                    var values = new object[Props.Length];
-                    for (int i = 0; i < Props.Length; i++)
-                    {
-                        values[i] = Props[i].GetValue(item, null);
-                    }
-                    dataTable.Rows.Add(values);
-                }
-                return dataTable;
-            }
         }
 
         private void bt_cancelBill_Click(object sender, EventArgs e)
@@ -270,6 +246,29 @@ namespace UI
                 MessageBox.Show("Đã huỷ thanh toán!");
             }
             CreateBillID();
+        }
+
+        public class ListToDataTable
+        {
+            public DataTable ToDataTable<T>(List<T> items)
+            {
+                DataTable dataTable = new DataTable(typeof(T).Name);
+                PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+                foreach (PropertyInfo prop in Props)
+                {
+                    dataTable.Columns.Add(prop.Name);
+                }
+                foreach (T item in items)
+                {
+                    var values = new object[Props.Length];
+                    for (int i = 0; i < Props.Length; i++)
+                    {
+                        values[i] = Props[i].GetValue(item, null);
+                    }
+                    dataTable.Rows.Add(values);
+                }
+                return dataTable;
+            }
         }
     }
 }

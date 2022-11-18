@@ -30,6 +30,11 @@ namespace UI
         {
             bill_list = sellhistory.getDataSellingBLL();
             DataTable dt = converter.ToDataTable(bill_list);
+            dt.Columns.Add("info", typeof(System.String));
+            foreach (DataRow row in dt.Rows)
+            {
+                row["info"] = "Xem";
+            }
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].HeaderText = "Mã hóa đơn";
             dataGridView1.Columns[1].HeaderText = "Ngày tạo đơn";
@@ -37,7 +42,8 @@ namespace UI
             dataGridView1.Columns[3].HeaderText = "Mã giảm giá";
             dataGridView1.Columns[4].HeaderText = "Giá đơn hàng";
             dataGridView1.Columns[5].HeaderText = "Tiền giảm giá";
-            dataGridView1.Columns[6].HeaderText = "Tổng tiền"; 
+            dataGridView1.Columns[6].HeaderText = "Tổng tiền";
+            dataGridView1.Columns[7].HeaderText = "Chi tiết";
             dataGridView1.ReadOnly = true;
         }
 
@@ -103,6 +109,16 @@ namespace UI
             }
         }
 
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 7)
+            {
+                BillDetail billDetail = new BillDetail();
+                billDetail.bill_id = (dataGridView1.Rows[e.RowIndex].Cells[0].Value).ToString();
+                billDetail.ShowDialog();
+            }
+        }
+
         public class ListToDataTable
         {
             public DataTable ToDataTable<T>(List<T> items)
@@ -124,6 +140,12 @@ namespace UI
                 }
                 return dataTable;
             }
+        }
+
+        private void bt_deleteHoaDona_Click(object sender, EventArgs e)
+        {
+            DeleteBill deleteBill = new DeleteBill();
+            deleteBill.ShowDialog();
         }
     }
 }

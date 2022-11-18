@@ -66,6 +66,7 @@
       <DependentUpon>FASTFOODModel.tt</DependentUpon>
     </Compile>
     <Compile Include="BILL_LIST.cs" />
+    <Compile Include="DeleteBillDAL.cs" />
     <Compile Include="EmployeeDAL.cs" />
     <Compile Include="OrderDAL.cs" />
     <Compile Include="ProductDAL.cs" />

@@ -57,5 +57,33 @@ namespace DAL
             }
 
         }
+
+        public List<BILL_DETAIL> searchbilldetail(string bill_id)
+        {
+            List<BILL_DETAIL> list = getDataBillDetailDAL();
+            List<BILL_DETAIL> billdetaillist = new List<BILL_DETAIL>();
+            foreach (var p in list)
+            {
+                if (p.bill_id.ToLower().TrimEnd().Equals(bill_id.ToLower()))
+                {
+                    billdetaillist.Add(p);
+                }
+            }
+            return billdetaillist;
+        }
+
+        public string getproductname(string product_id)
+        {
+            ProductDAL productDAL = new ProductDAL();
+            List<PRODUCT> list = productDAL.getDataProductDAL();
+            foreach (var p in list)
+            {
+                if (p.product_id.ToString() == product_id)
+                {
+                    return p.product_name.ToString();
+                }
+            }
+            return "Không tìm thấy";
+        }
     }
 }

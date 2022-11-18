@@ -35,5 +35,10 @@ namespace BLL
             else
                 return "Thất bại";
         }
+
+        public List<BILL_DETAIL> searchbilldetail(string bill_id)
+        {
+            return bill_DAL.searchbilldetail(bill_id);
+        }
     }
 }
