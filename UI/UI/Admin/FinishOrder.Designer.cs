@@ -169,6 +169,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(1000, 1000);
             this.Name = "FinishOrder";
             this.Text = "FinishOrder";
             this.Load += new System.EventHandler(this.FinishOrder_Load);

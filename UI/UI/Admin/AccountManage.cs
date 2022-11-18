@@ -31,6 +31,7 @@ namespace UI.Admin
             accData.Columns[0].HeaderText = "Mã nhân viên";
             accData.Columns[1].HeaderText = "Mật khẩu";
             accData.Columns[2].HeaderText = "Quản trị viên";
+            accData.ReadOnly = true;
         }
 
         private void addAccount_Click(object sender, EventArgs e)
