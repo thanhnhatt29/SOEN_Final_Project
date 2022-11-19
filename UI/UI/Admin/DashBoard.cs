@@ -23,7 +23,7 @@ namespace UI
         private void DashBoard_Load(object sender, EventArgs e)
         {
             order_button.PerformClick();
-            //lb_greet.Text = "Chào " + GetUserName(hiddenName) + " <3"; //sau khi set lại form login thì phải uncomment dòng này
+            lb_greet.Text = "Chào " + GetUserName(hiddenName) + " <3"; //sau khi set lại form login thì phải uncomment dòng này
 
         }
         public string GetUserName(string hidname)
@@ -34,9 +34,10 @@ namespace UI
 
             using (FASTFOODEntities db = new FASTFOODEntities())
             {
-                EMPLOYEE emp = db.EMPLOYEEs.Find(hidname);
+                ACCOUNT acc = db.ACCOUNTs.Find(hiddenName);
+                EMPLOYEE emp = db.EMPLOYEEs.Find(hiddenName);
                 
-                if (emp.position == "seller")
+                if (acc.permission==false)
                 {
                     voucher_button.Enabled = false;
                     revenue_button.Enabled = false;

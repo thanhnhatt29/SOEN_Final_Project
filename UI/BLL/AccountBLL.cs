@@ -57,6 +57,7 @@ namespace BLL
             return acc_DAL.FindAccDAL(name);
         }
 
+
         public bool DelAccountBLL(string id_del)
         {
             return acc_DAL.DelAccountDAL(id_del);

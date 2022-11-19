@@ -49,5 +49,14 @@ namespace UI
                 passw_Box.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
             }
         }
+
+        private void passw_Link_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Password pass = new Password();
+            pass.ShowDialog();
+            this.Show();
+            passw_Box.Clear();
+        }
     }
 }
