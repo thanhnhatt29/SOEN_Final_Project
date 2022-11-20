@@ -18,6 +18,7 @@ namespace UI
         public Password()
         {
             InitializeComponent();
+            this.AcceptButton = buttonConfirm;
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
