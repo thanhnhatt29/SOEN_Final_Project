@@ -50,8 +50,16 @@ namespace DAL
                 acc.passwd = passw;
                 acc.permission = admin;
 
-                db.ACCOUNTs.Add(acc);
-                db.SaveChanges();
+                try
+                {
+                    db.ACCOUNTs.Add(acc);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    return false;
+                }
+                
                 return true;
             }
         }

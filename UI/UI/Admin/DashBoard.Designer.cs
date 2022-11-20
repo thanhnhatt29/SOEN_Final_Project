@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.llb_logout = new System.Windows.Forms.LinkLabel();
+            this.logout_button = new System.Windows.Forms.Button();
             this.selling_button = new System.Windows.Forms.Button();
             this.revenue_button = new System.Windows.Forms.Button();
             this.account_button = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.llb_logout);
+            this.panel1.Controls.Add(this.logout_button);
             this.panel1.Controls.Add(this.selling_button);
             this.panel1.Controls.Add(this.revenue_button);
             this.panel1.Controls.Add(this.account_button);
@@ -66,19 +66,21 @@
             this.panel1.Size = new System.Drawing.Size(211, 875);
             this.panel1.TabIndex = 12;
             // 
-            // llb_logout
+            // logout_button
             // 
-            this.llb_logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.llb_logout.AutoSize = true;
-            this.llb_logout.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llb_logout.LinkColor = System.Drawing.Color.White;
-            this.llb_logout.Location = new System.Drawing.Point(15, 834);
-            this.llb_logout.Name = "llb_logout";
-            this.llb_logout.Size = new System.Drawing.Size(148, 30);
-            this.llb_logout.TabIndex = 8;
-            this.llb_logout.TabStop = true;
-            this.llb_logout.Text = "👈 Đăng xuất";
-            this.llb_logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_logout_LinkClicked);
+            this.logout_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.logout_button.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.logout_button.FlatAppearance.BorderSize = 0;
+            this.logout_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logout_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_button.ForeColor = System.Drawing.SystemColors.Control;
+            this.logout_button.Location = new System.Drawing.Point(0, 825);
+            this.logout_button.Name = "logout_button";
+            this.logout_button.Size = new System.Drawing.Size(211, 50);
+            this.logout_button.TabIndex = 9;
+            this.logout_button.Text = "👈 Đăng xuất";
+            this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // selling_button
             // 
@@ -86,7 +88,7 @@
             this.selling_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.selling_button.FlatAppearance.BorderSize = 0;
             this.selling_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.selling_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selling_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selling_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.selling_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.selling_button.Location = new System.Drawing.Point(0, 490);
@@ -106,7 +108,7 @@
             this.revenue_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.revenue_button.FlatAppearance.BorderSize = 0;
             this.revenue_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.revenue_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revenue_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.revenue_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.revenue_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.revenue_button.Location = new System.Drawing.Point(0, 425);
@@ -126,7 +128,7 @@
             this.account_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.account_button.FlatAppearance.BorderSize = 0;
             this.account_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.account_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.account_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.account_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.account_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.account_button.Location = new System.Drawing.Point(0, 360);
@@ -146,7 +148,7 @@
             this.employee_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.employee_button.FlatAppearance.BorderSize = 0;
             this.employee_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.employee_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employee_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employee_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.employee_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.employee_button.Location = new System.Drawing.Point(0, 295);
@@ -166,7 +168,7 @@
             this.product_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.product_button.FlatAppearance.BorderSize = 0;
             this.product_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.product_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.product_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.product_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.product_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.product_button.Location = new System.Drawing.Point(0, 230);
@@ -186,7 +188,7 @@
             this.voucher_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.voucher_button.FlatAppearance.BorderSize = 0;
             this.voucher_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.voucher_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voucher_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.voucher_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.voucher_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.voucher_button.Location = new System.Drawing.Point(0, 165);
@@ -206,7 +208,7 @@
             this.order_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.order_button.FlatAppearance.BorderSize = 0;
             this.order_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.order_button.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.order_button.ForeColor = System.Drawing.Color.Gainsboro;
             this.order_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.order_button.Location = new System.Drawing.Point(0, 100);
@@ -234,7 +236,7 @@
             // lb_greet
             // 
             this.lb_greet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lb_greet.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_greet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_greet.ForeColor = System.Drawing.SystemColors.Control;
             this.lb_greet.Location = new System.Drawing.Point(0, 0);
             this.lb_greet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -260,7 +262,7 @@
             // lb_nameForm
             // 
             this.lb_nameForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lb_nameForm.Font = new System.Drawing.Font("#LQC02 AllRoundGothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nameForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nameForm.Location = new System.Drawing.Point(0, 0);
             this.lb_nameForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_nameForm.Name = "lb_nameForm";
@@ -293,7 +295,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DashBoard_FormClosed);
             this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.pn_nameForm.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -315,7 +316,7 @@
         private System.Windows.Forms.Button revenue_button;
         private System.Windows.Forms.Label lb_nameForm;
         private System.Windows.Forms.Label lb_greet;
-        private System.Windows.Forms.LinkLabel llb_logout;
+        private System.Windows.Forms.Button logout_button;
     }
 }
 

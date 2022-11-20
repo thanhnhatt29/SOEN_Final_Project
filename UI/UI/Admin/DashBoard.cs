@@ -151,7 +151,7 @@ namespace UI
             Application.Exit();
         }
 
-        private void llb_logout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void logout_button_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

@@ -89,7 +89,8 @@
             // 
             // textBox_moneyPay
             // 
-            this.textBox_moneyPay.Location = new System.Drawing.Point(117, 494);
+            this.textBox_moneyPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_moneyPay.Location = new System.Drawing.Point(109, 494);
             this.textBox_moneyPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_moneyPay.Name = "textBox_moneyPay";
             this.textBox_moneyPay.Size = new System.Drawing.Size(161, 22);
@@ -99,7 +100,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 497);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(31, 497);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 16);
             this.label7.TabIndex = 18;
@@ -108,7 +110,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(251, 466);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(240, 466);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 9;
@@ -117,7 +120,8 @@
             // lb_finalPrice
             // 
             this.lb_finalPrice.AutoSize = true;
-            this.lb_finalPrice.Location = new System.Drawing.Point(323, 466);
+            this.lb_finalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_finalPrice.Location = new System.Drawing.Point(310, 466);
             this.lb_finalPrice.Name = "lb_finalPrice";
             this.lb_finalPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_finalPrice.TabIndex = 10;
@@ -125,7 +129,8 @@
             // 
             // bt_checkVoucher
             // 
-            this.bt_checkVoucher.Location = new System.Drawing.Point(295, 425);
+            this.bt_checkVoucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_checkVoucher.Location = new System.Drawing.Point(290, 427);
             this.bt_checkVoucher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_checkVoucher.Name = "bt_checkVoucher";
             this.bt_checkVoucher.Size = new System.Drawing.Size(72, 28);
@@ -136,7 +141,8 @@
             // 
             // textBox_voucher
             // 
-            this.textBox_voucher.Location = new System.Drawing.Point(117, 428);
+            this.textBox_voucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_voucher.Location = new System.Drawing.Point(109, 430);
             this.textBox_voucher.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_voucher.Name = "textBox_voucher";
             this.textBox_voucher.Size = new System.Drawing.Size(161, 22);
@@ -145,7 +151,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(51, 466);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(31, 466);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 16);
             this.label9.TabIndex = 14;
@@ -154,7 +161,8 @@
             // lb_offPrice
             // 
             this.lb_offPrice.AutoSize = true;
-            this.lb_offPrice.Location = new System.Drawing.Point(136, 466);
+            this.lb_offPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_offPrice.Location = new System.Drawing.Point(123, 466);
             this.lb_offPrice.Name = "lb_offPrice";
             this.lb_offPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_offPrice.TabIndex = 15;
@@ -170,6 +178,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.lb_billID);
             this.groupBox2.Controls.Add(this.lb_totalPrice);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(3, 140);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
@@ -182,7 +191,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 226);
+            this.label5.Location = new System.Drawing.Point(283, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 7;
@@ -191,7 +200,7 @@
             // lb_totalAmount
             // 
             this.lb_totalAmount.AutoSize = true;
-            this.lb_totalAmount.Location = new System.Drawing.Point(368, 226);
+            this.lb_totalAmount.Location = new System.Drawing.Point(357, 226);
             this.lb_totalAmount.Name = "lb_totalAmount";
             this.lb_totalAmount.Size = new System.Drawing.Size(28, 16);
             this.lb_totalAmount.TabIndex = 8;
@@ -212,7 +221,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 226);
+            this.label3.Location = new System.Drawing.Point(16, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 3;
@@ -221,7 +230,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 254);
+            this.label2.Location = new System.Drawing.Point(132, 254);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 5;
@@ -229,7 +238,7 @@
             // 
             // lb_billID
             // 
-            this.lb_billID.Location = new System.Drawing.Point(115, 226);
+            this.lb_billID.Location = new System.Drawing.Point(112, 225);
             this.lb_billID.Name = "lb_billID";
             this.lb_billID.Size = new System.Drawing.Size(85, 16);
             this.lb_billID.TabIndex = 4;
@@ -238,7 +247,7 @@
             // lb_totalPrice
             // 
             this.lb_totalPrice.AutoSize = true;
-            this.lb_totalPrice.Location = new System.Drawing.Point(224, 254);
+            this.lb_totalPrice.Location = new System.Drawing.Point(213, 254);
             this.lb_totalPrice.Name = "lb_totalPrice";
             this.lb_totalPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_totalPrice.TabIndex = 6;
@@ -255,6 +264,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lb_productPrice);
             this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -296,7 +306,7 @@
             // lb_productName
             // 
             this.lb_productName.AutoSize = true;
-            this.lb_productName.Location = new System.Drawing.Point(87, 62);
+            this.lb_productName.Location = new System.Drawing.Point(101, 62);
             this.lb_productName.Name = "lb_productName";
             this.lb_productName.Size = new System.Drawing.Size(93, 16);
             this.lb_productName.TabIndex = 11;
@@ -316,7 +326,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 62);
+            this.label6.Location = new System.Drawing.Point(27, 62);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 16);
             this.label6.TabIndex = 10;
@@ -325,7 +335,7 @@
             // lb_productPrice
             // 
             this.lb_productPrice.AutoSize = true;
-            this.lb_productPrice.Location = new System.Drawing.Point(276, 62);
+            this.lb_productPrice.Location = new System.Drawing.Point(307, 62);
             this.lb_productPrice.Name = "lb_productPrice";
             this.lb_productPrice.Size = new System.Drawing.Size(14, 16);
             this.lb_productPrice.TabIndex = 9;
@@ -334,7 +344,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(215, 62);
+            this.label8.Location = new System.Drawing.Point(238, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 16);
             this.label8.TabIndex = 8;
@@ -342,10 +352,11 @@
             // 
             // bt_cancelBill
             // 
+            this.bt_cancelBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cancelBill.Location = new System.Drawing.Point(269, 545);
             this.bt_cancelBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_cancelBill.Name = "bt_cancelBill";
-            this.bt_cancelBill.Size = new System.Drawing.Size(93, 39);
+            this.bt_cancelBill.Size = new System.Drawing.Size(93, 67);
             this.bt_cancelBill.TabIndex = 7;
             this.bt_cancelBill.Text = "Hủy đơn";
             this.bt_cancelBill.UseVisualStyleBackColor = true;
@@ -353,10 +364,11 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(64, 545);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 39);
+            this.button2.Size = new System.Drawing.Size(93, 67);
             this.button2.TabIndex = 6;
             this.button2.Text = "Thanh toán";
             this.button2.UseVisualStyleBackColor = true;
@@ -365,7 +377,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 431);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 433);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 1;

@@ -58,7 +58,7 @@ namespace BLL
             else return "Thất bại";
         }
 
-        public string updateVoucherBLL(string id, string apply_price, string percent, string max_money, string used)
+        public string updateVoucherBLL(string id, string apply_price, string percent, string max_money, bool used)
         {
             List<VOUCHER> list = vou_DAL.getDataVoucherDAL();
             if (list.Where(x => x.voucher_id == id).Count()==0)
@@ -84,7 +84,6 @@ namespace BLL
             {
                 return "Dữ liệu nhập sai kiểu";
             }
-            bool used_b = bool.Parse(used);
 
             int money = int.Parse(max_money);
             int price = int.Parse(apply_price);
@@ -103,7 +102,7 @@ namespace BLL
             {
                 return "Giá tối đa chưa hợp lệ";
             }
-            else if (vou_DAL.updateVoucherDAL(id, price, per, money,used_b))
+            else if (vou_DAL.updateVoucherDAL(id, price, per, money,used))
             {
                 return "Thành công";
             }

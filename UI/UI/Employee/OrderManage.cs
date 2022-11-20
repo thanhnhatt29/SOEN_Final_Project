@@ -176,22 +176,40 @@ namespace UI
         private void bt_checkVoucher_Click(object sender, EventArgs e)
         {
             VOUCHER voucher = new VOUCHER();
-            voucher = order_BLL.CheckVoucher(textBox_voucher.Text);
-            if (voucher != null)
+            if (textBox_voucher.TextLength == 0)
             {
-                double off_value = (double)voucher.off_percent * (Convert.ToDouble(lb_totalPrice.Text)) / 100;
-                if (off_value >= voucher.max_money)
-                {
-                    lb_offPrice.Text = (voucher.max_money).ToString();
-                }
-                else
-                {
-                    lb_offPrice.Text = (off_value).ToString();
-                }
+                MessageBox.Show("Chưa nhập voucher! Voucher mặc định: Khong");
             }
             else
             {
-                MessageBox.Show("Mã không hợp lệ!");
+                voucher = order_BLL.CheckVoucher(textBox_voucher.Text);
+                if (voucher == null)
+                {
+                    MessageBox.Show("Không tồn tại voucher!");
+                }
+                else if (voucher.apply_price > (Convert.ToDouble(lb_totalPrice.Text)))
+                {
+                    MessageBox.Show("Chưa đạt điều kiện!");
+                }
+                else
+                {
+                    if (voucher != null)
+                    {
+                        double off_value = (double)voucher.off_percent * (Convert.ToDouble(lb_totalPrice.Text)) / 100;
+                        if (off_value >= voucher.max_money)
+                        {
+                            lb_offPrice.Text = (voucher.max_money).ToString();
+                        }
+                        else
+                        {
+                            lb_offPrice.Text = (off_value).ToString();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã không hợp lệ!");
+                    }
+                }
             }
             LoadData();
         }

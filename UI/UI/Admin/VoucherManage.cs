@@ -103,7 +103,7 @@ namespace UI
             try
             {
 
-                MessageBox.Show(voucherBLL.updateVoucherBLL(id, price, percent, money, used_Box.Text));
+                MessageBox.Show(voucherBLL.updateVoucherBLL(id, price, percent, money, false));
             }
             catch
             {

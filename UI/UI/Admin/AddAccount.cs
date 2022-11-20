@@ -24,6 +24,11 @@ namespace UI.Admin
         {
             string message = accountBLL.addAccountBLL(emp_Box.Text,passw_Box.Text,passw_reBox.Text,adminCheck.Checked);
             MessageBox.Show(message);
+            if (message.Equals("Thêm tài khoản thành công"))
+            {
+                this.Close();
+            }
         }
+
     }
 }

@@ -38,6 +38,7 @@ namespace UI.Admin
         {
             AddAccount addAccount = new AddAccount();
             addAccount.ShowDialog();
+            LoadData();
         }
 
 
@@ -66,6 +67,7 @@ namespace UI.Admin
             {
                 MessageBox.Show("Lỗi");
             }
+            LoadData();
         }
     }
 }
