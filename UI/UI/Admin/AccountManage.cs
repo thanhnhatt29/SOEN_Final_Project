@@ -12,6 +12,7 @@ namespace UI.Admin
 {
     public partial class AccountManage : Form
     {
+        public string hiddenname;
         AccountBLL acc_BLL = new AccountBLL();
         public AccountManage()
         {
@@ -58,14 +59,14 @@ namespace UI.Admin
         private void bt_delete_Click(object sender, EventArgs e)
         {
             string id_del = accData.CurrentRow.Cells[0].Value.ToString();
-            if (acc_BLL.DelAccountBLL(id_del))
+            if (acc_BLL.DelAccountBLL(id_del, hiddenname))
             {
                 MessageBox.Show("Xoá tài khoản thành công");
                 //Load();
             }
             else
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Không thể xoá!");
             }
             LoadData();
         }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using UI.Admin;
 using BLL;
 using DAL;
+using UI.Employee;
 
 namespace UI
 {
@@ -102,6 +103,7 @@ namespace UI
         {
             lb_nameForm.Text = "Quản lý nhân viên";
             EmployeeManage employeeManage = new EmployeeManage() { Dock = DockStyle.Fill, TopLevel = false };
+            employeeManage.hiddenname = hiddenName;
             employeeManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(employeeManage);
@@ -114,6 +116,7 @@ namespace UI
         {
             lb_nameForm.Text = "Quản lý tài khoản";
             AccountManage accountManage = new AccountManage() { Dock = DockStyle.Fill, TopLevel = false };
+            accountManage.hiddenname = hiddenName;
             accountManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(accountManage);
@@ -154,6 +157,13 @@ namespace UI
         private void logout_button_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.hiddenname = hiddenName;
+            changePassword.ShowDialog();
         }
     }
 }

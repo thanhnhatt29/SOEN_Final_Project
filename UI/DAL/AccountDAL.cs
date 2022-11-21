@@ -64,6 +64,21 @@ namespace DAL
             }
         }
 
+        public bool ChangePassWordDAL(string hiddenname, string newpw)
+        {
+            using (FASTFOODEntities db = new FASTFOODEntities())
+            {
+                ACCOUNT acc = db.ACCOUNTs.Find(hiddenname);
+                try
+                {
+                    acc.passwd = newpw;
+                    db.SaveChanges();
+                    return true;
+                }
+                catch { return false; }
+            }
+        }
+
         public List<ACCOUNT> FindAccDAL(string name)
         {
             using (FASTFOODEntities db = new FASTFOODEntities())
