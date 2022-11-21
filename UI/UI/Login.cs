@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
+
 namespace UI
 {
     public partial class Login : Form
     {
         AccountBLL acc_BLL = new AccountBLL();
+        Message message = new Message();
+
         public Login()
         {
             InitializeComponent();
@@ -21,15 +24,19 @@ namespace UI
         // Login button
         private void button1_Click(object sender, EventArgs e)
         {
+            
             bool success = acc_BLL.loginBLL(empId_Box.Text, passw_Box.Text);
             if(success)
             {
+                
                 this.Hide();
                 DashBoard dashBoard = new DashBoard();
+                message.Notify("Đã đăng nhập thành công");
                 dashBoard.hiddenName = empId_Box.Text;
                 dashBoard.ShowDialog();
                 this.Show();
                 passw_Box.Clear();
+                
             }    
             else
             {

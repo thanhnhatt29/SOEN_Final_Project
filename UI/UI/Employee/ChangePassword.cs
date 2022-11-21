@@ -27,7 +27,7 @@ namespace UI.Employee
         {
             string message = accountBLL.ChangePasswordBLL(hiddenname, currentPW_tb.Text, passw_tb.Text, retype_tb.Text);
             MessageBox.Show(message);
-            if (message.Equals("Thêm tài khoản thành công"))
+            if (message.Equals("Đổi mật khẩu thành công!"))
             {
                 this.Close();
             }

@@ -18,9 +18,11 @@ using static System.Resources.ResXFileRef;
 
 namespace UI
 {
+    
     public partial class OrderManage : Form
     {
-
+        Message message = new Message();
+        
         OrderBLL order_BLL = new OrderBLL();
         ListToDataTable converter = new ListToDataTable();
         List<BILL_LIST> bill_list = new List<BILL_LIST>();
@@ -30,6 +32,7 @@ namespace UI
         public OrderManage()
         {
             InitializeComponent();
+            
             
         }
 

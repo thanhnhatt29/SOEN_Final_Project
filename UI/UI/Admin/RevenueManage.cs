@@ -52,8 +52,12 @@ namespace UI
 
         private void chartBoard(string elem)
         {
-            chart1.Series["Tiền"].XValueMember = elem;
-            chart1.Series["Tiền"].YValueMembers = "Tiền";
+            chart1.Series["Doanh thu"].XValueMember = elem;
+            chart1.Series["Doanh thu"].YValueMembers = "Tiền";
+            chart1.Series["Tăng trưởng"].XValueMember= elem;
+            chart1.Series["Tăng trưởng"].YValueMembers = "Tiền";
+            chart1.Titles.Clear();
+            chart1.Titles.Add("Doanh thu của quán theo từng " + elem.ToLower());
             chart1.DataSource = dataRevenue.DataSource;
             chart1.DataBind();
         }

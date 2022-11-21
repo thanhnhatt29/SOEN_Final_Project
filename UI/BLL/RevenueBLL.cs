@@ -17,7 +17,7 @@ namespace BLL
             dataTable.Columns.Add("Tiền");
             List<BILL> list = billDAL.getDataBillDAL();
             var data = list.GroupBy(g=>g.date_created)
-                            .Select(x => new { Date=x.Key, Money=x.Sum(y=>y.total_money) }).OrderBy(x=>x.Date);
+                            .Select(x => new { Date=x.Key.Date.ToString("dd-MM-yyyy"), Money=x.Sum(y=>y.total_money), realDate = x.Key}).OrderBy(x=>x.realDate);
             foreach (var item in data)
             {
                 dataTable.Rows.Add(item.Date,item.Money);
