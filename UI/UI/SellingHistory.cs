@@ -141,11 +141,5 @@ namespace UI
                 return dataTable;
             }
         }
-
-        private void bt_deleteHoaDona_Click(object sender, EventArgs e)
-        {
-            DeleteBill deleteBill = new DeleteBill();
-            deleteBill.ShowDialog();
-        }
     }
 }

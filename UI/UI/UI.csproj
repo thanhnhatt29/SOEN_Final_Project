@@ -97,12 +97,6 @@
     <Compile Include="Admin\BillDetail.Designer.cs">
       <DependentUpon>BillDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\DeleteBill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\DeleteBill.Designer.cs">
-      <DependentUpon>DeleteBill.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,9 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\BillDetail.resx">
       <DependentUpon>BillDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\DeleteBill.resx">
-      <DependentUpon>DeleteBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\EmployeeManage.resx">
       <DependentUpon>EmployeeManage.cs</DependentUpon>

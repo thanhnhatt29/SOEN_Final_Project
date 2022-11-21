@@ -30,12 +30,11 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bt_exportCSV = new MaterialSkin.Controls.MaterialButton();
-            this.bt_deleteHoaDona = new MaterialSkin.Controls.MaterialButton();
             this.bt_Refresh = new MaterialSkin.Controls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new MaterialSkin.Controls.MaterialTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,7 +66,7 @@
             this.bt_exportCSV.Depth = 0;
             this.bt_exportCSV.HighEmphasis = true;
             this.bt_exportCSV.Icon = null;
-            this.bt_exportCSV.Location = new System.Drawing.Point(763, 30);
+            this.bt_exportCSV.Location = new System.Drawing.Point(725, 22);
             this.bt_exportCSV.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.bt_exportCSV.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_exportCSV.Name = "bt_exportCSV";
@@ -80,28 +79,6 @@
             this.bt_exportCSV.UseVisualStyleBackColor = true;
             this.bt_exportCSV.Click += new System.EventHandler(this.bt_exportCSV_Click);
             // 
-            // bt_deleteHoaDona
-            // 
-            this.bt_deleteHoaDona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_deleteHoaDona.AutoSize = false;
-            this.bt_deleteHoaDona.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bt_deleteHoaDona.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.bt_deleteHoaDona.Depth = 0;
-            this.bt_deleteHoaDona.HighEmphasis = true;
-            this.bt_deleteHoaDona.Icon = null;
-            this.bt_deleteHoaDona.Location = new System.Drawing.Point(623, 30);
-            this.bt_deleteHoaDona.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.bt_deleteHoaDona.MouseState = MaterialSkin.MouseState.HOVER;
-            this.bt_deleteHoaDona.Name = "bt_deleteHoaDona";
-            this.bt_deleteHoaDona.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.bt_deleteHoaDona.Size = new System.Drawing.Size(129, 44);
-            this.bt_deleteHoaDona.TabIndex = 9;
-            this.bt_deleteHoaDona.Text = "Xoá hoá đơn";
-            this.bt_deleteHoaDona.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.bt_deleteHoaDona.UseAccentColor = false;
-            this.bt_deleteHoaDona.UseVisualStyleBackColor = true;
-            this.bt_deleteHoaDona.Click += new System.EventHandler(this.bt_deleteHoaDona_Click);
-            // 
             // bt_Refresh
             // 
             this.bt_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -111,7 +88,7 @@
             this.bt_Refresh.Depth = 0;
             this.bt_Refresh.HighEmphasis = true;
             this.bt_Refresh.Icon = null;
-            this.bt_Refresh.Location = new System.Drawing.Point(903, 30);
+            this.bt_Refresh.Location = new System.Drawing.Point(903, 22);
             this.bt_Refresh.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.bt_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Refresh.Name = "bt_Refresh";
@@ -129,7 +106,6 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.bt_Refresh);
-            this.panel1.Controls.Add(this.bt_deleteHoaDona);
             this.panel1.Controls.Add(this.bt_exportCSV);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 635);
@@ -138,12 +114,22 @@
             this.panel1.Size = new System.Drawing.Size(1080, 92);
             this.panel1.TabIndex = 11;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = global::UI.Properties.Resources.search45;
+            this.label5.Location = new System.Drawing.Point(24, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 59);
+            this.label5.TabIndex = 22;
+            // 
             // textBox1
             // 
             this.textBox1.AnimateReadOnly = false;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Depth = 0;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textBox1.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.textBox1.LeadingIcon = null;
             this.textBox1.Location = new System.Drawing.Point(96, 16);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -168,16 +154,6 @@
             this.panel2.Size = new System.Drawing.Size(1080, 635);
             this.panel2.TabIndex = 12;
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = global::UI.Properties.Resources.search45;
-            this.label5.Location = new System.Drawing.Point(24, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 59);
-            this.label5.TabIndex = 22;
-            // 
             // SellingHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,7 +176,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialButton bt_exportCSV;
-        private MaterialSkin.Controls.MaterialButton bt_deleteHoaDona;
         private MaterialSkin.Controls.MaterialButton bt_Refresh;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
