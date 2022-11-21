@@ -17,7 +17,7 @@ namespace BLL
             dataTable.Columns.Add("Tiền");
             List<BILL> list = billDAL.getDataBillDAL();
             var data = list.GroupBy(g=>g.date_created)
-                            .Select(x => new { Date=x.Key, Money=x.Sum(y=>y.total_money) });
+                            .Select(x => new { Date=x.Key, Money=x.Sum(y=>y.total_money) }).OrderBy(x=>x.Date);
             foreach (var item in data)
             {
                 dataTable.Rows.Add(item.Date,item.Money);
@@ -33,10 +33,12 @@ namespace BLL
             dataTable.Columns.Add("Tháng");
             dataTable.Columns.Add("Tiền");
             List<BILL> list = billDAL.getDataBillDAL();
-            var data = from t in list 
+            /*var data = from t in list 
                        group t by new { Year = t.date_created.Year,Month=t.date_created.Month} 
                        into g
-                             select new { MonthYear = (g.Key.Year+"/"+g.Key.Month), Money = g.Sum(y => y.total_money) };
+                             select new { MonthYear = (g.Key.Year+"/"+g.Key.Month), Money = g.Sum(y => y.total_money) };*/
+            var data = list.GroupBy(g => new { g.date_created.Year,g.date_created.Month })
+                            .Select(x => new { MonthYear = (x.Key.Month + "-" + x.Key.Year), Money = x.Sum(y => y.total_money),Month = x.Key.Month,Year = x.Key.Year }).OrderBy(x=>x.Year).OrderBy(x=>x.Month);
             foreach (var item in data)
             {
                 dataTable.Rows.Add(item.MonthYear, item.Money);

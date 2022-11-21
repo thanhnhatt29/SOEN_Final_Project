@@ -49,6 +49,8 @@ namespace UI
             dataRevenue.DataSource = revenueBLL.getDataDate();
             dataRevenue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataRevenue.ReadOnly = true;
+            comboBox1.SelectedIndex = 0;
+            chartBoard("Ngày");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,15 +58,27 @@ namespace UI
             if(comboBox1.Text == "Ngày")
             {
                 dataRevenue.DataSource = revenueBLL.getDataDate();
+                chartBoard(comboBox1.Text);
             }
             else if(comboBox1.Text == "Tháng")
             {
                 dataRevenue.DataSource=revenueBLL.getDataMonth();
+                chartBoard(comboBox1.Text);
             }
             else if(comboBox1.Text == "Năm")
             {
                 dataRevenue.DataSource = revenueBLL.getDataYear();
+                chartBoard(comboBox1.Text);
             }
+            
+        }
+
+        private void chartBoard(string elem)
+        {
+            chart1.Series["Tiền"].XValueMember = elem;
+            chart1.Series["Tiền"].YValueMembers = "Tiền";
+            chart1.DataSource = dataRevenue.DataSource;
+            chart1.DataBind();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
