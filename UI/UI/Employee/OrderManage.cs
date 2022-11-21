@@ -15,6 +15,9 @@ using BLL;
 using System.IO.Ports;
 using System.Collections;
 using static System.Resources.ResXFileRef;
+using System.Drawing.Printing;
+using System.Runtime.Remoting.Messaging;
+using System.Globalization;
 
 namespace UI
 {
@@ -28,6 +31,8 @@ namespace UI
         List<BILL_LIST> bill_list = new List<BILL_LIST>();
         public string billid;
         public string emp_id;
+        private Font verdana10Font;
+        private StreamReader reader;
 
         public OrderManage()
         {
@@ -289,6 +294,96 @@ namespace UI
                     dataTable.Rows.Add(values);
                 }
                 return dataTable;
+            }
+        }
+
+        private void bt_exportBill_Click(object sender, EventArgs e)
+        {
+            EditBillTXT();
+            string filename = "D:\\Bill_Export_Done.txt";
+            //Create a StreamReader object  
+            reader = new StreamReader(filename);
+            //Create a Verdana font with size 10  
+            verdana10Font = new Font("Consolas", 10, FontStyle.Bold);
+            //Create a PrintDocument object  
+            PrintDocument pd = new PrintDocument();
+            //Add PrintPage event handler  
+            pd.PrintPage += new PrintPageEventHandler(this.PrintTextFileHandler);
+            //Call Print Method  
+            pd.Print();
+            //Close the reader  
+            if (reader != null)
+                reader.Close();
+        }
+
+        private void EditBillTXT()
+        {
+            string path = System.Environment.CurrentDirectory.ToString();
+            path = path.Replace("\\UI\\bin\\Debug", "\\images\\Bill_Export.txt");
+            string text = File.ReadAllText(path);
+
+
+
+            text = text.Replace("(1)", DateTime.Now.ToString());
+            text = text.Replace("(2)", lb_billID.Text);
+            text = text.Replace("(3)", "Test");
+            text = text.Replace("(4)", "0123456789");
+            foreach (var item in bill_list)
+            {
+                
+                text = text.Replace("(5)","     " + PaddingForSpace(item.Product, 26) + PaddingForSpace(item.Amount.ToString(), 10) + item.Price + Environment.NewLine + "(5)");
+            }
+            text = text.Replace("(5)","");
+            text = text.Replace("(6)", lb_totalAmount.Text);
+            text = text.Replace("(7)", lb_totalPrice.Text);
+            text = text.Replace("(8)", textBox_voucher.Text);
+            text = text.Replace("(9)", lb_offPrice.Text);
+            text = text.Replace("(10)", lb_finalPrice.Text);
+
+            File.WriteAllText("D:\\Bill_Export_Done.txt", text);
+
+        }
+
+        private string PaddingForSpace(string word, int padding)
+        {
+            var si = new StringInfo(word);
+            int num = padding - si.LengthInTextElements;
+            for (int i = 0; i < num; i++)
+                word = word + " ";
+            return word;
+        }
+
+        private void PrintTextFileHandler(object sender, PrintPageEventArgs ppeArgs)
+        {
+            //Get the Graphics object  
+            Graphics g = ppeArgs.Graphics;
+            float linesPerPage = 0;
+            float yPos = 0;
+            int count = 0;
+            //Read margins from PrintPageEventArgs  
+            float leftMargin = ppeArgs.MarginBounds.Left;
+            float topMargin = ppeArgs.MarginBounds.Top;
+            string line = null;
+            //Calculate the lines per page on the basis of the height of the page and the height of the font  
+            linesPerPage = ppeArgs.MarginBounds.Height / verdana10Font.GetHeight(g);
+            //Now read lines one by one, using StreamReader  
+            while (count < linesPerPage && ((line = reader.ReadLine()) != null))
+            {
+                //Calculate the starting position  
+                yPos = topMargin + (count * verdana10Font.GetHeight(g));
+                //Draw text  
+                g.DrawString(line, verdana10Font, Brushes.Black, leftMargin, yPos, new StringFormat());
+                //Move to next line  
+                count++;
+            }
+            //If PrintPageEventArgs has more pages to print  
+            if (line != null)
+            {
+                ppeArgs.HasMorePages = true;
+            }
+            else
+            {
+                ppeArgs.HasMorePages = false;
             }
         }
     }

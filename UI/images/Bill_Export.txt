@@ -1,0 +1,22 @@
+                   FFL CHALLIOL                    
+           Đại học sư phạm kỹ thuật TP.HCM	  
+            Address: 1 Vo Van Ngan Street,          
+       Linh Chieu, Thu Duc, Ho Chi Minh City       
+                 Phone: 0987654321                 
+--------------------------------------------------
+Date: (1)
+Bill No: (2)
+Cashier: (3)
+Customer phone: (4)
+--------------------------------------------------
+|           Item          | Quantity |   Price   |
+(5)
+--------------------------------------------------
+Q. Total: (6)
+Total: (7)
+Voucher: (8)
+Off price: (9)
+Cash: (10)
+--------------------------------------------------
+                 Thanks for visiting                
+               Fast Food Love Challiol              

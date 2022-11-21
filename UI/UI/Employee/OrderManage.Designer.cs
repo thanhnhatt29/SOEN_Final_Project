@@ -58,6 +58,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bt_exportBill = new System.Windows.Forms.Button();
             this.bt_payBill.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_bill)).BeginInit();
@@ -67,6 +68,7 @@
             // bt_payBill
             // 
             this.bt_payBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(215)))), ((int)(((byte)(227)))));
+            this.bt_payBill.Controls.Add(this.bt_exportBill);
             this.bt_payBill.Controls.Add(this.textBox_moneyPay);
             this.bt_payBill.Controls.Add(this.label7);
             this.bt_payBill.Controls.Add(this.label4);
@@ -353,7 +355,7 @@
             // bt_cancelBill
             // 
             this.bt_cancelBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cancelBill.Location = new System.Drawing.Point(269, 545);
+            this.bt_cancelBill.Location = new System.Drawing.Point(289, 545);
             this.bt_cancelBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_cancelBill.Name = "bt_cancelBill";
             this.bt_cancelBill.Size = new System.Drawing.Size(93, 67);
@@ -365,7 +367,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(64, 545);
+            this.button2.Location = new System.Drawing.Point(33, 545);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 67);
@@ -393,6 +395,18 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(586, 623);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // bt_exportBill
+            // 
+            this.bt_exportBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_exportBill.Location = new System.Drawing.Point(159, 545);
+            this.bt_exportBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_exportBill.Name = "bt_exportBill";
+            this.bt_exportBill.Size = new System.Drawing.Size(93, 67);
+            this.bt_exportBill.TabIndex = 20;
+            this.bt_exportBill.Text = "Xuất hoá đơn";
+            this.bt_exportBill.UseVisualStyleBackColor = true;
+            this.bt_exportBill.Click += new System.EventHandler(this.bt_exportBill_Click);
             // 
             // OrderManage
             // 
@@ -448,5 +462,6 @@
         private System.Windows.Forms.Label lb_finalPrice;
         private System.Windows.Forms.TextBox textBox_moneyPay;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bt_exportBill;
     }
 }
