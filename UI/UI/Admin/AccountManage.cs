@@ -78,12 +78,12 @@ namespace UI.Admin
         private void bt_capquyen_Click(object sender, EventArgs e)
         {
             string id_set = accData.CurrentRow.Cells[0].Value.ToString();
-            DialogResult dr = MessageBox.Show("Bạn có muốn cấp quyền quản trị cho tài khoản này?", "Cấp quyền", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Bạn có muốn cấp/tước quyền quản trị cho tài khoản này?", "Cấp/tước quyền", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 if (acc_BLL.SetAdminBLL(id_set))
                 {
-                    MessageBox.Show("Cấp quyền tài khoản thành công");
+                    MessageBox.Show("Cấp/tước quyền tài khoản thành công");
                 }
                 else
                 {
@@ -96,11 +96,25 @@ namespace UI.Admin
 
         private void accData_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (accData.CurrentRow.Cells[2].Value.ToString().Equals("True"))
+            string id_set = accData.CurrentRow.Cells[0].Value.ToString();
+            string per_set = accData.CurrentRow.Cells[2].Value.ToString();
+            if (id_set == hiddenname)
             {
                 bt_capquyen.Enabled = false;
             }
-            else bt_capquyen.Enabled = true;
+            else
+            {
+                bt_capquyen.Enabled = true;
+                if (per_set.Equals("False"))
+                {
+                    bt_capquyen.Text = "Cấp Quyền";
+                }
+                else if (per_set.Equals("True"))
+                {
+                    bt_capquyen.Text = "Tước Quyền";
+                }
+            }
+            
         }
     }
 }

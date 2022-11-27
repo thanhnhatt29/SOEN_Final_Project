@@ -102,9 +102,19 @@ namespace DAL
                 ACCOUNT result = db.ACCOUNTs.Where(i => i.employee_id == id_set).SingleOrDefault();
                 if (result != null)
                 {
-                    result.permission = true;
-                    db.SaveChanges();
-                    return true;
+                    if (result.permission == false)
+                    {
+                        result.permission = true;
+                        db.SaveChanges();
+                        return true;
+                    }
+                    else if (result.permission == true)
+                    {
+                        result.permission = false;
+                        db.SaveChanges();
+                        return true;
+                    }    
+                    else return false;
                 }
                 else return false;
             }
