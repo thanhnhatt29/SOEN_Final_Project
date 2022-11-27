@@ -28,10 +28,10 @@ namespace UI
             bool success = acc_BLL.loginBLL(empId_Box.Text, passw_Box.Text);
             if(success)
             {
-                
+                label4.Text = "";
                 this.Hide();
                 DashBoard dashBoard = new DashBoard();
-                message.Notify("Đã đăng nhập thành công");
+                //message.Notify("Đã đăng nhập thành công");
                 dashBoard.hiddenName = empId_Box.Text;
                 dashBoard.ShowDialog();
                 this.Show();
@@ -40,7 +40,8 @@ namespace UI
             }    
             else
             {
-                MessageBox.Show("Thông tin đăng nhập chưa chính xác");
+                //MessageBox.Show("Thông tin đăng nhập chưa chính xác");
+                label4.Text = "Thông tin đăng nhập chưa chính xác!";
             }    
             
         }

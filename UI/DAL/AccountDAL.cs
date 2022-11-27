@@ -94,6 +94,22 @@ namespace DAL
                 return query.ToList();
             }
         }
+
+        public bool SetAdminDAL(string id_set)
+        {
+            using (FASTFOODEntities db = new FASTFOODEntities())
+            {
+                ACCOUNT result = db.ACCOUNTs.Where(i => i.employee_id == id_set).SingleOrDefault();
+                if (result != null)
+                {
+                    result.permission = true;
+                    db.SaveChanges();
+                    return true;
+                }
+                else return false;
+            }
+        }
+
         private string ConvertToUnSign(string input)
         {
             input = input.Trim();

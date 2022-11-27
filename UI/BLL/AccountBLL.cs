@@ -88,6 +88,10 @@ namespace BLL
             return acc_DAL.FindAccDAL(name);
         }
 
+        public bool SetAdminBLL(string id_set)
+        {
+            return acc_DAL.SetAdminDAL(id_set);
+        }
 
         public bool DelAccountBLL(string id_del, string hiddenname)
         {
