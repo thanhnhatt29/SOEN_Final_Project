@@ -34,6 +34,7 @@
             this.tx_findAcc = new MaterialSkin.Controls.MaterialTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bt_capquyen = new MaterialSkin.Controls.MaterialButton();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.accData)).BeginInit();
             this.panel1.SuspendLayout();
@@ -51,8 +52,9 @@
             this.accData.Name = "accData";
             this.accData.RowHeadersWidth = 51;
             this.accData.RowTemplate.Height = 24;
-            this.accData.Size = new System.Drawing.Size(766, 487);
+            this.accData.Size = new System.Drawing.Size(766, 475);
             this.accData.TabIndex = 7;
+            this.accData.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.accData_CellMouseClick);
             // 
             // addAccount
             // 
@@ -63,7 +65,7 @@
             this.addAccount.Depth = 0;
             this.addAccount.HighEmphasis = true;
             this.addAccount.Icon = null;
-            this.addAccount.Location = new System.Drawing.Point(558, 6);
+            this.addAccount.Location = new System.Drawing.Point(558, 26);
             this.addAccount.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.addAccount.MouseState = MaterialSkin.MouseState.HOVER;
             this.addAccount.Name = "addAccount";
@@ -85,7 +87,7 @@
             this.bt_Delele.Depth = 0;
             this.bt_Delele.HighEmphasis = true;
             this.bt_Delele.Icon = null;
-            this.bt_Delele.Location = new System.Drawing.Point(669, 6);
+            this.bt_Delele.Location = new System.Drawing.Point(669, 26);
             this.bt_Delele.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Delele.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Delele.Name = "bt_Delele";
@@ -94,18 +96,19 @@
             this.bt_Delele.TabIndex = 14;
             this.bt_Delele.Text = "Xoá";
             this.bt_Delele.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.bt_Delele.UseAccentColor = false;
+            this.bt_Delele.UseAccentColor = true;
             this.bt_Delele.UseVisualStyleBackColor = true;
             this.bt_Delele.Click += new System.EventHandler(this.bt_delete_Click);
             // 
             // tx_findAcc
             // 
+            this.tx_findAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tx_findAcc.AnimateReadOnly = false;
             this.tx_findAcc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tx_findAcc.Depth = 0;
             this.tx_findAcc.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tx_findAcc.LeadingIcon = null;
-            this.tx_findAcc.Location = new System.Drawing.Point(72, 0);
+            this.tx_findAcc.Location = new System.Drawing.Point(72, 19);
             this.tx_findAcc.MaxLength = 50;
             this.tx_findAcc.MouseState = MaterialSkin.MouseState.OUT;
             this.tx_findAcc.Multiline = false;
@@ -128,22 +131,45 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.bt_capquyen);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.tx_findAcc);
             this.panel2.Controls.Add(this.bt_Delele);
             this.panel2.Controls.Add(this.addAccount);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 525);
+            this.panel2.Location = new System.Drawing.Point(0, 505);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(810, 66);
+            this.panel2.Size = new System.Drawing.Size(810, 86);
             this.panel2.TabIndex = 18;
+            // 
+            // bt_capquyen
+            // 
+            this.bt_capquyen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_capquyen.AutoSize = false;
+            this.bt_capquyen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_capquyen.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_capquyen.Depth = 0;
+            this.bt_capquyen.HighEmphasis = true;
+            this.bt_capquyen.Icon = null;
+            this.bt_capquyen.Location = new System.Drawing.Point(445, 26);
+            this.bt_capquyen.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_capquyen.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_capquyen.Name = "bt_capquyen";
+            this.bt_capquyen.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_capquyen.Size = new System.Drawing.Size(105, 36);
+            this.bt_capquyen.TabIndex = 22;
+            this.bt_capquyen.Text = "Cấp Quyền";
+            this.bt_capquyen.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_capquyen.UseAccentColor = false;
+            this.bt_capquyen.UseVisualStyleBackColor = true;
+            this.bt_capquyen.Click += new System.EventHandler(this.bt_capquyen_Click);
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.Font = new System.Drawing.Font("#LQC01 Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Image = global::UI.Properties.Resources.search45;
-            this.label5.Location = new System.Drawing.Point(14, 0);
+            this.label5.Location = new System.Drawing.Point(14, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 48);
@@ -174,5 +200,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
+        private MaterialSkin.Controls.MaterialButton bt_capquyen;
     }
 }
