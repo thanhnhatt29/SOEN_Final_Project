@@ -227,6 +227,10 @@ namespace UI
                 {
                     MessageBox.Show(emp_BLL.updateEmpBLL(id, name, img, phone, doB, female, "Đã nghỉ") + " nhân viên nghỉ.");
                 }
+                else
+                {
+                    MessageBox.Show("Không thể xóa bản thân!");
+                }
                 
             }
             catch(Exception ex)
