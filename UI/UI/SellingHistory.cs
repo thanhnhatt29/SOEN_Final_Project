@@ -28,6 +28,11 @@ namespace UI
 
         private void SellingHistory_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             bill_list = sellhistory.getDataSellingBLL();
             DataTable dt = converter.ToDataTable(bill_list);
             dt.Columns.Add("info", typeof(System.String));
@@ -45,6 +50,7 @@ namespace UI
             dataGridView1.Columns[6].HeaderText = "Tổng tiền";
             dataGridView1.Columns[7].HeaderText = "Chi tiết";
             dataGridView1.ReadOnly = true;
+            dataGridView1.Columns[7].SortMode = DataGridViewColumnSortMode.NotSortable;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,6 +59,7 @@ namespace UI
             DataTable dt = converter.ToDataTable(bill_list);
             dataGridView1.DataSource = dt;
             textBox1.Clear();
+            LoadData();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,6 +81,7 @@ namespace UI
 
             }
             ToCSV(dt, path);
+            LoadData();
         }
 
         private void ToCSV(DataTable DT, string path)
@@ -111,7 +119,7 @@ namespace UI
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 7 & e.RowIndex != -1)
             {
                 BillDetail billDetail = new BillDetail();
                 billDetail.bill_id = (dataGridView1.Rows[e.RowIndex].Cells[0].Value).ToString();

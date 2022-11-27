@@ -7,7 +7,7 @@
 Date: (1)
 Bill No: (2)
 Cashier: (3)
-Customer phone: (4)
+Employee phone: (4)
 --------------------------------------------------
 |           Item          | Quantity |   Price   |
 (5)

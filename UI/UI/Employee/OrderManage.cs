@@ -33,6 +33,8 @@ namespace UI
         public string emp_id;
         private Font verdana10Font;
         private StreamReader reader;
+        public string emp_phone;
+        public string emp_name;
 
         public OrderManage()
         {
@@ -326,8 +328,8 @@ namespace UI
 
             text = text.Replace("(1)", DateTime.Now.ToString());
             text = text.Replace("(2)", lb_billID.Text);
-            text = text.Replace("(3)", "Test");
-            text = text.Replace("(4)", "0123456789");
+            text = text.Replace("(3)", emp_name);
+            text = text.Replace("(4)", emp_phone);
             foreach (var item in bill_list)
             {
                 

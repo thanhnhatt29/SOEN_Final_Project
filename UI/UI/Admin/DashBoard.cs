@@ -69,6 +69,11 @@ namespace UI
             orderManage.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             dashboard_panel.Controls.Clear();
             dashboard_panel.Controls.Add(orderManage);
+            EmployeeBLL employeeBLL = new EmployeeBLL();
+            EMPLOYEE emp = new EMPLOYEE();
+            emp = employeeBLL.InfoBLL(hiddenName);
+            orderManage.emp_name = emp.employee_name;
+            orderManage.emp_phone = emp.phone_number;
             orderManage.emp_id = hiddenName;
             orderManage.Show();
             ClearColorButton();
