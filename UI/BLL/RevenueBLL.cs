@@ -62,7 +62,58 @@ namespace BLL
 
             return dataTable;
         }
+        public DataTable getDataDateRev()
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Ngày");
+            dataTable.Columns.Add("Tiền");
+            List<BILL> list = billDAL.getDataBillDAL();
+            var data = list.GroupBy(g => g.date_created.Date)
+                            .Select(x => new { Date = x.Key.Date.ToString("dd-MM-yyyy"), Money = x.Sum(y => y.total_money), realDate = x.Key }).OrderBy(x => x.realDate).Reverse();
+            foreach (var item in data)
+            {
+                dataTable.Rows.Add(item.Date, item.Money);
+            }
 
+            return dataTable;
+        }
+
+        public DataTable getDataMonthRev()
+        {
+
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Tháng");
+            dataTable.Columns.Add("Tiền");
+            List<BILL> list = billDAL.getDataBillDAL();
+            /*var data = from t in list 
+                       group t by new { Year = t.date_created.Year,Month=t.date_created.Month} 
+                       into g
+                             select new { MonthYear = (g.Key.Year+"/"+g.Key.Month), Money = g.Sum(y => y.total_money) };*/
+            var data = list.GroupBy(g => new { g.date_created.Year, g.date_created.Month })
+                            .Select(x => new { MonthYear = (x.Key.Month + "-" + x.Key.Year), Money = x.Sum(y => y.total_money), Month = x.Key.Month, Year = x.Key.Year }).OrderByDescending(x => x.Year).OrderByDescending(x => x.Month);
+            foreach (var item in data)
+            {
+                dataTable.Rows.Add(item.MonthYear, item.Money);
+            }
+
+            return dataTable;
+        }
+
+        public DataTable getDataYearRev()
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Năm");
+            dataTable.Columns.Add("Tiền");
+            List<BILL> list = billDAL.getDataBillDAL();
+            var data = list.GroupBy(g => g.date_created.Year)
+                            .Select(x => new { Date = x.Key, Money = x.Sum(y => y.total_money) }).OrderBy(x => x.Date).Reverse();
+            foreach (var item in data)
+            {
+                dataTable.Rows.Add(item.Date, item.Money);
+            }
+
+            return dataTable;
+        }
         public DataTable getDateSales(string date)
         {
             DataTable dataTable = new DataTable();

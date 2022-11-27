@@ -184,7 +184,6 @@ C:\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\bin\Debug\MaterialSkin.dll
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\bin\Debug\MaterialSkin.dll
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.BillDetail.resources
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.BillDetail.resources
-C:\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.DeleteBill.resources
 C:\nam3ki1\cnpm\SOEN_Final_Project\UI\UI\obj\Debug\UI.Password.resources
 C:\Users\Acer\Documents\GitHub\SOEN_Final_Project\UI\UI\obj\Debug\UI.Password.resources
 D:\UTE College\program\HK5\SOEN\SOEN_Final_Project\UI\UI\obj\Debug\UI.BillDetail.resources

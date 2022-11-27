@@ -17,6 +17,7 @@ namespace UI
 
 
         RevenueBLL revenueBLL = new RevenueBLL();
+        bool asc = true;
         public RevenueManage()
         {
             InitializeComponent();
@@ -24,30 +25,46 @@ namespace UI
             //dataRevenue.DataSource = revenueBLL.getDataMonth();
             dataRevenue.DataSource = revenueBLL.getDataDate();
             dataRevenue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            disableSort();
             dataRevenue.ReadOnly = true;
             comboBox1.SelectedIndex = 0;
             chartBoard("Ngày");
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            
+            
         }
+        
+        private void disableSort()
+        {
+            foreach(DataGridViewColumn col in dataRevenue.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            asc = true;
             if(comboBox1.Text == "Ngày")
             {
                 dataRevenue.DataSource = revenueBLL.getDataDate();
+                disableSort();
                 chartBoard(comboBox1.Text);
                 pieBoard(0, 0);
             }
             else if(comboBox1.Text == "Tháng")
             {
                 dataRevenue.DataSource=revenueBLL.getDataMonth();
+                disableSort();
                 chartBoard(comboBox1.Text);
                 pieBoard(0, 0);
             }
             else if(comboBox1.Text == "Năm")
             {
                 dataRevenue.DataSource = revenueBLL.getDataYear();
+                disableSort();
                 chartBoard(comboBox1.Text);
                 pieBoard(0, 0);
             }
@@ -66,10 +83,6 @@ namespace UI
             chart1.DataBind();
         }
 
-        private DateTime getDate(string date)
-        {
-            return DateTime.ParseExact(date, "dd-MM-YY",System.Globalization.CultureInfo.InvariantCulture);   
-        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -101,10 +114,60 @@ namespace UI
             }
         }
 
+        void revTableDes()
+        {
+            if (comboBox1.Text == "Ngày")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataDateRev();
+            }
+            else if (comboBox1.Text == "Tháng")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataMonthRev();
+            }
+            else if (comboBox1.Text == "Năm")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataYearRev();
+            }
+        }
 
+        void revTableAsc()
+        {
+            if (comboBox1.Text == "Ngày")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataDate();
+            }
+            else if (comboBox1.Text == "Tháng")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataMonth();
+            }
+            else if (comboBox1.Text == "Năm")
+            {
+                dataRevenue.DataSource = revenueBLL.getDataYear();
+            }
+        }
         private void dataRevenue_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            pieBoard(e.RowIndex, 0);
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                pieBoard(e.RowIndex, 0);
+            }
+            if(e.RowIndex == -1 && e.ColumnIndex == 0)
+            {
+                if(asc == true)
+                {
+                    asc = false;
+                    revTableDes();
+                    disableSort();
+                }
+                else if(asc == false)
+                {
+                    asc = true;
+                    revTableAsc();
+                    disableSort();
+                }
+                
+            }
+            
         }
     }
 }
