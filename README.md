@@ -1,18 +1,47 @@
-# SOEN_Final_Project
-Nhận xét và đưa ra công việc cần hoàn thành:
-# Về code:
-+ Form Login: chạy được, gần hoàn thành, thêm đưa username vào Dash
-+ Form Dash Board: chạy được
-+ Form Order: chạy được, đang test chức năng, lấy ảnh trong database
-+ Form Voucher: chạy được, delete set null
-+ Form Product: chạy được, đang test chức năng
-+ Form Employee: chạy được, đang test chức năng
-+ Form Account: chạy được, code chức năng
-+ Form Revenue: chạy được, chức năng bị lỗi, chưa fill data
-+ Form Selling History: chạy được, còn thiếu chức năng
-# Về database:
-+ Cần thêm data mẫu, hình ảnh
-+ Thêm dữ liệu email (quên mật khẩu)
-# Về design:
-+ Chưa cần thiết, đang tham khảo sơ các nguồn video trên mạng để tìm mẫu đẹp phù hợp
+# Sales Management Project
+
+## Introduction
+The Sales Management Project is a sales management application developed in C#. This project is designed to assist in managing sales activities, including account management, billing, employee management, product management, and other related activities.
+
+## Project Structure
+- **BLL (Business Logic Layer)**: Contains business logic classes.
+- **DAL (Data Access Layer)**: Contains data access classes.
+- **UI (User Interface)**: Contains user interface classes.
+
+## Main Features
+- **Account Management**: Create, update, and delete user accounts.
+- **Billing**: Generate and manage bills and bill details.
+- **Employee Management**: Manage employee information and roles.
+- **Order Management**: Handle customer orders and order details.
+- **Product Management**: Manage product information, including adding, updating, and deleting products.
+- **Revenue Management**: Track and report revenue.
+- **Voucher Management**: Create and manage discount vouchers.
+- **Selling History**: View and manage the history of sales transactions.
+- **Login and Authentication**: Secure login and authentication for users.
+
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   ```
+2. Open the solution in Visual Studio
+   ```sh
+   cd <repository-folder>
+   code UI.sln 
+   ``` 
+3. Restore NuGet packages
+   ```sh
+   dotnet restore
+   ``` 
+
+## Build and run
+1. Build the project:
+    ```sh
+   dotnet build
+   ```
+
+1. Build the project:
+    ```sh
+   dotnet run --project UI/UI.csproj
+   ``` 
 
